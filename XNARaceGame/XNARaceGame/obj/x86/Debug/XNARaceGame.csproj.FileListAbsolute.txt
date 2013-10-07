@@ -1,0 +1,6 @@
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\bin\x86\Debug\XNARaceGame.exe
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\bin\x86\Debug\XNARaceGame.pdb
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.csprojResolveAssemblyReference.cache
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.exe
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.pdb
