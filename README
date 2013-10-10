@@ -1,1 +1,3 @@
 DO NOT COMMIT/PUSH TO MASTER BRANCH. All progress must be made in the develop branch. Branching off develop is preferred for side-projects.
+
+Monogame compatibility has been added. Do not touch any references to Mono(game).
