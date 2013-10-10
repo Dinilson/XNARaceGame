@@ -2,7 +2,6 @@ using System;
 
 namespace XNARaceGame
 {
-#if WINDOWS || XBOX
     static class Program
     {
         /// <summary>
@@ -10,12 +9,9 @@ namespace XNARaceGame
         /// </summary>
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
-            {
-                game.Run();
-            }
+            Game game = new Game();
+            game.run();
         }
     }
-#endif
 }
 
