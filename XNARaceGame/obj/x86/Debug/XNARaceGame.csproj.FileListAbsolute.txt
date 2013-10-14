@@ -1,0 +1,9 @@
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\bin\Debug\XNARaceGame.exe
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\bin\Debug\XNARaceGame.pdb
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.exe
+E:\School\Programmeren 1\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.pdb
+E:\git\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.exe
+E:\git\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.pdb
+E:\git\XNARaceGame\XNARaceGame\bin\Debug\XNARaceGame.exe
+E:\git\XNARaceGame\XNARaceGame\bin\Debug\XNARaceGame.pdb
+E:\git\XNARaceGame\XNARaceGame\obj\x86\Debug\XNARaceGame.csprojResolveAssemblyReference.cache
