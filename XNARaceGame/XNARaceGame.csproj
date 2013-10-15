@@ -78,9 +78,6 @@
   </Target>
   -->
   <ItemGroup>
-    <ProjectReference Include="..\XNARaceGameContent\XNARaceGameContent.csproj">
-      <Project>{B859A463-F045-4FE5-962A-0CA29C77622E}</Project>
-      <Name>XNARaceGameContent</Name>
-    </ProjectReference>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>
