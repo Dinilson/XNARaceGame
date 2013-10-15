@@ -2,11 +2,17 @@ using System;
 
 namespace XNARaceGame
 {
-	public class Checkpoint
+	private class Checkpoint
 	{
-		public Checkpoint()
+        int num;
+
+		public Checkpoint(int num)
 		{
+            this.num = num;
 		}
+
+        
+
 	}
 }
 
