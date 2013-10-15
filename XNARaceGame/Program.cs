@@ -6,7 +6,7 @@ namespace XNARaceGame
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
+            RaceGame game = new RaceGame();
             game.run();
         }
     }

@@ -55,9 +55,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="Powerup.cs" />
+    <Compile Include="RaceGame.cs" />
+    <Compile Include="Checkpoint.cs" />
+    <Compile Include="View.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Collision.cs" />
+    <Compile Include="UI.cs" />
+    <Compile Include="Controller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -67,4 +77,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\XNARaceGameContent\XNARaceGameContent.csproj">
+      <Project>{B859A463-F045-4FE5-962A-0CA29C77622E}</Project>
+      <Name>XNARaceGameContent</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
