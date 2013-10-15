@@ -28,6 +28,31 @@ namespace XNARaceGame
 			checkpoints = new bool[4] { false, false, false, false };
 		}
 		#endregion
+		
+		#region update
+		public override bool update(int dt, Controller controller)
+		{
+			return false;
+		}
+		#endregion
+		
+		#region render
+		public override void render(View view)
+		{
+		}
+		#endregion
+		
+		#region entityCollision
+		public override void entityCollision(Entity entity)
+		{
+		}
+		#endregion
+		
+		#region mapCollision
+		public override void mapCollision(Vector2 vector)
+		{
+		}
+		#endregion
 	}
 } 
 
