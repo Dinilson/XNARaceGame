@@ -13,13 +13,8 @@ namespace XNARaceGame
 {
     class RaceGame : Microsoft.Xna.Framework.Game
     {
-		GraphicsDeviceManager graphics;
-		SpriteBatch spriteBatch;
-
         public RaceGame()
         {
-			graphics = new GraphicsDeviceManager(this);
-
         }
 
         public void run()

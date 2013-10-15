@@ -14,6 +14,7 @@ namespace XNARaceGame
 	public class Entity
 	{
 		#region Entity variables
+		string name;
 		Vector2 coords;
 		double rot = 0; // In radian.
 		double accel = 0;
@@ -24,13 +25,14 @@ namespace XNARaceGame
 		#endregion
 
 		#region Constructor class
-		public Entity(Vector2 coordsIn, Vector2 hitboxIn, bool isVisibleIn, bool isCollidableIn, double rotIn)
+		public Entity(string name, Vector2 coords, Vector2 hitbox, bool isVisible, bool isCollidable, double rot)
 		{
-			coords = coordsIn;
-			hitbox = hitboxIn;
-			isVisible = isVisibleIn;
-			isCollidable = isCollidableIn;
-			rot = rotIn;
+			this.name = name;
+			this.coords = coords;
+			this.hitbox = hitbox;
+			this.isVisible = isVisible;
+			this.isCollidable = isCollidable;
+			this.rot = rot;
 		}
 		#endregion
 
@@ -43,6 +45,7 @@ namespace XNARaceGame
 		#region render
 		public void render()
 		{
+			// Nothing is rendered here.
 		}
 		#endregion
 	}

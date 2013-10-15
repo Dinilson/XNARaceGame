@@ -6,6 +6,7 @@ namespace XNARaceGame
     {
         static void Main(string[] args)
         {
+			//Console.WriteLine("foo");
             RaceGame game = new RaceGame();
             game.run();
         }
