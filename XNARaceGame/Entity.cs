@@ -29,7 +29,7 @@ namespace XNARaceGame
 		{
 			this.name = name;
 			this.coords = coords;
-			this.rot = 0;
+			this.rot = rot;
 			this.accel = 0;
 			this.vector = new Vector2(0, 0);
 			this.hitbox = hitbox;
