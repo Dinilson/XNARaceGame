@@ -14,7 +14,7 @@ namespace XNARaceGame
 	class Entity
 	{
 		#region Entity variables
-		public string name { get; set; }
+		public string name;
 		public Vector2 coords { get; set; }
 		public double rot { get; set; }
 		public double accel { get; set; }
@@ -39,15 +39,30 @@ namespace XNARaceGame
 		#endregion
 
 		#region update
-		public void update()
+		public virtual bool update(int dt, Controller controller)
 		{
+			return false;
 		}
 		#endregion
 
 		#region render
-		public void render()
+		public virtual void render(View view)
 		{
 			// Nothing is rendered here.
+		}
+		#endregion
+		
+		#region entityCollision
+		public virtual void entityCollision(Entity entity)
+		{
+			//Do nothing on collision with entity
+		}
+		#endregion
+		
+		#region entityCollision
+		public virtual void mapCollision(Vector2 vector)
+		{
+			//Do nothing on collision with map
 		}
 		#endregion
 	}
