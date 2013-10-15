@@ -15,11 +15,11 @@ namespace XNARaceGame
 	{
 		private static int FPS = 60;
 
-		private Map map;
-		private UI ui;
-		private Controller controller;
-		private View view;
-		private List<Entity> entities;
+		public  Map map { get; set; }
+		public UI ui { get; set; }
+		public Controller controller { get; }
+		public View view { get; }
+		public List<Entity> entities { get; }
 		private bool running;
 		private int nextTick;
 
@@ -70,59 +70,6 @@ namespace XNARaceGame
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
 				nextTick += 1000 / FPS;
-			}
-		}
-
-		public Map Map
-		{
-			get
-			{
-				return map;
-			}
-			set
-			{
-				map = value;
-			}
-		}
-
-		public UI UI
-		{
-			get
-			{
-				return ui;
-			}
-			set
-			{
-				ui = value;
-			}
-		}
-		public Controller Controller
-		{
-			get
-			{
-				return controller;
-			}
-			set
-			{
-				controller = value;
-			}
-		}
-		public View View
-		{
-			get
-			{
-				return view;
-			}
-			set
-			{
-				view = value;
-			}
-		}
-		public List<Entity> Entities
-		{
-			get
-			{
-				return entities;
 			}
 		}
 	}
