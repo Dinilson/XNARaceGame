@@ -14,25 +14,27 @@ namespace XNARaceGame
 	class Entity
 	{
 		#region Entity variables
-		private string name { get; set; }
-		private Vector2 coords { get; set; }
-		private double rot = 0; // In radian. Max rot = 6.283185307179586
-		private double accel = 0;
-		private Vector2 vector = new Vector2(0, 0); // Direction, speed
-		private Vector2 hitbox { get; set; }
-		private bool isVisible = false;
-		private bool isCollidable = false;
+		public string name { get; set; }
+		public Vector2 coords { get; set; }
+		public double rot { get; set; }
+		public double accel { get; set; }
+		public Vector2 vector { get; set; }
+		public Vector2 hitbox { get; set; }
+		public bool isVisible { get; set; }
+		public bool isCollidable { get; set; }
 		#endregion
 
 		#region Constructor class
-		public Entity(string name, Vector2 coords, Vector2 hitbox, bool isVisible, bool isCollidable, double rot)
+		public Entity(string name, Vector2 coords, double rot, Vector2 hitbox, bool isVisible, bool isCollidable)
 		{
 			this.name = name;
 			this.coords = coords;
+			this.rot = 0;
+			this.accel = 0;
+			this.vector = new Vector2(0, 0);
 			this.hitbox = hitbox;
 			this.isVisible = isVisible;
 			this.isCollidable = isCollidable;
-			this.rot = rot;
 		}
 		#endregion
 
@@ -48,40 +50,6 @@ namespace XNARaceGame
 			// Nothing is rendered here.
 		}
 		#endregion
-
-		#region Properties
-		public double Rot
-		{
-			get { return rot; }
-			set { rot = value; }
-		}
-
-		public double Accel
-		{
-			get { return accel; }
-			set { accel = value; }
-		}
-
-		public Vector2 Vector
-		{
-			get { return vector; }
-			set { vector = value; }
-		}
-
-		public bool IsVisible
-		{
-			get { return isVisible; }
-			set { isVisible = value; }
-		}
-
-		public bool IsCollidable
-		{
-			get { return isCollidable; }
-			set { isCollidable = value; }
-		}
-
-		#endregion
-
 	}
 }
 
