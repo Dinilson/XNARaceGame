@@ -44,4 +44,7 @@
       <Package>monogame</Package>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
 </Project>
