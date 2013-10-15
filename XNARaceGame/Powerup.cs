@@ -12,11 +12,11 @@ namespace XNARaceGame
 		{
 		}
 
-        public Powerup(bool isA, string ty, int time)
+        public Powerup(bool isActive, string type, int timer)
         {
-            isActive = isA;
-            type = ty;
-            timer = time;
+            this.isActive = isActive;
+            this.type = type;
+            this.timer = timer;
         }
 
 
