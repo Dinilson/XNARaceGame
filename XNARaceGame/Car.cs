@@ -22,7 +22,8 @@ namespace XNARaceGame
 
 		public Car(Vector2 coords, double rot) : base("Car", coords, new Vector2(1337, 1337), true, true, rot) // Yet to define hitbox. Dummy values 1337.
 		{
-
+			//base.coords = coords;
+			//base.rot = rot;
 		}
 
 		/*public void method()
