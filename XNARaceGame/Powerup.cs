@@ -2,7 +2,7 @@ using System;
 
 namespace XNARaceGame
 {
-	private class Powerup
+	class Powerup
 	{
         bool isActive {get; set;} 
         string type {get; set;} 

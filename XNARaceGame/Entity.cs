@@ -11,17 +11,17 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	public class Entity
+	class Entity
 	{
 		#region Entity variables
-		string name;
-		Vector2 coords;
-		double rot = 0; // In radian.
-		double accel = 0;
-		Vector2 vector = new Vector2(0, 0); // Direction, speed
-		Vector2 hitbox;
-		bool isVisible = false;
-		bool isCollidable = false;
+		private string name { get; set; }
+		private Vector2 coords { get; set; }
+		private double rot = 0; // In radian. Max rot = 6.283185307179586
+		private double accel = 0;
+		private Vector2 vector = new Vector2(0, 0); // Direction, speed
+		private Vector2 hitbox { get; set; }
+		private bool isVisible = false;
+		private bool isCollidable = false;
 		#endregion
 
 		#region Constructor class
@@ -48,6 +48,40 @@ namespace XNARaceGame
 			// Nothing is rendered here.
 		}
 		#endregion
+
+		#region Properties
+		public double Rot
+		{
+			get { return rot; }
+			set { rot = value; }
+		}
+
+		public double Accel
+		{
+			get { return accel; }
+			set { accel = value; }
+		}
+
+		public Vector2 Vector
+		{
+			get { return vector; }
+			set { vector = value; }
+		}
+
+		public bool IsVisible
+		{
+			get { return isVisible; }
+			set { isVisible = value; }
+		}
+
+		public bool IsCollidable
+		{
+			get { return isCollidable; }
+			set { isCollidable = value; }
+		}
+
+		#endregion
+
 	}
 }
 
