@@ -18,18 +18,18 @@ namespace XNARaceGame
 				{
 					foreach (Entity e in entities)
 					{
-						if (collides(entity, e))
+						if (EntitiesCollides(entity, e))
 						{
-							EntitiesCollide(entity, e);
+							e.entityCollide(entity);
 						}
 					}
 				}
 			}
 		}
 
-		public static void EntitiesCollide(Entity collider, Entity colliding)
+		public static bool EntitiesCollides(Entity collider, Entity colliding)
 		{
-
+			return false;
 		}
 	}
 }
