@@ -45,7 +45,7 @@ namespace XNARaceGame
 
             if (entity.Name() == "Car" && isActive)
             {
-                if (type == "Damage")
+                if (type == "Repair")
                 {
 
                     Powerup.resetDamage(entity);
