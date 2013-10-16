@@ -43,21 +43,21 @@ namespace XNARaceGame
         #endregion
 
         #region Update
-        public bool update(double dt, Controller controller)
+        public override bool update(double dt, Controller controller)
         {
             return isAlive;// Nothing is updated here.
         }
         #endregion
 
         #region Render
-        public void render()
+        public override void render()
         {
 			// Nothing is rendered here.
         }
         #endregion
 
-        #region Collision
-        public void collision(Entity entity)
+        #region Entitycollision
+        public override void entityCollision(Entity entity)
         {
 
             if (entity.name == "Car" && isActive == true)
@@ -72,6 +72,13 @@ namespace XNARaceGame
                 }
                 
             }
+        }
+        #endregion
+
+        #region Mapcollision
+        public override void mapCollision(Vector2 vector)
+        {
+            //wordt niet aangeroepen
         }
         #endregion
     }
