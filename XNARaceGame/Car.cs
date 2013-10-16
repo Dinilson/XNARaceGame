@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	public class Car : Entity
+	class Car : Entity
 	{
 		#region Variables
 		//image = imagefile (needs work later)

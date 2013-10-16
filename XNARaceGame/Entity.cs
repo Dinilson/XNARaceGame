@@ -59,7 +59,7 @@ namespace XNARaceGame
 		}
 		#endregion
 		
-		#region entityCollision
+		#region mapCollision
 		public virtual void mapCollision(Vector2 vector)
 		{
 			//Do nothing on collision with map
