@@ -13,7 +13,7 @@ namespace XNARaceGame
 {
 	class RaceGame : Microsoft.Xna.Framework.Game
 	{
-		private static int FPS = 60;
+		private readonly static int FPS = 60;
 
 		public Map map { get; set; }
 		public UI ui { get; set; }

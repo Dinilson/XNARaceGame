@@ -16,7 +16,7 @@ namespace XNARaceGame
 		#region Attributes
 		//image = imagefile (needs work later)
         private double damage; // Percentage. Preferably up to 100.
-        public double petrol; // Percentage. Starts with full petrol.
+        private double petrol; // Percentage. Starts with full petrol.
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
 		#endregion
 
@@ -65,7 +65,7 @@ namespace XNARaceGame
             }
         }
 
-        public double Patrol {
+        public double Petrol {
             get {
                 return petrol;
             }

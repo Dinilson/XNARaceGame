@@ -24,7 +24,7 @@ namespace XNARaceGame
         {
             this.isActive = isActive;
             this.type = type;
-            this.timer = timer;
+            this.timer = -1;
         }
         #endregion
 
@@ -38,7 +38,7 @@ namespace XNARaceGame
         #region Refuelpowerup
         public void resetCarPetrol(Entity car)
         {
-            ((Car)car).petrol = 100;
+            ((Car)car).Petrol = 100;
         }
         #endregion
 
