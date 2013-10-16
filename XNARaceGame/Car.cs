@@ -13,7 +13,7 @@ namespace XNARaceGame
 {
 	class Car : Entity
 	{
-		#region Variables
+		#region Attributes
 		//image = imagefile (needs work later)
         private double damage; // Percentage. Preferably up to 100.
         public double petrol; // Percentage. Starts with full petrol.
@@ -29,26 +29,26 @@ namespace XNARaceGame
 		}
 		#endregion
 		
-		#region update
+		#region Update
 		public override bool update(double dt, Controller controller)
 		{
 			return isAlive;
 		}
 		#endregion
 		
-		#region render
+		#region Render
 		public override void render(View view)
 		{
 		}
 		#endregion
 		
-		#region entityCollision
+		#region EntityCollision
 		public override void entityCollision(Entity entity)
 		{
 		}
 		#endregion
 		
-		#region mapCollision
+		#region MapCollision
 		public override void mapCollision(Vector2 vector)
 		{
 		}
