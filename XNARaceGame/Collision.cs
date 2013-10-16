@@ -14,11 +14,11 @@ namespace XNARaceGame
 		{
 			foreach (Entity entity in entities)
 			{
-				if (entity.Actor)
+				if (entity.isActor && entity.isCollidable)
 				{
 					foreach (Entity e in entities)
 					{
-						if (EntitiesCollides(entity, e))
+						if (e.isCollidable && EntitiesCollides(entity, e))
 						{
 							e.entityCollide(entity);
 						}

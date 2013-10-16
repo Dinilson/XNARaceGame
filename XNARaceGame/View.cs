@@ -4,8 +4,10 @@ namespace XNARaceGame
 {
 	public class View
 	{
-		public View()
+        private RaceGame game;
+		public View(RaceGame game)
 		{
+            this.game = game;
 		}
 	}
 }

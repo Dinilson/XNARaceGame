@@ -17,21 +17,21 @@ namespace XNARaceGame
         public string type {get; set;} 
         public int timer {get; set;}
 
-        public Powerup(bool isActive, string type, int timer, double coords, Vector2 hitbox) : base("Powerup", coords, 0, hitbox, true, true)
+        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, 0, hitbox, true, true)
         {
             this.isActive = isActive;
             this.type = type;
             this.timer = timer;
         }
 
-        public void resetDamage()
+        public void resetDamage(Entity car)
         {
-           Car.damage = 0.0;
+            ((Car)car).Damage = 0;
         }
 
-        public void resetPetrol()
+        public void resetPetrol(Entity car)
         {
-           Car.petrol = 100;
+            ((Car)car).petrol = 100;
         }
 
         public void update()
@@ -51,11 +51,11 @@ namespace XNARaceGame
             {
                 if (type == "Repair")
                 {
-                    Powerup.resetDamage(entity);
+                    resetDamage(entity);
                 }
                 else if (type == "Petrol")
                 {
-                    Powerup.resetPetrol(entity);
+                    resetPetrol(entity);
                 }
                 
             }

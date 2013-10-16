@@ -15,8 +15,8 @@ namespace XNARaceGame
 	{
 		#region Variables
 		//image = imagefile (needs work later)
-		public double damage { get; set { if(value>=0 && value<=100) { damage = value;}} } // Percentage. Preferably up to 100.
-		public double petrol { get; set { if(value>=0 && value<=100) { petrol = value;}} } // Percentage. Starts with full petrol.
+        private double damage; // Percentage. Preferably up to 100.
+        public double petrol; // Percentage. Starts with full petrol.
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
 		#endregion
 
@@ -53,6 +53,28 @@ namespace XNARaceGame
 		{
 		}
 		#endregion
+
+        public double Damage {
+            get {
+                return damage;
+            }
+            set {
+                if (value >= 0 && value <= 100) {
+                    damage = value;
+                }
+            }
+        }
+
+        public double Patrol {
+            get {
+                return petrol;
+            }
+            set {
+                if (value >= 0 && value <= 100) {
+                    petrol = value;
+                }
+            }
+        }
 	}
-} 
+}
 

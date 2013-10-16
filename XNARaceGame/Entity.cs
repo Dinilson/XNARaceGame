@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	class Entity
+	public abstract class Entity
 	{
 		#region Entity variables
 		public string name;
@@ -22,6 +22,7 @@ namespace XNARaceGame
 		public Vector2 hitbox { get; set; }
 		public bool isVisible { get; set; }
 		public bool isCollidable { get; set; }
+        public bool isActor { get; set; }
 		#endregion
 
 		#region Constructor class
@@ -39,31 +40,19 @@ namespace XNARaceGame
 		#endregion
 
 		#region update
-		public virtual bool update(int dt, Controller controller)
-		{
-			return false;
-		}
+        public abstract bool update(int dt, Controller controller);
 		#endregion
 
 		#region render
-		public virtual void render(View view)
-		{
-			// Nothing is rendered here.
-		}
+        public abstract void render(View view);
 		#endregion
 		
 		#region entityCollision
-		public virtual void entityCollision(Entity entity)
-		{
-			//Do nothing on collision with entity
-		}
+        public abstract void entityCollision(Entity entity);
 		#endregion
 		
 		#region mapCollision
-		public virtual void mapCollision(Vector2 vector)
-		{
-			//Do nothing on collision with map
-		}
+		public abstract void mapCollision(Vector2 vector);
 		#endregion
 	}
 }

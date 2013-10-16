@@ -15,12 +15,14 @@ namespace XNARaceGame
 	{
 		private static int FPS = 60;
 
-		public  Map map { get; set; }
+		public Map map { get; set; }
 		public UI ui { get; set; }
-		public Controller controller { get; }
-		public View view { get; }
-		public List<Entity> entities { get; }
-		private bool running;
+        public Controller controller { get; set; }
+        public View view { get; set; }
+        public List<Entity> entities { get; set; }
+		public bool running { get; set; }
+        public bool paused { get; set; }
+
 		private int nextTick;
 
 		public RaceGame()
@@ -39,20 +41,23 @@ namespace XNARaceGame
 			{
 				entity.render(view);
 			}
+            ui.render(view);
 		}
 
 		public void update(int dt)
 		{
-			Collision.CheckMapCollisions(dt, map, entities);
-			Collision.CheckEntityCollisions(dt, entities);
+            if (!paused) {
+                controller.handleInput();
 
-			foreach (Entity entity in entities)
-			{
-				if (!entity.update(dt, controller))
-				{
-					entities.Remove(entity);
-				}
-			}
+                Collision.CheckMapCollisions(dt, map, entities);
+                Collision.CheckEntityCollisions(dt, entities);
+
+                foreach (Entity entity in entities) {
+                    if (!entity.update(dt, controller)) {
+                        entities.Remove(entity);
+                    }
+                }
+            }
 		}
 
 		public void run()
@@ -65,7 +70,7 @@ namespace XNARaceGame
 			{
 				do
 				{
-					update(currentTick - lastTick);
+					update((currentTick - lastTick) / 1000);
 					lastTick = currentTick;
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
