@@ -46,7 +46,7 @@ namespace XNARaceGame
             ui.render(view);
 		}
 
-		public void update(int dt)
+		public void update(double dt)
 		{
             if (!paused) {
                 controller.handleGameInput();

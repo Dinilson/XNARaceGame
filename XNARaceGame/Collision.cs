@@ -5,12 +5,12 @@ namespace XNARaceGame
 {
 	class Collision
 	{
-		public static void CheckMapCollisions(int dt, Map map, List<Entity> entities)
+		public static void CheckMapCollisions(double dt, Map map, List<Entity> entities)
 		{
 
 		}
 
-		public static void CheckEntityCollisions(int dt, List<Entity> entities)
+		public static void CheckEntityCollisions(double dt, List<Entity> entities)
 		{
 			foreach (Entity entity in entities)
 			{

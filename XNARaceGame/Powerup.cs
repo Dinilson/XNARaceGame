@@ -34,7 +34,7 @@ namespace XNARaceGame
             ((Car)car).petrol = 100;
         }
 
-        public bool update(int dt, Controller controller)
+        public bool update(double dt, Controller controller)
         {
             return isAlive;// Nothing is updated here.
         }

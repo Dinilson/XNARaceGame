@@ -30,7 +30,7 @@ namespace XNARaceGame
 		#endregion
 		
 		#region update
-		public override bool update(int dt, Controller controller)
+		public override bool update(double dt, Controller controller)
 		{
 			return isAlive;
 		}

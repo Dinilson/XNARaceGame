@@ -43,7 +43,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region update
-        public abstract bool update(int dt, Controller controller);
+        public abstract bool update(double dt, Controller controller);
 		#endregion
 
 		#region render
