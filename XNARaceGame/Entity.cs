@@ -23,10 +23,11 @@ namespace XNARaceGame
 		public bool isVisible { get; set; }
 		public bool isCollidable { get; set; }
         public bool isActor { get; set; }
+        public bool isAlive { get; set; }
 		#endregion
 
 		#region Constructor class
-		public Entity(string name, Vector2 coords, double rot, Vector2 hitbox, bool isVisible, bool isCollidable)
+		public Entity(string name, Vector2 coords, Vector2 hitbox, double rot, bool isVisible, bool isCollidable, bool isActor)
 		{
 			this.name = name;
 			this.coords = coords;
@@ -36,6 +37,8 @@ namespace XNARaceGame
 			this.hitbox = hitbox;
 			this.isVisible = isVisible;
 			this.isCollidable = isCollidable;
+            this.isActor = isActor;
+            isAlive = true;
 		}
 		#endregion
 

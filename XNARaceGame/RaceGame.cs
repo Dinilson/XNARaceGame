@@ -39,7 +39,9 @@ namespace XNARaceGame
 			map.render(view);
 			foreach (Entity entity in entities)
 			{
-				entity.render(view);
+                if (entity.isVisible) {
+                    entity.render(view);
+                }
 			}
             ui.render(view);
 		}
@@ -47,7 +49,7 @@ namespace XNARaceGame
 		public void update(int dt)
 		{
             if (!paused) {
-                controller.handleInput();
+                controller.handleGameInput();
 
                 Collision.CheckMapCollisions(dt, map, entities);
                 Collision.CheckEntityCollisions(dt, entities);

@@ -21,7 +21,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region Constructor
-		public Car(Vector2 coords, double rot) : base("Car", coords, rot, new Vector2(1337, 1337), true, true) // Yet to define hitbox. Dummy values 1337.
+		public Car(Vector2 coords, double rot) : base("Car", coords, new Vector2(1337, 1337), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
 		{
 			damage = 0;
 			petrol = 100;
@@ -32,7 +32,7 @@ namespace XNARaceGame
 		#region update
 		public override bool update(int dt, Controller controller)
 		{
-			return false;
+			return isAlive;
 		}
 		#endregion
 		

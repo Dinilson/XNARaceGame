@@ -17,7 +17,7 @@ namespace XNARaceGame
         public string type {get; set;} 
         public int timer {get; set;}
 
-        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, 0, hitbox, true, true)
+        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, hitbox, 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
@@ -34,9 +34,9 @@ namespace XNARaceGame
             ((Car)car).petrol = 100;
         }
 
-        public void update()
+        public bool update(int dt, Controller controller)
         {
-			// Nothing is updated here.
+            return isAlive;// Nothing is updated here.
         }
 
         public void render()

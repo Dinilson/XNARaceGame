@@ -15,7 +15,7 @@ namespace XNARaceGame
 	{
         int num;
 
-		public Checkpoint(int num, Vector2 coords, Vector2 hitbox, double rot) : base("Checkpoint", coords, hitbox, false, true, rot)
+		public Checkpoint(int num, Vector2 coords, Vector2 hitbox, double rot) : base("Checkpoint", coords, hitbox, rot, false, true, false)
 		{
             this.num = num;
 			// Because "Vector2 coords" is a parameter in "public Checkpoint()", it is forwarded to "coords" in base "base()".

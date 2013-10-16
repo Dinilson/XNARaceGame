@@ -20,7 +20,7 @@ namespace XNARaceGame
 					{
 						if (e.isCollidable && EntitiesCollides(entity, e))
 						{
-							e.entityCollide(entity);
+                            e.entityCollision(entity);
 						}
 					}
 				}
