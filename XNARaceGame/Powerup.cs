@@ -24,12 +24,12 @@ namespace XNARaceGame
             this.timer = timer;
         }
 
-        public void resetDamage(Entity car)
+        public void resetCarDamage(Entity car)
         {
             ((Car)car).Damage = 0;
         }
 
-        public void resetPetrol(Entity car)
+        public void resetCarPetrol(Entity car)
         {
             ((Car)car).petrol = 100;
         }
@@ -51,11 +51,11 @@ namespace XNARaceGame
             {
                 if (type == "Repair")
                 {
-                    resetDamage(entity);
+                    resetCarDamage(entity);
                 }
                 else if (type == "Petrol")
                 {
-                    resetPetrol(entity);
+                    resetCarPetrol(entity);
                 }
                 
             }
