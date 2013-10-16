@@ -7,6 +7,11 @@ namespace XNARaceGame
 		public Map()
 		{
 		}
+
+		public void render()
+		{
+			// Nothing is rendered here.
+		}
 	}
 }
 
