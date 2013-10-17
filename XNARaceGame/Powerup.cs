@@ -13,7 +13,9 @@ namespace XNARaceGame
 {
 	class Powerup : Entity 
     {
+
         #region Attributes
+        public readonly static int TIMEOUT = 1000;
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
@@ -30,22 +32,28 @@ namespace XNARaceGame
         #endregion
 
         #region Healpowerup
-        public void resetCarDamage(Entity car) //de heal methode
+        public void resetCarDamage(Car car) //de heal methode
         {
-            ((Car)car).Damage = 0;
+            car.Damage = 0;
         }
         #endregion
 
         #region Refuelpowerup 
-        public void resetCarPetrol(Entity car) //de refuel functie
+        public void resetCarPetrol(Car car) //de refuel functie
         {
-            ((Car)car).Petrol = 100;
+            car.Petrol = 100;
         }
         #endregion
 
         #region Update
         public override bool update(double dt, Controller controller) // update functie
         {
+            if (timer > -1 && Environment.TickCount >= timer)
+            {
+                isVisible = true;
+                isActive = true;
+            }
+
             return isAlive;
 			// More to be updated I guess?
         }
@@ -62,16 +70,20 @@ namespace XNARaceGame
         public override void entityCollision(Entity entity) // collision detectie voor andere entities
         {
 
-            if (entity.name == "Car" && isActive == true)
+            if (entity.name == "Car" && isActive)
             {
                 if (type == "Repair")
                 {
-                    resetCarDamage(entity);
+                    resetCarDamage((Car)entity);
                 }
                 else if (type == "Petrol")
                 {
-                    resetCarPetrol(entity);
+                    resetCarPetrol((Car)entity);
                 }
+                isActive = false;
+                isVisible = false;
+                timer = Environment.TickCount + TIMEOUT;
+
                 
             }
         }
