@@ -78,6 +78,6 @@
   </Target>
   -->
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\healPowerupv2.png" />
   </ItemGroup>
 </Project>

@@ -11,56 +11,78 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	class Powerup : Entity
-	{
+	class Powerup : Entity 
+    {
+        #region Attributes
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
+        #endregion
 
+        #region Constructor
+        //constructor
         public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, hitbox, 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
-            this.timer = timer;
+            this.timer = -1;
         }
+        #endregion
 
-        public void resetDamage(Entity car)
+        #region Healpowerup
+        public void resetCarDamage(Entity car) //de heal methode
         {
             ((Car)car).Damage = 0;
         }
+        #endregion
 
-        public void resetPetrol(Entity car)
+        #region Refuelpowerup 
+        public void resetCarPetrol(Entity car) //de refuel functie
         {
             ((Car)car).Petrol = 100;
         }
+        #endregion
 
-        public bool update(int dt, Controller controller)
+        #region Update
+        public override bool update(double dt, Controller controller) // update functie
         {
             return isAlive;
 			// More to be updated I guess?
         }
+        #endregion
 
-        public void render()
+        #region Render
+        public override void render()
         {
 			// Nothing is rendered here.
         }
+        #endregion
 
-        public void collision(Entity entity)
+        #region Entitycollision
+        public override void entityCollision(Entity entity) // collision detectie voor andere entities
         {
 
             if (entity.name == "Car" && isActive == true)
             {
                 if (type == "Repair")
                 {
-                    resetDamage(entity);
+                    resetCarDamage(entity);
                 }
                 else if (type == "Petrol")
                 {
-                    resetPetrol(entity);
+                    resetCarPetrol(entity);
                 }
                 
             }
         }
-	}
+        #endregion
+
+        #region Mapcollision
+        public override void mapCollision(Vector2 vector)
+        {
+            //wordt niet aangeroepen
+        }
+        #endregion
+    }
 }
 

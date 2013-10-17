@@ -16,7 +16,7 @@ namespace XNARaceGame
 
         public void handleGameInput() {
             if(keyMap.Contains('p')) {
-                game.paused = true;
+                game.paused = !game.paused;
             }
         }
 	}
