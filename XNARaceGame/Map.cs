@@ -9,7 +9,7 @@ namespace XNARaceGame
 		{
 		}
 
-        public void render(View view)
+        public void render(GraphicsManager graphicsManager)
         {
         }
 	}

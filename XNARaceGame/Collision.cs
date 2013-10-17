@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace XNARaceGame
 {
-	class Collision
+	class CollisionManager
 	{
 		public static void CheckMapCollisions(double dt, Map map, List<Entity> entities)
 		{

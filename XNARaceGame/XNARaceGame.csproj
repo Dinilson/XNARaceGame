@@ -62,6 +62,7 @@
     <Compile Include="Powerup.cs" />
     <Compile Include="RaceGame.cs" />
     <Compile Include="Checkpoint.cs" />
+    <Compile Include="SoundManager.cs" />
     <Compile Include="View.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Tile.cs" />

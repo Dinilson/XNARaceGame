@@ -46,7 +46,7 @@ namespace XNARaceGame
         #endregion
 
         #region Update
-        public override bool update(double dt, Controller controller) // update functie
+        public override bool update(double dt, InputManager inputManager) // update functie
         {
             if (timer > -1 && Environment.TickCount >= timer)
             {
@@ -60,7 +60,7 @@ namespace XNARaceGame
         #endregion
 
         #region Render
-        public override void render(View view)
+        public override void render(GraphicsManager graphicsManager)
         {
 			// Nothing is rendered here.
         }

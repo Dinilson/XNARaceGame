@@ -43,11 +43,11 @@ namespace XNARaceGame
 		#endregion
 
 		#region update
-        public abstract bool update(double dt, Controller controller);
+        public abstract bool update(double dt, InputManager inputManager);
 		#endregion
 
 		#region render
-        public abstract void render(View view);
+        public abstract void render(GraphicsManager graphicsManager);
 		#endregion
 		
 		#region entityCollision

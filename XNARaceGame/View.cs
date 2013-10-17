@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace XNARaceGame
 {
-	public class View
+	public class GraphicsManager
 	{
         public readonly static int DEFAULT_SCREEN_WIDTH = 800;
         public readonly static int DEFAULT_SCREEN_HEIGHT = 600;
@@ -19,11 +19,11 @@ namespace XNARaceGame
         private int screenWidth;
         private int screenHeight;
 
-        public View(RaceGame game)
+        public GraphicsManager(RaceGame game)
             : this(game, DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT) {
         }
 
-		public View(RaceGame game, int screenWidth, int screenHeight)
+		public GraphicsManager(RaceGame game, int screenWidth, int screenHeight)
 		{
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;

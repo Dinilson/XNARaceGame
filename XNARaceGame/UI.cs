@@ -11,7 +11,7 @@ namespace XNARaceGame
             this.game = game;
 		}
 
-        public bool render(View view) {
+        public bool render(GraphicsManager graphicsManager) {
             return false;
         }
 	}

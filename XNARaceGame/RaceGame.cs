@@ -17,8 +17,8 @@ namespace XNARaceGame
 
 		public Map map { get; set; }
 		public UI ui { get; set; }
-        public Controller controller { get; set; }
-        public View view { get; set; }
+        public InputManager inputManager { get; set; }
+        public GraphicsManager graphicsManager { get; set; }
         public List<Entity> entities { get; set; }
 		public bool running { get; set; }
         public bool paused { get; set; }
@@ -30,33 +30,33 @@ namespace XNARaceGame
 			running = false;
 			map = new Map();
 			ui = new UI(this);
-			controller = new Controller(this);
-			view = new View(this);
+			inputManager = new InputManager(this);
+			graphicsManager = new GraphicsManager(this);
             entities = new List<Entity>();
 		}
 
 		public void render()
 		{
-			map.render(view);
+			map.render(graphicsManager);
 			foreach (Entity entity in entities)
 			{
                 if (entity.isVisible) {
-                    entity.render(view);
+                    entity.render(graphicsManager);
                 }
 			}
-            ui.render(view);
+            ui.render(graphicsManager);
 		}
 
 		public void update(double dt)
 		{
             if (!paused) {
-                controller.handleGameInput();
+                inputManager.handleGameInput();
 
-                Collision.CheckMapCollisions(dt, map, entities);
-                Collision.CheckEntityCollisions(dt, entities);
+                CollisionManager.CheckMapCollisions(dt, map, entities);
+                CollisionManager.CheckEntityCollisions(dt, entities);
 
                 foreach (Entity entity in entities) {
-                    if (!entity.update(dt, controller)) {
+                    if (!entity.update(dt, inputManager)) {
                         entities.Remove(entity);
                     }
                 }
