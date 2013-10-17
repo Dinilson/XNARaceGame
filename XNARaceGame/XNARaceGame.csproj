@@ -77,8 +77,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\healPowerup.png" />
+    <Content Include="Resources\healPowerupv2.png" />
   </ItemGroup>
 </Project>
