@@ -60,7 +60,7 @@ namespace XNARaceGame
         #endregion
 
         #region Render
-        public override void render()
+        public override void render(View view)
         {
 			// Nothing is rendered here.
         }

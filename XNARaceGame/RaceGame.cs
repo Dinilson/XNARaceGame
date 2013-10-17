@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	class RaceGame : Microsoft.Xna.Framework.Game
+	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
 		private readonly static int FPS = 60;
 
@@ -32,6 +32,7 @@ namespace XNARaceGame
 			ui = new UI(this);
 			controller = new Controller(this);
 			view = new View(this);
+            entities = new List<Entity>();
 		}
 
 		public void render()

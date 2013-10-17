@@ -12,6 +12,7 @@ namespace XNARaceGame
 		public Controller(RaceGame game)
 		{
             this.game = game;
+            keyMap = new List<char>();
 		}
 
         public void handleGameInput() {

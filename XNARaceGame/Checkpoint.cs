@@ -22,8 +22,21 @@ namespace XNARaceGame
 			// The same applies to "hitbox" and "rot".
 		}
 
-        
+        public override void render(View view)
+        {
+        }
 
+        public override bool update(double dt, Controller controller) {
+            return isAlive;
+        }
+
+        public override void entityCollision(Entity entity)
+        {
+        }
+
+        public override void mapCollision(Vector2 vector)
+        {
+        }
 	}
 }
 
