@@ -65,7 +65,7 @@ namespace XNARaceGame
             }
         }
 
-        public double Patrol {
+        public double Petrol {
             get {
                 return petrol;
             }

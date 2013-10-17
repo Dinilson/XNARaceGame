@@ -31,12 +31,13 @@ namespace XNARaceGame
 
         public void resetPetrol(Entity car)
         {
-            ((Car)car).petrol = 100;
+            ((Car)car).Petrol = 100;
         }
 
         public bool update(int dt, Controller controller)
         {
-            return isAlive;// Nothing is updated here.
+            return isAlive;
+			// More to be updated I guess?
         }
 
         public void render()
