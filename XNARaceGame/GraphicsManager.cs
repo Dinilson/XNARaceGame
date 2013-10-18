@@ -30,7 +30,7 @@ namespace XNARaceGame
             this.game = game;
             graphicsAdapter = GraphicsAdapter.DefaultAdapter;
             graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), game.Window.Handle, screenWidth, screenHeight);
-            graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings);
+            graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix.
             spriteBatch = new SpriteBatch(graphicsDevice);
 		}
 
