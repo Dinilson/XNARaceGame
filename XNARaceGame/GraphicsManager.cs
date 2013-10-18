@@ -1,10 +1,10 @@
 using System;
 using System.Windows.Forms;
-using System.Windows.Forms.ComponentModel;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework;
 
 namespace XNARaceGame
 {
@@ -32,13 +32,12 @@ namespace XNARaceGame
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
             this.game = game;
-            form = new Form();
-            //form.Size = new Size(screenWidth, screenHeight);
+            formInit(screenWidth, screenHeight);
             graphicsAdapter = GraphicsAdapter.DefaultAdapter;
             graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), form.Handle, screenWidth, screenHeight);
             graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix.
             spriteBatch = new SpriteBatch(graphicsDevice);
-            form.Show();
+            graphicsDevice.Clear(Color.Red);
 		}
 
         private static PresentationParameters setupGraphicsDeviceSettings(PresentationParameters parameters, IntPtr handle, int screenWidth, int screenHeight) {
@@ -47,6 +46,14 @@ namespace XNARaceGame
             parameters.IsFullScreen = false;
             parameters.DeviceWindowHandle = handle;
             return parameters;
+        }
+
+        private void formInit(int width, int height) {
+            form = new Form();
+            form.Width = width + 10;
+            form.Height = height + 10;
+            form.Text = "Gamez";
+            form.Show();
         }
 	}
 }

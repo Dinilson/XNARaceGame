@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -71,7 +72,7 @@ namespace XNARaceGame
 		}
 
 		public void run()
-		{/*
+		{
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;
 			int lastTick = currentTick;
@@ -85,7 +86,7 @@ namespace XNARaceGame
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
 				nextTick += 1000 / FPS;
-			}*/
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace XNARaceGame
 {
@@ -7,7 +8,8 @@ namespace XNARaceGame
         static void Main(string[] args)
         {
             RaceGame game = new RaceGame();
-            game.run();
+            Thread t = new Thread(game.run);
+            t.Start();
         }
     }
 }
