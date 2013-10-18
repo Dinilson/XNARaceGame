@@ -63,12 +63,12 @@
     <Compile Include="RaceGame.cs" />
     <Compile Include="Checkpoint.cs" />
     <Compile Include="SoundManager.cs" />
-    <Compile Include="View.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Tile.cs" />
-    <Compile Include="Collision.cs" />
     <Compile Include="UI.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="CollisionManager.cs" />
+    <Compile Include="InputManager.cs" />
+    <Compile Include="GraphicsManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
