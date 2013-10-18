@@ -79,7 +79,10 @@
   </Target>
   -->
   <ItemGroup>
-    <None Include="Resources\healPowerup.png" />
-    <None Include="Resources\petrolPowerup.png" />
+    <None Include="Resources\sprites\healPowerup.png" />
+    <None Include="Resources\sprites\petrolPowerup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\sprites\testmap.png" />
   </ItemGroup>
 </Project>
