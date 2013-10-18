@@ -34,10 +34,11 @@ namespace XNARaceGame
             this.game = game;
             formInit(screenWidth, screenHeight);
             graphicsAdapter = GraphicsAdapter.DefaultAdapter;
-            graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), form.Handle, screenWidth, screenHeight);
-            graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix.
+            graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), this.form.Handle, screenWidth, screenHeight);
+            graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix. It does take three arguments
             spriteBatch = new SpriteBatch(graphicsDevice);
             graphicsDevice.Clear(Color.Red);
+            Application.Run(form);
 		}
 
         private static PresentationParameters setupGraphicsDeviceSettings(PresentationParameters parameters, IntPtr handle, int screenWidth, int screenHeight) {
@@ -53,7 +54,7 @@ namespace XNARaceGame
             form.Width = width + 10;
             form.Height = height + 10;
             form.Text = "Gamez";
-            form.Show();
+            //Application.Run(form);
         }
 	}
 }
