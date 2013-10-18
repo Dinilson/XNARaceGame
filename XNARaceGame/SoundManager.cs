@@ -5,5 +5,7 @@ using System.Text;
 
 namespace XNARaceGame {
     class SoundManager {
+        public SoundManager() {
+        }
     }
 }

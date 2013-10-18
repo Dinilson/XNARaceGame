@@ -15,10 +15,11 @@ namespace XNARaceGame
 	{
 		private readonly static int FPS = 60;
 
-		public Map map { get; set; }
-		public UI ui { get; set; }
         public InputManager inputManager { get; set; }
         public GraphicsManager graphicsManager { get; set; }
+        public SoundManager soundManager { get; set; }
+        public UI ui { get; set; }
+        public Map map { get; set; }
         public List<Entity> entities { get; set; }
 		public bool running { get; set; }
         public bool paused { get; set; }
@@ -32,6 +33,7 @@ namespace XNARaceGame
 			ui = new UI(this);
 			inputManager = new InputManager(this);
 			graphicsManager = new GraphicsManager(this);
+            soundManager = new SoundManager();
             entitiesInit();
 		}
 
@@ -40,7 +42,7 @@ namespace XNARaceGame
             entities.Add(new Car(new Vector2(10, 10), 0));
         }
 
-		public void render()
+		private void render()
 		{
 			map.render(graphicsManager);
 			foreach (Entity entity in entities)
@@ -52,7 +54,7 @@ namespace XNARaceGame
             ui.render(graphicsManager);
 		}
 
-		public void update(double dt)
+		private void update(double dt)
 		{
             if (!paused) {
                 inputManager.handleGameInput();
