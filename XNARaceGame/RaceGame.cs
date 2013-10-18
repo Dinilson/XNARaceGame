@@ -32,8 +32,13 @@ namespace XNARaceGame
 			ui = new UI(this);
 			inputManager = new InputManager(this);
 			graphicsManager = new GraphicsManager(this);
-            entities = new List<Entity>();
+            entitiesInit();
 		}
+
+        private void entitiesInit() {
+            entities = new List<Entity>();
+            entities.Add(new Car(new Vector2(10, 10), 0));
+        }
 
 		public void render()
 		{
