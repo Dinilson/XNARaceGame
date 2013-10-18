@@ -1,4 +1,7 @@
 using System;
+using System.Windows.Forms;
+using System.Windows.Forms.ComponentModel;
+using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.GamerServices;
@@ -16,6 +19,7 @@ namespace XNARaceGame
         public PresentationParameters graphicsDeviceSettings { get; set; }
 
         private RaceGame game;
+        private Form form;
         private int screenWidth;
         private int screenHeight;
 
@@ -28,10 +32,13 @@ namespace XNARaceGame
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
             this.game = game;
+            form = new Form();
+            //form.Size = new Size(screenWidth, screenHeight);
             graphicsAdapter = GraphicsAdapter.DefaultAdapter;
-            graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), game.Window.Handle, screenWidth, screenHeight);
+            graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), form.Handle, screenWidth, screenHeight);
             graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix.
             spriteBatch = new SpriteBatch(graphicsDevice);
+            form.Show();
 		}
 
         private static PresentationParameters setupGraphicsDeviceSettings(PresentationParameters parameters, IntPtr handle, int screenWidth, int screenHeight) {

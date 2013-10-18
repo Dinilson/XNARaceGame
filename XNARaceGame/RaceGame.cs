@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	public class RaceGame : Microsoft.Xna.Framework.Game
+	public class RaceGame
 	{
 		private readonly static int FPS = 60;
 
@@ -71,7 +71,7 @@ namespace XNARaceGame
 		}
 
 		public void run()
-		{
+		{/*
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;
 			int lastTick = currentTick;
@@ -85,7 +85,7 @@ namespace XNARaceGame
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
 				nextTick += 1000 / FPS;
-			}
+			}*/
 		}
 	}
 }

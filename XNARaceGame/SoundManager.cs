@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace XNARaceGame {
-    class SoundManager {
+    public class SoundManager {
         public SoundManager() {
         }
     }
