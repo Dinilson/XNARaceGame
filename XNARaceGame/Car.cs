@@ -31,20 +31,23 @@ namespace XNARaceGame
 		
 		#region Update
 		public override bool update(double dt, InputManager inputManager)
-		{
-			rot %= (double)Math.PI * 2;
-			if (rot < 0) 
-			{
-				rot += (double)Math.PI * 2;
-			}
+        {
+            double tau = (double)Math.PI * 2; // tau = 2 * pi
 
-			double velocity = accel / dt;
+            rot %= tau;
 
-			coords.X += velocity * ((double)Math.Cos(vector.Y));
-			coords.Y += velocity * ((double)Math.Sin(vector.Y));
+            if (rot < 0) 
+            {
+                rot += tau;
+            }
 
-			return isAlive;
-		}
+            double velocity = accel / dt;
+
+            coords.X += velocity * ((double)Math.Cos(vector.Y));
+            coords.Y += velocity * ((double)Math.Sin(vector.Y));
+            
+            return isAlive;
+        }
 		#endregion
 
 		#region Render
@@ -65,6 +68,7 @@ namespace XNARaceGame
 		}
 		#endregion
 
+		#region Getters and setters
         public double Damage {
             get {
                 return damage;
@@ -86,6 +90,7 @@ namespace XNARaceGame
                 }
             }
         }
+		#endregion
 	}
 }
 
