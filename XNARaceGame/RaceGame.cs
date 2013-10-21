@@ -74,11 +74,12 @@ namespace XNARaceGame
 
 		public void run()
 		{
+            graphicsManager.Run();
+            /*
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;
 			int lastTick = currentTick;
 			running = true;
-            graphicsManager.Run();
 			while (running)
 			{
 				do
@@ -88,8 +89,7 @@ namespace XNARaceGame
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
 				nextTick += 1000 / FPS;
-			}
-            Console.ReadLine();
+			}*/
 		}
 	}
 }

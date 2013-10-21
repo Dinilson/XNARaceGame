@@ -41,10 +41,12 @@ namespace XNARaceGame
                 rot += tau;
             }
 
-            double velocity = accel / dt;
+            double velocity = accel * dt;
 
-			coords.X += velocity * ((double)Math.Cos(vector.Y));
-			coords.Y += velocity * ((double)Math.Sin(vector.Y));
+            coords = Vector2.Add(coords, Vector2.Multiply(vector, (float)velocity));
+
+			//coords.Add((float)(velocity * ((double)Math.Cos(vector.Y)));
+			//coords.Y += (float)(velocity * ((double)Math.Sin(vector.Y));
             
 			return isAlive;
 		}
