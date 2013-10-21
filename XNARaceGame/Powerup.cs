@@ -75,6 +75,7 @@ namespace XNARaceGame
                 if (type == "Repair")
                 {
                     resetCarDamage((Car)entity);
+                    
                 }
                 else if (type == "Petrol")
                 {

@@ -86,6 +86,7 @@
     <None Include="Resources\sprites\powerups\petrolPowerup.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\powerup.wav" />
     <Content Include="Resources\sprites\testawesomeautosomg.png" />
     <Content Include="Resources\sprites\maps\testmap.png" />
   </ItemGroup>

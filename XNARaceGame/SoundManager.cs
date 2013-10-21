@@ -10,8 +10,19 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame {
-    public class SoundManager {
-        public SoundManager() {
+    public class SoundManager : Microsoft.Xna.Framework.Game
+    {
+        
+        private SoundEffect Pow { get; set; }
+        public SoundManager()
+        {
+            LoadContent();
+        }
+        protected virtual void override LoadContent()
+        {
+           
+            Pow = Content.Load<SoundEffect>("powerup.wav");
+     
         }
     }
 }
