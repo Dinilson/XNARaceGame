@@ -31,21 +31,11 @@ namespace XNARaceGame
 		
 		#region Update
 		public override bool update(double dt, InputManager inputManager)
-<<<<<<< HEAD
         {
             double tau = (double)Math.PI * 2; // tau = 2 * pi
-=======
-		{
-			/*rot %= (double)Math.PI * 2;
-			if (rot < 0) 
-			{
-				rot += (double)Math.PI * 2;
-			}
->>>>>>> b323c5d89f8e69db76d10e9662b3d9094fa6bfba
 
             rot %= tau;
 
-<<<<<<< HEAD
             if (rot < 0) 
             {
                 rot += tau;
@@ -53,18 +43,12 @@ namespace XNARaceGame
 
             double velocity = accel / dt;
 
-            coords.X += velocity * ((double)Math.Cos(vector.Y));
-            coords.Y += velocity * ((double)Math.Sin(vector.Y));
-            
-            return isAlive;
-        }
-=======
 			coords.X += velocity * ((double)Math.Cos(vector.Y));
 			coords.Y += velocity * ((double)Math.Sin(vector.Y));
-            */
+            
 			return isAlive;
 		}
->>>>>>> b323c5d89f8e69db76d10e9662b3d9094fa6bfba
+
 		#endregion
 
 		#region Render
