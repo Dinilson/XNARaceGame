@@ -1,61 +1,95 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Threading;
-using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Net;
+using Microsoft.Xna.Framework.Storage;
 
-namespace XNARaceGame
-{
-	public class GraphicsManager
-	{
-        public readonly static int DEFAULT_SCREEN_WIDTH = 800;
-        public readonly static int DEFAULT_SCREEN_HEIGHT = 600;
-        
-        public GraphicsDevice graphicsDevice { get; set; }
-        public GraphicsAdapter graphicsAdapter { get; set; }
-        public SpriteBatch spriteBatch { get; set; }
-        public PresentationParameters graphicsDeviceSettings { get; set; }
+namespace XNARaceGame {
+    public class GraphicsManager : Microsoft.Xna.Framework.Game {
 
-        private RaceGame game;
-        private Form form;
-        private int screenWidth;
-        private int screenHeight;
-
-        public GraphicsManager(RaceGame game)
-            : this(game, DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT) {
+        public static GraphicsDeviceManager graphicsManager = null;
+        public static SpriteBatch spriteBatch = null;
+        public static ContentManager content = null;
+        private static string remWindowsTitle = "";
+        public static string WindowsTitle {
+            get {
+                return remWindowsTitle;
+            }
         }
 
-		public GraphicsManager(RaceGame game, int screenWidth, int screenHeight)
-		{
-            this.screenWidth = screenWidth;
-            this.screenHeight = screenHeight;
+        public static GraphicsDevice Device {
+            get {
+                return graphicsManager.GraphicsDevice;
+            }
+        }
+
+        protected static int width, height;
+
+        public static int Width {
+            get { return width; }
+        }
+
+        public static int Height {
+            get { return height; }
+        }
+
+        public new static ContentManager Content {
+            get {
+                return content;
+            }
+        }
+
+        public RaceGame game { get; set; }
+
+        public GraphicsManager(RaceGame game, string setWindowsTitle) {
             this.game = game;
-            formInit(screenWidth, screenHeight);
-            graphicsAdapter = GraphicsAdapter.DefaultAdapter;
-            graphicsDeviceSettings = setupGraphicsDeviceSettings(new PresentationParameters(), this.form.Handle, screenWidth, screenHeight);
-            graphicsDevice = new GraphicsDevice(graphicsAdapter, GraphicsProfile.Reach, graphicsDeviceSettings); // Does not take three arguments. Needs a fix. It does take three arguments
-            spriteBatch = new SpriteBatch(graphicsDevice);
-            graphicsDevice.Clear(Color.Red);
-            Application.Run(form);
-		}
+            graphicsManager = new GraphicsDeviceManager(this);
 
-        private static PresentationParameters setupGraphicsDeviceSettings(PresentationParameters parameters, IntPtr handle, int screenWidth, int screenHeight) {
-            parameters.BackBufferWidth = screenWidth;
-            parameters.BackBufferHeight = screenHeight;
-            parameters.IsFullScreen = false;
-            parameters.DeviceWindowHandle = handle;
-            return parameters;
+            graphicsManager.PreferredBackBufferHeight = 600;
+            graphicsManager.PreferredBackBufferWidth = 800;
+
+            GraphicsManager.content = base.Content;
+            base.Content.RootDirectory = "Content";
+
+            this.Window.Title = setWindowsTitle;
+            remWindowsTitle = setWindowsTitle;
         }
 
-        private void formInit(int width, int height) {
-            form = new Form();
-            form.Width = width + 10;
-            form.Height = height + 10;
-            form.Text = "Gamez";
-            //Application.Run(form);
+        public GraphicsManager()
+            : this(new RaceGame(), "Xna2DRacer") {
         }
-	}
+
+        protected override void LoadContent() {
+            //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
+            base.LoadContent();
+        }
+
+        void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {
+            if (Environment.OSVersion.Platform != PlatformID.Win32NT) {
+                PresentationParameters presentParams =
+                    e.GraphicsDeviceInformation.PresentationParameters;
+
+                presentParams.RenderTargetUsage = RenderTargetUsage.PlatformContents;
+                if (graphicsManager.PreferredBackBufferHeight == 720) {
+                    presentParams.MultiSampleCount = 1;
+                } else {
+                    presentParams.MultiSampleCount = 1;
+                }
+            }
+        }
+
+        protected override void Initialize() {
+            base.Initialize();
+            spriteBatch = new SpriteBatch(Device);
+        }
+    }
 }
 

@@ -48,8 +48,8 @@ namespace XNARaceGame
 		#endregion
 
 		#region Render
-		public override void render(GraphicsManager graphicsManager)
-		{
+		public override void render(GraphicsManager graphicsManager) {
+            graphicsManager.GraphicsDevice.Clear(Color.Black);
 		}
 		#endregion
 		
