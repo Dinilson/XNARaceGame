@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -32,7 +33,7 @@ namespace XNARaceGame
 			map = new Map();
 			ui = new UI(this);
 			inputManager = new InputManager(this);
-			graphicsManager = new GraphicsManager(this);
+			graphicsManager = new GraphicsManager(this, "appeltaart");
             soundManager = new SoundManager();
             entitiesInit();
 		}
@@ -44,6 +45,7 @@ namespace XNARaceGame
 
 		private void render()
 		{
+            graphicsManager.GraphicsDevice.Clear(Color.Black);
 			map.render(graphicsManager);
 			foreach (Entity entity in entities)
 			{
@@ -71,13 +73,15 @@ namespace XNARaceGame
 		}
 
 		public void run()
-		{/*
+		{
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;
 			int lastTick = currentTick;
 			running = true;
+            graphicsManager.Run();
 			while (running)
 			{
+                GraphicsManager.Device.Clear(Color.Black);
 				do
 				{
 					update((currentTick - lastTick) / 1000);
@@ -85,7 +89,9 @@ namespace XNARaceGame
 				} while ((currentTick = Environment.TickCount) < nextTick);
 				render();
 				nextTick += 1000 / FPS;
-			}*/
+			}
+            Console.ReadLine();
 		}
+
 	}
 }
