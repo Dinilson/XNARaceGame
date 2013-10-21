@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
@@ -19,7 +19,7 @@ namespace XNARaceGame
         public PresentationParameters graphicsDeviceSettings { get; set; }
 
         private RaceGame game;
-        private Form form;
+        //private Form form;
         private int screenWidth;
         private int screenHeight;
 

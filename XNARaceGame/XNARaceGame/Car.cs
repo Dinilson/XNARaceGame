@@ -32,17 +32,20 @@ namespace XNARaceGame
         #region Update
         public override bool update(double dt, InputManager inputManager)
         {
-            /*rot %= (double)Math.PI * 2;
+            double tau = (double)Math.PI * 2;
+
+            rot %= tau;
+
             if (rot < 0) 
             {
-                rot += (double)Math.PI * 2;
+                rot += tau;
             }
 
             double velocity = accel / dt;
 
             coords.X += velocity * ((double)Math.Cos(vector.Y));
             coords.Y += velocity * ((double)Math.Sin(vector.Y));
-            */
+            
             return isAlive;
         }
         #endregion
