@@ -87,6 +87,7 @@ namespace XNARaceGame
 				render();
 				nextTick += 1000 / FPS;
 			}
+            Console.ReadLine();
 		}
 	}
 }
