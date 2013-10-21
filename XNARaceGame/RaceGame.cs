@@ -43,9 +43,9 @@ namespace XNARaceGame
             entities.Add(new Car(new Vector2(10, 10), 0));
         }
 
-		private void render()
+		public void render()
 		{
-            graphicsManager.GraphicsDevice.Clear(Color.Black);
+            GraphicsManager.Device.Clear(Color.Black);
 			map.render(graphicsManager);
 			foreach (Entity entity in entities)
 			{
@@ -56,7 +56,7 @@ namespace XNARaceGame
             ui.render(graphicsManager);
 		}
 
-		private void update(double dt)
+		public void update(double dt)
 		{
             if (!paused) {
                 inputManager.handleGameInput();
@@ -81,7 +81,6 @@ namespace XNARaceGame
             graphicsManager.Run();
 			while (running)
 			{
-                GraphicsManager.Device.Clear(Color.Black);
 				do
 				{
 					update((currentTick - lastTick) / 1000);
@@ -92,6 +91,5 @@ namespace XNARaceGame
 			}
             Console.ReadLine();
 		}
-
 	}
 }

@@ -90,6 +90,14 @@ namespace XNARaceGame {
             base.Initialize();
             spriteBatch = new SpriteBatch(Device);
         }
+
+        protected override void Draw(GameTime gameTime) {
+            game.render();
+        }
+
+        protected override void Update(GameTime gameTime) {
+            game.update((float)gameTime.ElapsedGameTime.TotalSeconds);
+        }
     }
 }
 
