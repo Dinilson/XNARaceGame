@@ -12,14 +12,16 @@ namespace XNARaceGame
 {
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
-        SoundEffect muz;
+        private SoundEffect Muz { get; set; }
+        private SoundEffect Pow { get; set; }
         public SoundManager()
         {
-
+            LoadContent();
         }
         protected virtual void LoadContent()
         {
-            muz = Content.Load<SoundEffect>("muziek1.wav");
+            Muz = Content.Load<SoundEffect>("muziek1.wav");
+            Pow = Content.Load<SoundEffect>("powerup.wav");
         }
 
     }
