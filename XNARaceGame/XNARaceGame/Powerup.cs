@@ -24,7 +24,7 @@ namespace XNARaceGame
 
         #region Constructor
         //constructor
-        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, hitbox, 0, true, true, false)
+        public Powerup(RaceGame game, bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", game, coords, hitbox, 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
@@ -76,7 +76,7 @@ namespace XNARaceGame
                 if (type == "Repair")
                 {
                     resetCarDamage((Car)entity);
-                    soundmanager.pow.Play();
+                    game.soundManager.playSound("powerup");
                 }
                 else if (type == "Petrol")
                 {

@@ -15,6 +15,7 @@ namespace XNARaceGame
 	{
 		#region Entity variables
 		public string name;
+        public RaceGame game { get; set; }
 		public Vector2 coords { get; set; }
 		public Vector2 velocity { get; set; }
         public Vector2 accel { get; set; }
@@ -27,9 +28,10 @@ namespace XNARaceGame
 		#endregion
 
 		#region Constructor class
-		public Entity(string name, Vector2 coords, Vector2 hitbox, double rot, bool isVisible, bool isCollidable, bool isActor)
+		public Entity(string name, RaceGame game, Vector2 coords, Vector2 hitbox, double rot, bool isVisible, bool isCollidable, bool isActor)
 		{
 			this.name = name;
+            this.game = game;
 			this.coords = coords;
 			this.velocity = new Vector2(0, 0);
             this.accel = new Vector2(0, 0);
