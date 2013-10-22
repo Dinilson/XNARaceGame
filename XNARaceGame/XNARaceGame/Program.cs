@@ -1,15 +1,16 @@
-using System;
+﻿using System;
 using System.Threading;
 
 namespace XNARaceGame
 {
-    static class Program
+    class Program
     {
         static void Main(string[] args)
         {
             RaceGame game = new RaceGame();
-            Thread t = new Thread(game.run);
-            t.Start();
+            //Thread gameLoop = new Thread(game.run);
+            //gameLoop.Start();
+            game.run();
         }
     }
 }

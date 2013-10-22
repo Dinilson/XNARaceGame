@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -11,20 +11,19 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-    class Powerup : Entity
+	class Powerup : Entity 
     {
 
         #region Attributes
         public readonly static int TIMEOUT = 1000;
-        public bool isActive { get; set; }
-        public string type { get; set; }
-        public int timer { get; set; }
+        public bool isActive {get; set;} 
+        public string type {get; set;} 
+        public int timer {get; set;}
         #endregion
 
         #region Constructor
         //constructor
-        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox)
-            : base("Powerup", coords, hitbox, 0, true, true, false)
+        public Powerup(bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", coords, hitbox, 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
@@ -39,7 +38,7 @@ namespace XNARaceGame
         }
         #endregion
 
-        #region Refuelpowerup
+        #region Refuelpowerup 
         public void resetCarPetrol(Car car) //de refuel functie
         {
             car.Petrol = 100;
@@ -56,14 +55,14 @@ namespace XNARaceGame
             }
 
             return isAlive;
-            // More to be updated I guess?
+			// More to be updated I guess?
         }
         #endregion
 
         #region Render
         public override void render(GraphicsManager graphicsManager)
         {
-            // Nothing is rendered here.
+			// Nothing is rendered here.
         }
         #endregion
 
@@ -76,6 +75,7 @@ namespace XNARaceGame
                 if (type == "Repair")
                 {
                     resetCarDamage((Car)entity);
+                    
                 }
                 else if (type == "Petrol")
                 {
@@ -85,7 +85,7 @@ namespace XNARaceGame
                 isVisible = false;
                 timer = Environment.TickCount + TIMEOUT;
 
-
+                
             }
         }
         #endregion

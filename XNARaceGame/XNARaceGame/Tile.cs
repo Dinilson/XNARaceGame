@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 
 namespace XNARaceGame
 {
-    public class Tile
-    {
-        public Tile()
-        {
-        }
-    }
+	public class Tile
+	{
+		public Tile()
+		{
+		}
+	}
 }
 
