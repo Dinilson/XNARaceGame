@@ -47,7 +47,7 @@ namespace XNARaceGame
         #endregion
 
         #region Update
-        public override bool update(double dt, InputManager inputManager) // update functie
+        public override bool update(float dt, InputManager inputManager) // update functie
         {
             if (timer > -1 && Environment.TickCount >= timer)
             {

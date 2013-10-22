@@ -56,7 +56,7 @@ namespace XNARaceGame
             ui.render(graphicsManager);
 		}
 
-		public void update(double dt)
+		public void update(float dt)
 		{
             if (!paused) {
                 inputManager.handleGameInput();

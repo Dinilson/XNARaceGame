@@ -32,7 +32,7 @@ namespace XNARaceGame {
         }
 
         private void loadContent(string name) {
-            sounds.Add(name, Content.Load<SoundEffect>(name));
+                sounds.Add(name, Content.Load<SoundEffect>(name));
         }
 
         public void playSound(string name) {

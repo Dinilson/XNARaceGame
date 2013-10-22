@@ -26,7 +26,7 @@ namespace XNARaceGame
         {
         }
 
-        public override bool update(double dt, InputManager inputManager) {
+        public override bool update(float dt, InputManager inputManager) {
             return isAlive;
         }
 

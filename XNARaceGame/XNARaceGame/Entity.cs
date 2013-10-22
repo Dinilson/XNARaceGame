@@ -43,7 +43,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region update
-        public abstract bool update(double dt, InputManager inputManager);
+        public abstract bool update(float dt, InputManager inputManager);
 		#endregion
 
 		#region render
