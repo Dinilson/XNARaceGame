@@ -30,24 +30,22 @@ namespace XNARaceGame
 		#endregion
 		
 		#region Update
-		public override bool update(double dt, InputManager inputManager)
+		public override bool update(float dt, InputManager inputManager)
         {
-            double tau = (double)Math.PI * 2; // tau = 2 * pi
+            /*double tau = (double)Math.PI * 2; // tau = 2 * pi
 
             rot %= tau;
 
             if (rot < 0) 
             {
                 rot += tau;
-            }
+            }*/ // Maybe useless code who knows?
 
-            double velocity = accel * dt;
+            // Define accel with inputManager here
 
-            coords = Vector2.Add(coords, Vector2.Multiply(vector, (float)velocity));
+            velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
 
-			//coords.Add((float)(velocity * ((double)Math.Cos(vector.Y)));
-			//coords.Y += (float)(velocity * ((double)Math.Sin(vector.Y));
-            
+            coords = Vector2.Add(Vector2.Multiply(velocity, dt), coords); // s = (v * dt) + s. (v * dt = s)
 			return isAlive;
 		}
 

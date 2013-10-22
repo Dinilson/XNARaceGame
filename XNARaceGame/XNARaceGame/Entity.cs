@@ -16,9 +16,9 @@ namespace XNARaceGame
 		#region Entity variables
 		public string name;
 		public Vector2 coords { get; set; }
-		public Vector2 vector { get; set; }
+		public Vector2 velocity { get; set; }
+        public Vector2 accel { get; set; }
 		public double rot { get; set; }
-		public double accel { get; set; }
 		public Vector2 hitbox { get; set; }
 		public bool isVisible { get; set; }
 		public bool isCollidable { get; set; }
@@ -31,9 +31,9 @@ namespace XNARaceGame
 		{
 			this.name = name;
 			this.coords = coords;
-			this.vector = new Vector2(0, 0);
+			this.velocity = new Vector2(0, 0);
+            this.accel = new Vector2(0, 0);
 			this.rot = rot;
-			this.accel = 0;
 			this.hitbox = hitbox;
 			this.isVisible = isVisible;
 			this.isCollidable = isCollidable;
