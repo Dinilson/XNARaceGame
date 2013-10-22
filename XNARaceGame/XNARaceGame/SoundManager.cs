@@ -14,9 +14,11 @@ namespace XNARaceGame {
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
         public SoundEffect pow { get; set; }
+        public Dictionary<string, SoundEffect> sounds { get; set; }
 
         public SoundManager()
         {
+            sounds = new Dictionary<string, SoundEffect>();
             base.Content.RootDirectory = "Content";
             LoadContent();
         }
@@ -27,10 +29,16 @@ namespace XNARaceGame {
            
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
-            pow = Content.Load<SoundEffect>("powerup");
-
+            loadContent("powerup");
         }
 
+        private void loadContent(string name) {
+            sounds.Add(name, Content.Load<SoundEffect>(name));
+        }
+
+        public void playSound(string name) {
+            sounds[name].Play();
+        }
        
     }
 }
