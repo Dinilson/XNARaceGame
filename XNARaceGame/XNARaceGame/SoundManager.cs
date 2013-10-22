@@ -14,7 +14,7 @@ namespace XNARaceGame {
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
         public SoundEffect pow { get; set; }
-        public Dictionary<string, SoundEffect> sounds { get; set; }
+        private Dictionary<string, SoundEffect> sounds;
 
         public SoundManager()
         {
@@ -26,7 +26,6 @@ namespace XNARaceGame {
 
         protected override void LoadContent()
         {
-           
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
             loadContent("powerup");
@@ -39,6 +38,5 @@ namespace XNARaceGame {
         public void playSound(string name) {
             sounds[name].Play();
         }
-       
     }
 }
