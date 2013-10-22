@@ -23,6 +23,7 @@ namespace XNARaceGame {
                 return remWindowsTitle;
             }
         }
+        
 
         public static GraphicsDevice Device {
             get {
@@ -69,6 +70,8 @@ namespace XNARaceGame {
         protected override void LoadContent() {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
+          
+
         }
 
         void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {
