@@ -19,6 +19,7 @@ namespace XNARaceGame
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
+        SoundManager soundmanager;
         #endregion
 
         #region Constructor
@@ -75,11 +76,12 @@ namespace XNARaceGame
                 if (type == "Repair")
                 {
                     resetCarDamage((Car)entity);
-                    
+                    soundmanager.pow.Play();
                 }
                 else if (type == "Petrol")
                 {
                     resetCarPetrol((Car)entity);
+                    soundmanager.pow.Play();
                 }
                 isActive = false;
                 isVisible = false;

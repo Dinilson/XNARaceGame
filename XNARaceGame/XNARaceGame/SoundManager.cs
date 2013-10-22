@@ -8,22 +8,29 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Storage;
 
 namespace XNARaceGame {
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
-        private SoundEffect Pow { get; set; }
+        public SoundEffect pow { get; set; }
 
         public SoundManager()
         {
+            base.Content.RootDirectory = "Content";
             LoadContent();
         }
+       
 
-        /*protected virtual void override LoadContent()
+        protected override void LoadContent()
         {
            
-            Pow = Content.Load<SoundEffect>("powerup.wav");
-     
-        }*/
+            //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
+            base.LoadContent();
+            pow = Content.Load<SoundEffect>("powerup");
+
+        }
+
+       
     }
 }
