@@ -40,7 +40,7 @@ namespace XNARaceGame
 
         private void entitiesInit() {
             entities = new List<Entity>();
-            entities.Add(new Car(new Vector2(10, 10), 0));
+            entities.Add(new Car(this, new Vector2(10, 10), 0));
         }
 
 		public void render()
