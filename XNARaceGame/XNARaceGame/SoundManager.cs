@@ -17,6 +17,7 @@ namespace XNARaceGame
 
         private Dictionary<string, SoundEffect> sounds;// een dictionairy voor de geluidseffecten
         private Dictionary<string, Song> songs; // dictionary voor muziek
+
         public SoundManager()// constructor
         {
             sounds = new Dictionary<string, SoundEffect>();
@@ -52,7 +53,7 @@ namespace XNARaceGame
         }
         public void playSong(string name)
         {
-            
+            sounds[name].Play();
         }
     }
 }

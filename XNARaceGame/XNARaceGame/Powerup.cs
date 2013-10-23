@@ -81,7 +81,7 @@ namespace XNARaceGame
                 else if (type == "Petrol")
                 {
                     resetCarPetrol((Car)entity);
-                    soundmanager.pow.Play();
+                    game.soundManager.playSound("powerup");
                 }
                 isActive = false;
                 isVisible = false;
