@@ -10,34 +10,49 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Storage;
 
-namespace XNARaceGame {
+namespace XNARaceGame
+{
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
-        public SoundEffect pow { get; set; }//variabelen aanmaken
-        private Dictionary<string, SoundEffect> sounds;// een dictionairy voor de geluidseffecten
 
+        private Dictionary<string, SoundEffect> sounds;// een dictionairy voor de geluidseffecten
+        private Dictionary<string, Song> songs; // dictionary voor muziek
         public SoundManager()// constructor
         {
             sounds = new Dictionary<string, SoundEffect>();
+            songs = new Dictionary<string, Song>();
             base.Content.RootDirectory = "Content";
             LoadContent();
         }
-       
+
 
         protected override void LoadContent()// methode om geluiden te maken
         {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
-            loadContent("powerup");
-            loadContent("menumuz");
+            loadsoundContent("powerup");
+            loadmuzContent("menumuz");
         }
 
-        private void loadContent(string name) {
-                sounds.Add(name, Content.Load<SoundEffect>(name));
+        private void loadsoundContent(string name)
+        {
+            sounds.Add(name, Content.Load<SoundEffect>(name));
+
         }
 
-        public void playSound(string name) {
+        private void loadmuzContent(string name)
+        {
+            songs.Add(name, Content.Load<Song>(name));
+
+        }
+        public void playSound(string name)
+        {
             sounds[name].Play();
+
+        }
+        public void playSong(string name)
+        {
+            
         }
     }
 }
