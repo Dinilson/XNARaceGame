@@ -10,6 +10,7 @@ namespace XNARaceGame
             RaceGame game = new RaceGame();
             //Thread gameLoop = new Thread(game.run);
             //gameLoop.Start();
+            
             game.run();
             
         }
