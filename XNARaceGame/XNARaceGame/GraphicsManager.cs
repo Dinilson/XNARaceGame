@@ -97,6 +97,8 @@ namespace XNARaceGame {
 
         protected override void Draw(GameTime gameTime) {
             game.render();
+            
+           
         }
 
         protected override void Update(GameTime gameTime) {

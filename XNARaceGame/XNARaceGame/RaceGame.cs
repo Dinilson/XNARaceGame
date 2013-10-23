@@ -43,18 +43,19 @@ namespace XNARaceGame
             entities.Add(new Car(this, new Vector2(10, 10), 0));
         }
 
-		public void render()
-		{
+        public void render()
+        {
             GraphicsManager.Device.Clear(Color.Black);
-			map.render(graphicsManager);
-			foreach (Entity entity in entities)
-			{
-                if (entity.isVisible) {
+            map.render(graphicsManager);
+            foreach (Entity entity in entities)
+            {
+                if (entity.isVisible)
+                {
                     entity.render(graphicsManager);
                 }
-			}
+            }
             ui.render(graphicsManager);
-		}
+        }
 
 		public void update(float dt)
 		{

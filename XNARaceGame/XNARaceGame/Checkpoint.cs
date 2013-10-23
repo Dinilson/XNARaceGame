@@ -35,7 +35,7 @@ namespace XNARaceGame
 
         }
 
-        public void 
+        
 
         public override void render(GraphicsManager graphicsManager)
         {
