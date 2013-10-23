@@ -13,10 +13,10 @@ using Microsoft.Xna.Framework.Storage;
 namespace XNARaceGame {
     public class SoundManager : Microsoft.Xna.Framework.Game
     {
-        public SoundEffect pow { get; set; }
-        private Dictionary<string, SoundEffect> sounds;
+        public SoundEffect pow { get; set; }//variabelen aanmaken
+        private Dictionary<string, SoundEffect> sounds;// een dictionairy voor de geluidseffecten
 
-        public SoundManager()
+        public SoundManager()// constructor
         {
             sounds = new Dictionary<string, SoundEffect>();
             base.Content.RootDirectory = "Content";
@@ -24,11 +24,12 @@ namespace XNARaceGame {
         }
        
 
-        protected override void LoadContent()
+        protected override void LoadContent()// methode om geluiden te maken
         {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
             loadContent("powerup");
+            loadContent("menumuz");
         }
 
         private void loadContent(string name) {
