@@ -53,7 +53,7 @@ namespace XNARaceGame
         }
         public void playSong(string name)
         {
-            sounds[name].Play();
+            MediaPlayer.Play(songs[name]);
         }
     }
 }
