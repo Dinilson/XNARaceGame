@@ -23,6 +23,7 @@ namespace XNARaceGame {
                 return remWindowsTitle;
             }
         }
+        Texture2D testmap;
         
 
         public static GraphicsDevice Device {
@@ -70,6 +71,7 @@ namespace XNARaceGame {
         protected override void LoadContent() {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
+            testmap = Content.Load<Texture2D>("testmap");
           
 
         }
