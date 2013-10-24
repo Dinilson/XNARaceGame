@@ -19,7 +19,7 @@ namespace XNARaceGame
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
-        SoundManager soundmanager;
+        //SoundManager soundManager;
         #endregion
 
         #region Constructor
@@ -36,6 +36,7 @@ namespace XNARaceGame
         public void resetCarDamage(Car car) //de heal methode
         {
             car.Damage = 0;
+            
         }
         #endregion
 

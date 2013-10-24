@@ -14,7 +14,7 @@ using Microsoft.Xna.Framework.Storage;
 namespace XNARaceGame {
     public class GraphicsManager : Microsoft.Xna.Framework.Game {
 
-        public static GraphicsDeviceManager graphicsManager = null;
+        public static GraphicsDeviceManager graphicsDeviceManager = null;
         public static SpriteBatch spriteBatch = null;
         public static ContentManager content = null;
         private static string remWindowsTitle = "";
@@ -23,12 +23,12 @@ namespace XNARaceGame {
                 return remWindowsTitle;
             }
         }
-        Texture2D testmap;
+        
         
 
         public static GraphicsDevice Device {
             get {
-                return graphicsManager.GraphicsDevice;
+                return graphicsDeviceManager.GraphicsDevice;
             }
         }
 
@@ -52,10 +52,10 @@ namespace XNARaceGame {
 
         public GraphicsManager(RaceGame game, string setWindowsTitle) {
             this.game = game;
-            graphicsManager = new GraphicsDeviceManager(this);
+            graphicsDeviceManager = new GraphicsDeviceManager(this);
 
-            graphicsManager.PreferredBackBufferHeight = 600;
-            graphicsManager.PreferredBackBufferWidth = 800;
+            graphicsDeviceManager.PreferredBackBufferHeight = 600;
+            graphicsDeviceManager.PreferredBackBufferWidth = 800;
 
             GraphicsManager.content = base.Content;
             base.Content.RootDirectory = "Content";
@@ -71,8 +71,7 @@ namespace XNARaceGame {
         protected override void LoadContent() {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
             base.LoadContent();
-            testmap = Content.Load<Texture2D>("testmap");
-          
+           
 
         }
 
@@ -82,7 +81,7 @@ namespace XNARaceGame {
                     e.GraphicsDeviceInformation.PresentationParameters;
 
                 presentParams.RenderTargetUsage = RenderTargetUsage.PlatformContents;
-                if (graphicsManager.PreferredBackBufferHeight == 720) {
+                if (graphicsDeviceManager.PreferredBackBufferHeight == 720) {
                     presentParams.MultiSampleCount = 1;
                 } else {
                     presentParams.MultiSampleCount = 1;
@@ -97,6 +96,7 @@ namespace XNARaceGame {
 
         protected override void Draw(GameTime gameTime) {
             game.render();
+            base.Draw(gameTime);
             
            
         }

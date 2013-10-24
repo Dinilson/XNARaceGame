@@ -14,7 +14,7 @@ namespace XNARaceGame
 {
 	public class RaceGame
 	{
-		private readonly static int FPS = 60;
+		//private readonly static int FPS = 60;
 
         public InputManager inputManager { get; set; }
         public GraphicsManager graphicsManager { get; set; }
@@ -25,7 +25,7 @@ namespace XNARaceGame
 		public bool running { get; set; }
         public bool paused { get; set; }
 
-		private int nextTick;
+		//private int nextTick;
 
 		public RaceGame()
 		{
