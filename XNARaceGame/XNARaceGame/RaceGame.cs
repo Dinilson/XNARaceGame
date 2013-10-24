@@ -45,7 +45,7 @@ namespace XNARaceGame
 
         public void render()
         {
-            GraphicsManager.Device.Clear(Color.Black);
+           //GraphicsManager.Device.Clear(Color.Black);
             map.render(graphicsManager);
             foreach (Entity entity in entities)
             {
@@ -59,8 +59,10 @@ namespace XNARaceGame
 
 		public void update(float dt)
 		{
+            inputManager.update();
+            inputManager.handleGameInput();
             if (!paused) {
-                inputManager.handleGameInput();
+                
 
                 CollisionManager.CheckMapCollisions(dt, map, entities);
                 CollisionManager.CheckEntityCollisions(dt, entities);
