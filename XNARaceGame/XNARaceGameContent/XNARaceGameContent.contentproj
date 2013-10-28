@@ -52,11 +52,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="healPowerup.png">
-      <Name>healPowerup</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="petrolpowerup.png">
       <Name>petrolpowerup</Name>
       <Importer>TextureImporter</Importer>
@@ -83,6 +78,13 @@
   <ItemGroup>
     <Compile Include="racetrackv2.png">
       <Name>racetrackv2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="healPowerup.png">
+      <Name>healPowerup</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
