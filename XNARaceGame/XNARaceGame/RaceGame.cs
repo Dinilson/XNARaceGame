@@ -77,7 +77,7 @@ namespace XNARaceGame
             }
         }
 
-        protected override void Draw()
+        protected override void Draw(GameTime gameTime)
         {
            //Device.Clear(Color.Black);
             map.render(this);
