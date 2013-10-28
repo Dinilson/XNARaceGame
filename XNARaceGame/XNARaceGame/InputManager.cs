@@ -14,23 +14,18 @@ namespace XNARaceGame
 {
 	public class InputManager
 	{
-        /*
-        public List<char> keyMap { get; set; }
-        */
-        private RaceGame game;
-        public KeyboardState currentKeyState;
+        public KeyboardState currentKeyState { get; set; }
 
 		public InputManager(RaceGame game)
 		{
-            this.game = game;
+            currentKeyState = new KeyboardState();
 		}
        
-
-        public void handleGameInput() {
+        public void handleGameInput(RaceGame game) {
 
             if (currentKeyState.IsKeyDown(Keys.W)) 
             {
-                //up
+                game.graphicsManager.GraphicsDevice.Clear(Color.Red);
             }
 
             if (currentKeyState.IsKeyDown(Keys.A))
@@ -51,9 +46,7 @@ namespace XNARaceGame
             if (currentKeyState.IsKeyDown(Keys.P))
             {
                 game.paused = !game.paused;
-            }
-
-           
+            }  
         }
         public void update()
         {

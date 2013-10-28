@@ -28,6 +28,7 @@ namespace XNARaceGame
         public List<Entity> entities { get; set; }
 		public bool running { get; set; }
         public bool paused { get; set; }
+        public float scale { get; set; }
 
 		//private int nextTick;
 
@@ -42,6 +43,8 @@ namespace XNARaceGame
             graphicsManager = new GraphicsDeviceManager(this);
             graphicsManager.PreferredBackBufferWidth = SCREEN_WIDTH;
             graphicsManager.PreferredBackBufferHeight = SCREEN_HEIGHT;
+
+            scale = 2.0f;
 
             content = base.Content;
             content.RootDirectory = "Content";
@@ -101,7 +104,7 @@ namespace XNARaceGame
 		{
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
             inputManager.update();
-            inputManager.handleGameInput();
+            inputManager.handleGameInput(this);
             if (!paused) {
                 
 
