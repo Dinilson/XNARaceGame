@@ -26,7 +26,7 @@ namespace XNARaceGame
 
         #region Constructor
         //constructor
-        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(50, 50), 0, true, true, false)
+        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(50*game.scale, 50*game.scale), 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
