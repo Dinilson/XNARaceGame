@@ -15,8 +15,8 @@ namespace XNARaceGame
 	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
 		private readonly static String TITLE_NAME = "appeltaart";
-        private readonly static int SCREEN_WIDTH = 800;
-        private readonly static int SCREEN_HEIGHT = 600;
+        private readonly static int SCREEN_WIDTH = 1280;
+        private readonly static int SCREEN_HEIGHT = 720;
 
         public InputManager inputManager { get; set; }
         public GraphicsDeviceManager graphicsManager { get; set; }
