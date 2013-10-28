@@ -23,8 +23,6 @@ namespace XNARaceGame
 		public bool running { get; set; }
         public bool paused { get; set; }
 
-		//private int nextTick;
-
 		public RaceGame()
 		{
 			running = false;
@@ -32,7 +30,7 @@ namespace XNARaceGame
 			ui = new UI(this);
 			inputManager = new InputManager(this);
             graphicsManager = new GraphicsManager(this);
-            soundManager = new SoundManager();
+            soundManager = new SoundManager(this);
 
             content = base.Content;
             content.RootDirectory = "Content";
@@ -52,6 +50,7 @@ namespace XNARaceGame
 
         protected override void LoadContent() {
             graphicsManager.loadContent();
+            soundManager.loadContent();
             entitiesInit();
         }
 

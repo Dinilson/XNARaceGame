@@ -12,38 +12,35 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace XNARaceGame
 {
-    public class SoundManager : Microsoft.Xna.Framework.Game
+    public class SoundManager
     {
-
+        private RaceGame game;
         private Dictionary<string, SoundEffect> sounds;// een dictionairy voor de geluidseffecten
         private Dictionary<string, Song> songs; // dictionary voor muziek
 
-        public SoundManager()// constructor
+        public SoundManager(RaceGame game)// constructor
         {
+            this.game = game;
             sounds = new Dictionary<string, SoundEffect>();
             songs = new Dictionary<string, Song>();
-            base.Content.RootDirectory = "Content";
-            LoadContent();
         }
 
 
-        protected override void LoadContent()// methode om geluiden te maken
+        protected void loadContent()// methode om geluiden te maken
         {
-            //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
-            base.LoadContent();
-            loadsoundContent("powerup");
-            loadmuzContent("menumuz");
+            loadSoundContent("powerup");
+            loadMusicContent("menumuz");
         }
 
-        private void loadsoundContent(string name)
+        private void loadSoundContent(string name)
         {
-            sounds.Add(name, Content.Load<SoundEffect>(name));
+            sounds.Add(name, game.content.Load<SoundEffect>(name));
 
         }
 
-        private void loadmuzContent(string name)
+        private void loadMusicContent(string name)
         {
-            songs.Add(name, Content.Load<Song>(name));
+            songs.Add(name, game.content.Load<Song>(name));
 
         }
         public void playSound(string name)
