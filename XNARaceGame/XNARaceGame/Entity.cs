@@ -49,7 +49,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region render
-        public abstract void render(GraphicsManager graphicsManager);
+        public abstract void render();
 		#endregion
 		
 		#region entityCollision

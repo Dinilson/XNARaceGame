@@ -23,7 +23,7 @@ namespace XNARaceGame
         
 
       
-        public void render(GraphicsManager graphicsManager)
+        public void render()
         {
            
            GraphicsManager.spriteBatch.Begin();

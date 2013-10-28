@@ -26,7 +26,7 @@ namespace XNARaceGame
         #endregion
 
         #region render
-        public override void render(GraphicsManager graphicsManager)
+        public override void render()
         {
         }
         #endregion
