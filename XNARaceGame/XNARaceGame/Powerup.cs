@@ -82,7 +82,6 @@ namespace XNARaceGame
         #region Entitycollision
         public override void entityCollision(Entity entity) // collision detectie voor andere entities
         {
-
             if (entity.name == "Car" && isActive)
             {
                 if (type == "Repair")
@@ -98,8 +97,6 @@ namespace XNARaceGame
                 isActive = false;
                 isVisible = false;
                 timer = Environment.TickCount + TIMEOUT;
-
-                
             }
         }
         #endregion
