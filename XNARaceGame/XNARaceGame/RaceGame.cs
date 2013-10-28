@@ -79,12 +79,9 @@ namespace XNARaceGame
 
         protected override void Draw(GameTime gameTime)
         {
-<<<<<<< HEAD
             graphicsManager.GraphicsDevice.Clear(Color.Black);
-=======
            //Device.Clear(Color.Black);
             spriteBatch.Begin();
->>>>>>> ad068e8f355aabb9b6a193d7c89df6e0828da4fa
             map.render(this);
             foreach (Entity entity in entities)
             {
