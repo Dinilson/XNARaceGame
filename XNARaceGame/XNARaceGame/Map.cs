@@ -24,7 +24,7 @@ namespace XNARaceGame
         {
            
            //game.spriteBatch.Begin();
-           game.spriteBatch.Draw(game.content.Load<Texture2D>("testmap"), new Rectangle(0, 0, 800, 600),Color.White);
+           game.spriteBatch.Draw(game.content.Load<Texture2D>("racetrackv2"), new Rectangle(0, 0, 800, 600),Color.White);
            //game.spriteBatch.End();
             
         }
