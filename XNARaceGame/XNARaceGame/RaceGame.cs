@@ -57,7 +57,7 @@ namespace XNARaceGame
 
         protected override void Draw(GameTime gameTime)
         {
-            graphicsManager.graphicsDeviceManager.GraphicsDevice.Clear(Color.Black);
+            graphicsManager.clearScreen(Color.Black);
             graphicsManager.spriteBatch.Begin();
             map.render(graphicsManager);
             foreach (Entity entity in entities)

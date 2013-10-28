@@ -60,5 +60,9 @@ namespace XNARaceGame {
         public void drawSprite(string name, int x, int y, int dx, int dy) {
             spriteBatch.Draw(sprites[name], new Rectangle(x, y, (int)(dx * SCALE), (int)(dy * SCALE)), Color.White);
         }
+
+        public void clearScreen(Color color) {
+            graphicsDeviceManager.GraphicsDevice.Clear(color);
+        }
     }
 }

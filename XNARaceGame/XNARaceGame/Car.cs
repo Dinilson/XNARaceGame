@@ -14,7 +14,6 @@ namespace XNARaceGame
 	class Car : Entity
 	{
 		#region Attributes
-		//image = imagefile (needs work later)
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
