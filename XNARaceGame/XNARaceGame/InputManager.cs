@@ -52,6 +52,7 @@ namespace XNARaceGame
         public void update()
         {
             currentKeyState = Keyboard.GetState();
+
         }
 	}
 }
