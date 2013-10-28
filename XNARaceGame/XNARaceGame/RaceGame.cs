@@ -51,12 +51,13 @@ namespace XNARaceGame
 
             this.Window.Title = TITLE_NAME;
 
-            entitiesInit();
+            //entitiesInit();
 		}
 
         private void entitiesInit() {
             entities = new List<Entity>();
             entities.Add(new Car(this, new Vector2(10, 10), 0));
+            entities.Add(new Powerup(this, "Repair", true, new Vector2(50, 50)));
         }
 
         protected override void Initialize() {
@@ -66,7 +67,8 @@ namespace XNARaceGame
 
         protected override void LoadContent() {
             //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
-            base.LoadContent();
+            entitiesInit();
+            //base.LoadContent();
         }
 
         void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {

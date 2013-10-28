@@ -26,7 +26,7 @@ namespace XNARaceGame
 
         #region Constructor
         //constructor
-        public Powerup(RaceGame game, bool isActive, string type, int timer, Vector2 coords, Vector2 hitbox) : base("Powerup", game, coords, hitbox, 0, true, true, false)
+        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(50, 50), 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
@@ -75,7 +75,7 @@ namespace XNARaceGame
             else if (type == "Repair") {
                 texture = healTexture;
             }
-            game.spriteBatch.Draw(texture, new Rectangle(200, 200, 50, 50), Color.White);
+            game.spriteBatch.Draw(texture, new Rectangle((int)coords.X, (int)coords.Y, (int)(50*game.scale), (int)(50*game.scale)), Color.White);
         }
         #endregion
 
