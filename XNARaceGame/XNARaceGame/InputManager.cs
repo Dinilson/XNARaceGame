@@ -18,7 +18,7 @@ namespace XNARaceGame
 
 		public InputManager(RaceGame game)
 		{
-            currentKeyState = new KeyboardState();
+            currentKeyState = Keyboard.GetState();
 		}
        
         public void handleGameInput(RaceGame game) {
