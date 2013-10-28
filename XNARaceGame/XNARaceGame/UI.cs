@@ -11,8 +11,8 @@ namespace XNARaceGame
             this.game = game;
 		}
 
-        public bool render(RaceGame game) {
-            return false;
+        public void render(RaceGame game) {
+            
         }
 	}
 }
