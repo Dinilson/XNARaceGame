@@ -35,7 +35,7 @@ namespace XNARaceGame
 
             if (currentKeyState.IsKeyDown(Keys.S))
             {
-                // Backward
+                // Backward 
             }
 
             if (currentKeyState.IsKeyDown(Keys.D))
