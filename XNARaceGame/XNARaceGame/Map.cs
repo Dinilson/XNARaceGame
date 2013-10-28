@@ -20,13 +20,9 @@ namespace XNARaceGame
 		{
         }
         
-        public void render(RaceGame game)
+        public void render(GraphicsManager graphicsManager)
         {
-           
-           //game.spriteBatch.Begin();
-           game.spriteBatch.Draw(game.content.Load<Texture2D>("racetrackv2"), new Rectangle(0, 0, 1280, 720),Color.White);
-           //game.spriteBatch.End();
-            
+            graphicsManager.drawSprite("Map_001", 0, 0, 800, 600);
         }
 
 	}

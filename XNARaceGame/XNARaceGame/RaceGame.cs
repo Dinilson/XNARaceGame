@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -14,21 +13,15 @@ namespace XNARaceGame
 {
 	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
-		private readonly static String TITLE_NAME = "appeltaart";
-        private readonly static int SCREEN_WIDTH = 1280;
-        private readonly static int SCREEN_HEIGHT = 720;
-
         public InputManager inputManager { get; set; }
-        public GraphicsDeviceManager graphicsManager { get; set; }
         public ContentManager content { get; set; }
-        public SpriteBatch spriteBatch { get; set; }
+        public GraphicsManager graphicsManager { get; set; }
         public SoundManager soundManager { get; set; }
         public UI ui { get; set; }
         public Map map { get; set; }
         public List<Entity> entities { get; set; }
 		public bool running { get; set; }
         public bool paused { get; set; }
-        public float scale { get; set; }
 
 		//private int nextTick;
 
@@ -38,20 +31,11 @@ namespace XNARaceGame
 			map = new Map();
 			ui = new UI(this);
 			inputManager = new InputManager(this);
+            graphicsManager = new GraphicsManager(this);
             soundManager = new SoundManager();
-
-            graphicsManager = new GraphicsDeviceManager(this);
-            graphicsManager.PreferredBackBufferWidth = SCREEN_WIDTH;
-            graphicsManager.PreferredBackBufferHeight = SCREEN_HEIGHT;
-
-            scale = 2.0f;
 
             content = base.Content;
             content.RootDirectory = "Content";
-
-            this.Window.Title = TITLE_NAME;
-
-            //entitiesInit();
 		}
 
         private void entitiesInit() {
@@ -63,44 +47,28 @@ namespace XNARaceGame
 
         protected override void Initialize() {
             base.Initialize();
-            spriteBatch = new SpriteBatch(graphicsManager.GraphicsDevice);
+            graphicsManager.initialize();
         }
 
         protected override void LoadContent() {
-            //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
+            graphicsManager.loadContent();
             entitiesInit();
-            //base.LoadContent();
-        }
-
-        void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {
-            if (Environment.OSVersion.Platform != PlatformID.Win32NT) {
-                PresentationParameters presentParams =
-                    e.GraphicsDeviceInformation.PresentationParameters;
-
-                presentParams.RenderTargetUsage = RenderTargetUsage.PlatformContents;
-                if (graphicsManager.PreferredBackBufferHeight == 720) {
-                    presentParams.MultiSampleCount = 1;
-                } else {
-                    presentParams.MultiSampleCount = 1;
-                }
-            }
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            graphicsManager.GraphicsDevice.Clear(Color.Black);
-           //Device.Clear(Color.Black);
-            spriteBatch.Begin();
-            map.render(this);
+            graphicsManager.graphicsDeviceManager.GraphicsDevice.Clear(Color.Black);
+            graphicsManager.spriteBatch.Begin();
+            map.render(graphicsManager);
             foreach (Entity entity in entities)
             {
                 if (entity.isVisible)
                 {
-                    entity.render(this);  
+                    entity.render(graphicsManager);  
                 }
             }
-            ui.render(this);
-            spriteBatch.End();
+            ui.render(graphicsManager);
+            graphicsManager.spriteBatch.End();
         }
 
 		protected override void Update(GameTime gameTime)
@@ -109,12 +77,9 @@ namespace XNARaceGame
             inputManager.update();
             inputManager.handleGameInput(this);
             if (!paused) {
-                
-
-                CollisionManager.CheckMapCollisions(dt, map, entities);
-                CollisionManager.CheckEntityCollisions(dt, entities);
-
                 foreach (Entity entity in entities) {
+                    CollisionManager.CheckMapCollisions(entity, map, dt);
+                    CollisionManager.CheckEntityCollisions(entity, entities, dt);
                     if (!entity.update(dt, inputManager)) {
                         entities.Remove(entity);
                     }
@@ -124,7 +89,6 @@ namespace XNARaceGame
 
 		public void run()
 		{
-            //graphicsManager.Run();
             /*
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;

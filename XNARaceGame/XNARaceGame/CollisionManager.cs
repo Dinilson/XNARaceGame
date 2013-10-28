@@ -5,23 +5,20 @@ namespace XNARaceGame
 {
 	class CollisionManager
 	{
-		public static void CheckMapCollisions(double dt, Map map, List<Entity> entities)
+		public static void CheckMapCollisions(Entity entity, Map map, double dt)
 		{
 
 		}
 
-		public static void CheckEntityCollisions(double dt, List<Entity> entities)
+		public static void CheckEntityCollisions(Entity entity, List<Entity> entities, double dt)
 		{
-			foreach (Entity entity in entities)
+			if (entity.isActor && entity.isCollidable)
 			{
-				if (entity.isActor && entity.isCollidable)
+				foreach (Entity e in entities)
 				{
-					foreach (Entity e in entities)
+					if (e.isCollidable && EntitiesCollides(entity, e))
 					{
-						if (e.isCollidable && EntitiesCollides(entity, e))
-						{
-                            e.entityCollision(entity);
-						}
+                        e.entityCollision(entity);
 					}
 				}
 			}

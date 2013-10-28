@@ -52,10 +52,8 @@ namespace XNARaceGame
 		#endregion
 
 		#region Render
-		public override void render(RaceGame game) {
-            //game.spriteBatch.Begin();
-            game.spriteBatch.Draw(game.content.Load<Texture2D>("testau"), new Rectangle((int)coords.X, (int)coords.Y, (int)(50 * game.scale), (int)(50 * game.scale)), Color.White);
-            //game.spriteBatch.End();
+		public override void render(GraphicsManager graphicsManager) {
+            graphicsManager.drawSprite(name, (int)coords.X, (int)coords.Y, 50, 50);
 		}
 		#endregion
 		

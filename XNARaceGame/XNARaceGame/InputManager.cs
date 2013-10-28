@@ -25,7 +25,7 @@ namespace XNARaceGame
 
             if (currentKeyState.IsKeyDown(Keys.W)) 
             {
-                game.graphicsManager.GraphicsDevice.Clear(Color.Red);
+                game.graphicsManager.graphicsDeviceManager.GraphicsDevice.Clear(Color.Red);
             }
 
             if (currentKeyState.IsKeyDown(Keys.A))

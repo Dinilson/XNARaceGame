@@ -11,7 +11,7 @@ namespace XNARaceGame
             this.game = game;
 		}
 
-        public void render(RaceGame game) {
+        public void render(GraphicsManager graphicsManager) {
             
         }
 	}
