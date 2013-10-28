@@ -42,8 +42,9 @@ namespace XNARaceGame
             graphicsManager = new GraphicsDeviceManager(this);
             graphicsManager.PreferredBackBufferWidth = SCREEN_WIDTH;
             graphicsManager.PreferredBackBufferHeight = SCREEN_HEIGHT;
+
             content = base.Content;
-            base.Content.RootDirectory = "Content";
+            content.RootDirectory = "Content";
 
             this.Window.Title = TITLE_NAME;
 
