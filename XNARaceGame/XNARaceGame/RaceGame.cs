@@ -18,6 +18,7 @@ namespace XNARaceGame
 
         public InputManager inputManager { get; set; }
         public GraphicsDeviceManager graphicsManager { get; set; }
+        public ContentManager content { get; set; }
         public SpriteBatch spriteBatch { get; set; }
         public SoundManager soundManager { get; set; }
         public UI ui { get; set; }
@@ -39,7 +40,7 @@ namespace XNARaceGame
             graphicsManager = new GraphicsDeviceManager(this);
             graphicsManager.PreferredBackBufferHeight = 600;
             graphicsManager.PreferredBackBufferWidth = 800;
-            GraphicsManager.content = base.Content;
+            content = base.Content;
             base.Content.RootDirectory = "Content";
 
             this.Window.Title = "appeltaart";
@@ -55,6 +56,11 @@ namespace XNARaceGame
         protected override void Initialize() {
             base.Initialize();
             spriteBatch = new SpriteBatch(graphicsManager.GraphicsDevice);
+        }
+
+        protected override void LoadContent() {
+            //cloud = Content.Load<Texture2D>(@"Sprites\\Clouds");
+            base.LoadContent();
         }
 
         void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {

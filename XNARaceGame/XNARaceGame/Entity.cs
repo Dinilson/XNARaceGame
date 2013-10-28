@@ -49,7 +49,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region render
-        public abstract void render();
+        public abstract void render(RaceGame game);
 		#endregion
 		
 		#region entityCollision
