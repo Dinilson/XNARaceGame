@@ -19,6 +19,8 @@ namespace XNARaceGame
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
+        private Texture2D healTexture;
+        private Texture2D petrolTexture;
         //SoundManager soundManager;
         #endregion
 
@@ -29,6 +31,8 @@ namespace XNARaceGame
             this.isActive = isActive;
             this.type = type;
             this.timer = -1;
+            healTexture = game.content.Load<Texture2D>("healPowerup");
+            petrolTexture = game.content.Load<Texture2D>("petrolPowerup");
         }
         #endregion
 
@@ -64,13 +68,14 @@ namespace XNARaceGame
         #region Render
         public override void render(RaceGame game)
         {
-			// Nothing is rendered here.
-            //game.spriteBatch.Begin();
-            game.spriteBatch.Draw(game.content.Load<Texture2D>("healPowerup"), new Rectangle(200, 200, 50, 50), Color.White);
-            //game.spriteBatch.End();
-            //game.spriteBatch.Begin();
-            game.spriteBatch.Draw(game.content.Load<Texture2D>("petrolpowerup"), new Rectangle(400, 400, 50, 50), Color.White);
-            //game.spriteBatch.End();
+            Texture2D texture = null;
+            if (type == "Petrol") {
+                texture = petrolTexture;
+            }
+            else if (type == "Repair") {
+                texture = healTexture;
+            }
+            game.spriteBatch.Draw(texture, new Rectangle(200, 200, 50, 50), Color.White);
         }
         #endregion
 
