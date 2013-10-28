@@ -38,7 +38,7 @@ namespace XNARaceGame {
         }
 
         public void loadContent() {
-            sprites["PatrolPowerup"] = game.content.Load<Texture2D>("petrolPowerup");
+            sprites["PetrolPowerup"] = game.content.Load<Texture2D>("petrolPowerup");
             sprites["RepairPowerup"] = game.content.Load<Texture2D>("healPowerup");
             sprites["Car"] = game.content.Load<Texture2D>("testau");
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
