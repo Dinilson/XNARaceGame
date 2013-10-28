@@ -20,8 +20,6 @@ namespace XNARaceGame
 		{
         }
         
-
-      
         public void render(RaceGame game)
         {
            

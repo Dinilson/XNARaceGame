@@ -53,7 +53,6 @@ namespace XNARaceGame
 
 		#region Render
 		public override void render(RaceGame game) {
-            game.graphicsManager.GraphicsDevice.Clear(Color.Black);
 		}
 		#endregion
 		
