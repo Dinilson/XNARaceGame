@@ -11,8 +11,7 @@ namespace XNARaceGame
             //Thread gameLoop = new Thread(game.run);
             //gameLoop.Start();
             
-            game.run();
-            
+            game.Run();
         }
     }
 }

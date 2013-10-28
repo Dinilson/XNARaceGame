@@ -12,12 +12,13 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
-	public class RaceGame
+	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
 		//private readonly static int FPS = 60;
 
         public InputManager inputManager { get; set; }
-        public GraphicsManager graphicsManager { get; set; }
+        public GraphicsDeviceManager graphicsManager { get; set; }
+        public SpriteBatch spriteBatch { get; set; }
         public SoundManager soundManager { get; set; }
         public UI ui { get; set; }
         public Map map { get; set; }
@@ -33,8 +34,16 @@ namespace XNARaceGame
 			map = new Map();
 			ui = new UI(this);
 			inputManager = new InputManager(this);
-			graphicsManager = new GraphicsManager(this, "appeltaart");
             soundManager = new SoundManager();
+
+            graphicsManager = new GraphicsDeviceManager(this);
+            graphicsManager.PreferredBackBufferHeight = 600;
+            graphicsManager.PreferredBackBufferWidth = 800;
+            GraphicsManager.content = base.Content;
+            base.Content.RootDirectory = "Content";
+
+            this.Window.Title = "appeltaart";
+
             entitiesInit();
 		}
 
@@ -43,22 +52,42 @@ namespace XNARaceGame
             entities.Add(new Car(this, new Vector2(10, 10), 0));
         }
 
-        public void render()
+        protected override void Initialize() {
+            base.Initialize();
+            spriteBatch = new SpriteBatch(graphicsManager.GraphicsDevice);
+        }
+
+        void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {
+            if (Environment.OSVersion.Platform != PlatformID.Win32NT) {
+                PresentationParameters presentParams =
+                    e.GraphicsDeviceInformation.PresentationParameters;
+
+                presentParams.RenderTargetUsage = RenderTargetUsage.PlatformContents;
+                if (graphicsManager.PreferredBackBufferHeight == 720) {
+                    presentParams.MultiSampleCount = 1;
+                } else {
+                    presentParams.MultiSampleCount = 1;
+                }
+            }
+        }
+
+        protected override void Draw()
         {
-           //GraphicsManager.Device.Clear(Color.Black);
-            map.render(graphicsManager);
+           //Device.Clear(Color.Black);
+            map.render(this);
             foreach (Entity entity in entities)
             {
                 if (entity.isVisible)
                 {
-                    entity.render(graphicsManager);
+                    entity.render(this);
                 }
             }
-            ui.render(graphicsManager);
+            ui.render(this);
         }
 
-		public void update(float dt)
+		protected override void Update(GameTime gameTime)
 		{
+            float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
             inputManager.update();
             inputManager.handleGameInput();
             if (!paused) {
@@ -77,7 +106,7 @@ namespace XNARaceGame
 
 		public void run()
 		{
-            graphicsManager.Run();
+            //graphicsManager.Run();
             /*
 			nextTick = Environment.TickCount + 1000 / FPS;
 			int currentTick = Environment.TickCount;
