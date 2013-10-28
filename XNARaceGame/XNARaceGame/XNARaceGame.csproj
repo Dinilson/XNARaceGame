@@ -111,7 +111,6 @@
     <Compile Include="Checkpoint.cs" />
     <Compile Include="CollisionManager.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="GraphicsManager.cs" />
     <Compile Include="InputManager.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Powerup.cs" />
