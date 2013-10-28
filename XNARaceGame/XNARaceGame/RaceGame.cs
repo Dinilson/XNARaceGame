@@ -57,7 +57,8 @@ namespace XNARaceGame
         private void entitiesInit() {
             entities = new List<Entity>();
             entities.Add(new Car(this, new Vector2(10, 10), 0));
-            entities.Add(new Powerup(this, "Repair", true, new Vector2(50, 50)));
+            entities.Add(new Powerup(this, "Repair", true, new Vector2(200, 100)));
+            entities.Add(new Powerup(this, "Petrol", true, new Vector2(1150, 300)));
         }
 
         protected override void Initialize() {

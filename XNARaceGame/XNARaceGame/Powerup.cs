@@ -15,7 +15,11 @@ namespace XNARaceGame
     {
 
         #region Attributes
-        public readonly static int TIMEOUT = 1000;
+        private readonly static int width = 20;
+        private readonly static int height = 20;
+        private readonly static int TIMEOUT = 1000;
+
+
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
@@ -26,7 +30,7 @@ namespace XNARaceGame
 
         #region Constructor
         //constructor
-        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(50*game.scale, 50*game.scale), 0, true, true, false)
+        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(width*game.scale, height*game.scale), 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
@@ -75,7 +79,7 @@ namespace XNARaceGame
             else if (type == "Repair") {
                 texture = healTexture;
             }
-            game.spriteBatch.Draw(texture, new Rectangle((int)coords.X, (int)coords.Y, (int)(50*game.scale), (int)(50*game.scale)), Color.White);
+            game.spriteBatch.Draw(texture, new Rectangle((int)coords.X, (int)coords.Y, (int)(width*game.scale), (int)(height*game.scale)), Color.White);
         }
         #endregion
 
