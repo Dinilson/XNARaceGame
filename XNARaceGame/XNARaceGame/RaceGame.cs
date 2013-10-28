@@ -14,7 +14,9 @@ namespace XNARaceGame
 {
 	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
-		//private readonly static int FPS = 60;
+		private readonly static String TITLE_NAME = "appeltaart";
+        private readonly static int SCREEN_WIDTH = 800;
+        private readonly static int SCREEN_HEIGHT = 600;
 
         public InputManager inputManager { get; set; }
         public GraphicsDeviceManager graphicsManager { get; set; }
@@ -38,12 +40,12 @@ namespace XNARaceGame
             soundManager = new SoundManager();
 
             graphicsManager = new GraphicsDeviceManager(this);
-            graphicsManager.PreferredBackBufferHeight = 600;
-            graphicsManager.PreferredBackBufferWidth = 800;
+            graphicsManager.PreferredBackBufferWidth = SCREEN_WIDTH;
+            graphicsManager.PreferredBackBufferHeight = SCREEN_HEIGHT;
             content = base.Content;
             base.Content.RootDirectory = "Content";
 
-            this.Window.Title = "appeltaart";
+            this.Window.Title = TITLE_NAME;
 
             entitiesInit();
 		}
