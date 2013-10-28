@@ -65,6 +65,12 @@ namespace XNARaceGame
         public override void render(RaceGame game)
         {
 			// Nothing is rendered here.
+            //game.spriteBatch.Begin();
+            game.spriteBatch.Draw(game.content.Load<Texture2D>("healPowerup"), new Rectangle(200, 200, 50, 50), Color.White);
+            //game.spriteBatch.End();
+            //game.spriteBatch.Begin();
+            game.spriteBatch.Draw(game.content.Load<Texture2D>("petrolpowerup"), new Rectangle(400, 400, 50, 50), Color.White);
+            //game.spriteBatch.End();
         }
         #endregion
 
