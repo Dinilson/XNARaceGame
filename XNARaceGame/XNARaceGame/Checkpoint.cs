@@ -28,7 +28,6 @@ namespace XNARaceGame
         #region render
         public override void render(RaceGame game)
         {
-            
         }
         #endregion
 
