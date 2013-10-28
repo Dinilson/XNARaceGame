@@ -62,7 +62,7 @@ namespace XNARaceGame
         #endregion
 
         #region Render
-        public override void render(GraphicsManager graphicsManager)
+        public override void render(RaceGame game)
         {
 			// Nothing is rendered here.
         }
