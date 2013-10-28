@@ -30,7 +30,7 @@ namespace XNARaceGame
 
             if (currentKeyState.IsKeyDown(Keys.W)) 
             {
-                GraphicsManager.Device.Clear(Color.AliceBlue); // test
+                //up
             }
 
             if (currentKeyState.IsKeyDown(Keys.A))

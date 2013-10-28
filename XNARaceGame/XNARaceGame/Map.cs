@@ -18,7 +18,6 @@ namespace XNARaceGame
          
 		public Map()
 		{
-            GraphicsManager.spriteBatch = new SpriteBatch(GraphicsManager.Device);
         }
         
 
