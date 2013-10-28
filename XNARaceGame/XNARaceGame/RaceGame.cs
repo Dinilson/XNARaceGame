@@ -79,7 +79,7 @@ namespace XNARaceGame
 
         protected override void Draw(GameTime gameTime)
         {
-           //Device.Clear(Color.Black);
+            graphicsManager.GraphicsDevice.Clear(Color.Black);
             map.render(this);
             foreach (Entity entity in entities)
             {
