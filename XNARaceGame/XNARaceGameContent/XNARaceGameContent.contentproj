@@ -62,8 +62,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="testawesomeautosomg.png">
-      <Name>testawesomeautosomg</Name>
+    <Compile Include="testau.png">
+      <Name>testau</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

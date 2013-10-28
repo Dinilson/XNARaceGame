@@ -80,15 +80,17 @@ namespace XNARaceGame
         protected override void Draw(GameTime gameTime)
         {
            //Device.Clear(Color.Black);
+            spriteBatch.Begin();
             map.render(this);
             foreach (Entity entity in entities)
             {
                 if (entity.isVisible)
                 {
-                    entity.render(this);
+                    entity.render(this);  
                 }
             }
             ui.render(this);
+            spriteBatch.End();
         }
 
 		protected override void Update(GameTime gameTime)
