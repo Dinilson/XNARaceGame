@@ -16,7 +16,7 @@ namespace XNARaceGame
 	{
         public KeyboardState currentKeyState { get; set; }
 
-		public InputManager(RaceGame game)
+		public InputManager()
 		{
             currentKeyState = Keyboard.GetState(); 
 		}
@@ -48,6 +48,7 @@ namespace XNARaceGame
                 game.paused = !game.paused;
             }  
         }
+
         public void update()
         {
             currentKeyState = Keyboard.GetState();

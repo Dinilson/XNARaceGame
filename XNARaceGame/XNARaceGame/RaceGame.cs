@@ -26,11 +26,11 @@ namespace XNARaceGame
 		public RaceGame()
 		{
 			running = false;
-			map = new Map();
-			ui = new UI(this);
-			inputManager = new InputManager(this);
+			inputManager = new InputManager();
             graphicsManager = new GraphicsManager(this);
             soundManager = new SoundManager(this);
+            ui = new UI(this);
+            map = new Map();
 
             content = base.Content;
             content.RootDirectory = "Content";
