@@ -26,7 +26,7 @@ namespace XNARaceGame
         }
 
 
-        public void loadContent()// methode om geluiden te maken
+        public void loadContent()// methode om geluiden in te laden
         {
             loadSoundContent("powerup");
             loadMusicContent("menumuz");
@@ -35,18 +35,15 @@ namespace XNARaceGame
         private void loadSoundContent(string name)
         {
             sounds.Add(name, game.content.Load<SoundEffect>(name));
-
         }
 
         private void loadMusicContent(string name)
         {
             songs.Add(name, game.content.Load<Song>(name));
-
         }
         public void playSound(string name)
         {
             sounds[name].Play();
-
         }
         public void playSong(string name)
         {
