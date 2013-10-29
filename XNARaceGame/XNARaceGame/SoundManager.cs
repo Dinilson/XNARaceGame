@@ -26,7 +26,7 @@ namespace XNARaceGame
         }
 
 
-        protected void loadContent()// methode om geluiden te maken
+        public void loadContent()// methode om geluiden te maken
         {
             loadSoundContent("powerup");
             loadMusicContent("menumuz");
