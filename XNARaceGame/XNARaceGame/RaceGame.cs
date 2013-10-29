@@ -50,7 +50,7 @@ namespace XNARaceGame
 
         protected override void LoadContent() {
             graphicsManager.loadContent();
-            soundManager.loadContent(); /waarom deze verwijderen?
+            soundManager.loadContent(); //waarom deze verwijderen?
             entitiesInit();
         }
 
