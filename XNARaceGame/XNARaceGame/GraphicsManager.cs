@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame {
-    class GraphicsManager {
+    public class GraphicsManager {
 
         private readonly static string WINDOW_TITLE = "appeltaart";
         private readonly static int SCREEN_WIDTH = 800;
@@ -26,8 +26,8 @@ namespace XNARaceGame {
         public GraphicsManager(RaceGame game) {
             this.game = game;
             graphicsDeviceManager = new GraphicsDeviceManager(game);
-            graphicsDeviceManager.PreferredBackBufferWidth = SCREEN_WIDTH;
-            graphicsDeviceManager.PreferredBackBufferHeight = SCREEN_HEIGHT;
+            graphicsDeviceManager.PreferredBackBufferWidth = (int)(SCREEN_WIDTH*SCALE);
+            graphicsDeviceManager.PreferredBackBufferHeight = (int)(SCREEN_HEIGHT*SCALE);
             game.Window.Title = WINDOW_TITLE;
 
             sprites = new Dictionary<string, Texture2D>();
@@ -57,8 +57,8 @@ namespace XNARaceGame {
             }
         }*/
 
-        public void drawSprite(string name, int x, int y, int dx, int dy) {
-            spriteBatch.Draw(sprites[name], new Rectangle(x, y, (int)(dx * SCALE), (int)(dy * SCALE)), Color.White);
+        public void drawSprite(string name, int x, int y, int width, int height) {
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x), (int)(y), (int)(width * SCALE), (int)(height * SCALE)), Color.White);
         }
 
         public void clearScreen(Color color) {
