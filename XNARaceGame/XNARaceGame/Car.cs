@@ -25,22 +25,43 @@ namespace XNARaceGame
 			damage = 0;
 			petrol = 100;
 			checkpoints = new bool[4] { false, false, false, false };
+            //accel = Vector2.Add(accel, new Vector2(0.1f, 0.1f));
 		}
 		#endregion
 		
 		#region Update
 		public override bool update(float dt, InputManager inputManager)
         {
-            /*double tau = (double)Math.PI * 2; // tau = 2 * pi
+            double tau = (double)Math.PI * 2; // tau = 2 * pi
 
             rot %= tau;
 
             if (rot < 0) 
             {
                 rot += tau;
-            }*/ // Maybe useless code who knows?
+            }
 
-            // Define accel with inputManager here
+            if (inputManager.currentKeyState.IsKeyDown(Keys.W))
+            {
+                if (accel.X == 0 && accel.Y == 0)
+                {
+                    accel = new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot));
+                }
+
+                else
+                {
+                    accel = Vector2.Add(accel, Vector2.Normalize(accel));
+                }
+            }
+
+
+
+            if (inputManager.currentKeyState.IsKeyUp(Keys.W) && inputManager.currentKeyState.IsKeyUp(Keys.S))
+            {
+                accel = new Vector2(0, 0);
+            }
+
+            accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
 
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
 
