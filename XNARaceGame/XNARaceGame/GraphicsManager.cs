@@ -48,6 +48,10 @@ namespace XNARaceGame {
             spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE), (int)(y * SCALE), (int)(width * SCALE), (int)(height * SCALE)), Color.White);
         }
 
+        public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE), (int)(y * SCALE), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
+        }
+
         public void clearScreen(Color color) {
             graphicsDeviceManager.GraphicsDevice.Clear(color);
         }
