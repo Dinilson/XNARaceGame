@@ -21,31 +21,2279 @@
     <packageHasNamedElement>
       <class
         Id="91a3ae0a-c9de-4494-b57c-040428a966ba"
-        name="Class1"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="bef770e5-f6fc-4994-b915-ffca6a74f0d1"
-        name="Class2"
+        name="RaceGame"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7c854f71-9d7b-4a5d-8f36-5ef179bd8970"
+            isDerived="false"
+            sourceEndRoleName="RaceGame"
+            targetEndRoleName="Entity"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8e322c69-5799-4e71-8dbf-0fbe0c62e443"
+              LastKnownName="Entity"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddbfb5c5-cc27-4fe6-a202-bb3ee9a5d369"
+                  name="RaceGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="933e5efc-9eaf-42c3-92d7-0fe8a43ea56b"
+                  name="Entity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="253bb850-b159-4f93-b592-a3c1b010fddc"
+            isDerived="false"
+            sourceEndRoleName="RaceGame"
+            targetEndRoleName="GraphicsManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77142f1e-affa-4c07-a9d4-37a9c807678c"
+              LastKnownName="GraphicsManager"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="55047756-3568-43dc-98d6-cc0fe0ef1bc7"
+                  name="RaceGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="946b32c0-3537-4028-9585-d59b67985a2e"
+                  name="GraphicsManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e2fbc91e-00a6-4cce-ae0c-8bb33051f052"
+            isDerived="false"
+            sourceEndRoleName="RaceGame"
+            targetEndRoleName="SoundManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1623dca2-9dc6-4f46-9747-c40871b061fd"
+              LastKnownName="SoundManager"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6190cdcf-fef6-4fbc-8d32-f6506957ff3e"
+                  name="RaceGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01364555-93c6-459c-b6e3-f511ee3cd27d"
+                  name="SoundManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="97e1cbcf-cd94-4cf8-ab69-cb220f4f2a95"
+            isDerived="false"
+            sourceEndRoleName="RaceGame"
+            targetEndRoleName="UI"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e99afe49-16c1-415c-9c20-d3782b61ac62"
+              LastKnownName="UI"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10acb970-7f15-48ce-b857-add2a06f9f24"
+                  name="RaceGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="419a2c5d-dd4f-40c5-86d3-a1c5183cf9d2"
+                  name="UI"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="de1fc00b-93fa-4dc7-819d-6d88665f51f2"
-            name="Attribute1"
+            Id="aa49644e-af87-48de-8cce-a3926eca8d66"
+            name="GraphicsManager"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d3910649-c89b-4896-a7b7-2c83eed276bf"
+            name="ContentManager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1ab65fd3-bebb-4d00-9217-3d90c58ae735"
+            name="InputManager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b649bf4f-2853-4dfb-a437-378361a9d32b"
+            name="SoundManager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2a3dff9b-be42-4700-9d7e-aa342c2f816d"
+            name="UI"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dbfeae62-7f7b-4c0e-9d45-8f1a3239f6f2"
+            name="Map"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f727a15e-ebb2-45de-bd51-1722a427f1b6"
+            name="List&lt;Entity&gt; entities"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c479c217-9a37-432a-b2b7-8605c4e2046e"
+            name="bool running"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bfe64084-307d-44de-9540-97f011ce0f40"
+            name="bool paused"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7c7862c3-0ab6-4365-ba02-0e54658d7a64"
+            name="RaceGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="71e05793-eb7d-4ed3-ae18-44361d1caa10"
+            name="entitiesInit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d0da234a-b2b4-488e-8203-86a855606739"
+            name="Initialize"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2347e66b-b667-4f64-ab4e-6978f15b53d1"
+            name="LoadContent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="cf923686-2c26-4394-8700-8e34c2779032"
+            name="Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e8ab3f8-faf8-4839-8dae-bc893f032332"
+                  name="GameTime gametime"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="87e31615-74c3-4b0a-8b79-20eb982f36eb"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e2a000a1-5058-455c-94cd-97e0bd5a5e41"
+                  name="GameTime gameTime"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dc9942f5-8a55-4745-b048-8602244d92ca"
+            name="run"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bef770e5-f6fc-4994-b915-ffca6a74f0d1"
+        name="Car"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ba1fa0ba-9dfa-4720-85c5-9cbe9aee13c0"
+            isSubstitutable="false">
+            <classMoniker
+              Id="db3853c2-306a-443f-bc0f-cc1caf5bbba4"
+              LastKnownName="InputManager"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="de1fc00b-93fa-4dc7-819d-6d88665f51f2"
+            name="double damage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c276634c-d9e0-447a-8efd-af16b14dcedb"
+            name="double petrol"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="01f20533-aaaf-4b1d-8827-6c336b21e2d1"
+            name="bool[] checkpoints"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="136bce5f-931d-4307-812d-379901bfb732"
+            name="float accel2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d9cad4d4-20a9-4691-893e-3978bc57e86f"
+            name="float velocity2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="58098004-54a8-45b2-b80b-145ac34332c5"
+            name="Car"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8e83afb5-ca63-4ba3-bdd7-b2d5172d2688"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56241a50-99ef-4632-81ca-90fad7dabaa6"
+                  name="Vector2 coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0d37b6c8-f174-47a9-ac2f-67c71f3f9b71"
+                  name="double rot)"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="69357019-b4b0-448f-96da-c5d72377cff8"
+                      LastKnownName="base(&quot;car&quot;"
+                      LastKnownLocation="xnaracerUMLgroep12.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1166aef5-f9d6-4918-bde9-0ee7b6710032"
+                  name="game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93eed7b5-bb74-49a4-8fa9-0fa0cee0fad3"
+                  name="coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71ca2740-e393-4251-9edd-bf8e75cb2d4a"
+                  name="new Vector2(1337"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f11474a-a155-4a42-b788-12a54baf6ca0"
+                  name="1337)"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8303219c-4ff0-47f8-b922-6e4678ef5de4"
+                  name="rot"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f380ed85-457d-4f8c-996d-900ac6bb91fb"
+                  name="true"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d68977a-4274-4d7a-9bd9-817a3aa40501"
+                  name="true"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cab650c3-d622-4e97-9b97-7cb9896f5f70"
+                  name="true"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6954d6e9-0d8f-469d-982a-64b814d8cf24"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a1d2ab42-0810-4cc4-b8f7-7d1af2e56b96"
+                  name="float dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="79f03f37-15c6-4d3c-a6fe-ae174a0de261"
+                  name="InputManager inputManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8ec127d8-409e-46e8-bdad-9a0dd841efcf"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2835574-18f3-4b0b-8c3b-baca9f88f24c"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ea779343-8e78-4526-8ed1-648e1f2a1222"
+            name="entityCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74199378-3609-4779-a50e-2c8cf5625716"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1c9758a0-187b-4357-8bad-35e2c0e48ea4"
+            name="mapColission"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c37501e1-f6a9-4741-a75c-52a2d0d0a7e8"
+                  name="Vector2 vector"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1b626b33-c499-42e8-8117-dfb778a6eb8a"
+        name="Checkpoint"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="20580e65-f067-4fb8-88cb-5b70f616060e"
+            name="int num"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1fa15385-4bb1-4354-b74f-cd19f7923891"
+            name="Checkpoint"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="150ca0df-58e1-43aa-9584-a43cf1532498"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e01a9afe-d220-41fa-ac8c-f2f79cfc2a37"
+                  name="int num"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="377ea2e5-5265-4aee-ac81-8815c4b2c680"
+                  name="Vector2 coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84e411a5-692f-407f-bc74-df2839fde53c"
+                  name="Vector2 hitbox"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2253f3e9-18af-479e-b82b-864e44df9526"
+                  name="double rot)"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="84fc9233-5fe8-4d94-826b-47058b626cfa"
+                      LastKnownName="base(&quot;Checkpoint&quot;"
+                      LastKnownLocation="xnaracerUMLgroep12.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e92895a4-d465-4180-bdec-ddec307f2f0b"
+                  name="game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68492936-8346-457d-8f14-cf86d1f8ac5a"
+                  name="coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f141be8c-cd0d-4da4-8b97-3a10da4265c9"
+                  name="hitbox"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="80eff3a1-cf08-43f4-945b-6dd3ea73e631"
+                  name="rot"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a8127f2-b5e8-4bf5-a506-3c8ff8122e11"
+                  name="false"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a35ec66-92f8-44a7-9a5f-3bb99c44de79"
+                  name="true"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d515f8ee-d9d5-46df-8cb6-6d540d412b8b"
+                  name="false"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e6a8f663-39ac-4adc-bca5-a8a37a046a96"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d6e946d5-876b-410e-b9fe-53505d56c436"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f99992ce-b915-4dd3-a622-cd35f9999c41"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="38c696e1-b925-4c21-bcbe-f1ea811f2873"
+                  name="float dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a19abef-37c7-45e6-93bd-52784d9204bc"
+                  name="InputManager inputManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f3f2f378-fda5-4812-8a2a-42390d5417fa"
+            name="entityCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7612dae0-b3be-4c5e-95e4-54414a2ee8e2"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bc85b3ec-cc49-4eff-bc93-ea67b6327b07"
+            name="mapCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8720ad2b-57ce-4763-b109-5f15c96055e7"
+                  name="Vector2 vector"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="465e6c29-8b2f-4bfb-bb79-0aacb6c5d732"
+            name="setCheckpoint"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6da5762d-a771-46e5-84f5-4fe7a64a91ba"
+                  name="Car car"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bd76cd4c-b4c3-45fb-b3fb-d8070ad67277"
+        name="CollisionManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="851a8bc2-17d4-4e16-9511-cf05d8885ca2"
+            name="CheckMapCollisions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0576873e-2f0a-4af1-8884-048653c7cbf2"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="078dc896-52f0-4bd9-a0c5-dd336e8732f7"
+                  name="Map map"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74335c76-ee78-4f43-a174-ee7c503f0e42"
+                  name="double dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="76903431-0430-492d-ab22-2783c776c209"
+            name="CheckEntityCollisions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78d729b3-c86e-4eac-88b7-99708e99e8d4"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4988a6df-0485-44cf-89b5-43355f0ba266"
+                  name="List&lt;Entity&gt; entities"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43a0ac90-649f-4351-b9e6-a0543d51caaa"
+                  name="double dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b83f7870-3d59-4e01-bfdf-18425ff68d12"
+            name="public static bool EntitiesCollides"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d07e252-9436-44cc-914b-abfac029bc8d"
+                  name="Entity collider"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b585ea16-62d4-4832-845f-9cac63602fd4"
+                  name="Entity colliding"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8e322c69-5799-4e71-8dbf-0fbe0c62e443"
+        name="Entity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="d6869485-786e-4d9e-87b7-0e127725086b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bef770e5-f6fc-4994-b915-ffca6a74f0d1"
+              LastKnownName="Car"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+          </generalization>
+          <generalization
+            Id="9a69342d-541f-408b-b7c5-42d8a2b53054"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c5f6b545-4e4d-4225-9de3-5013050a5004"
+              LastKnownName="Powerup"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="a69c3e7a-0981-48c9-9eb5-f69c3dcf6abc"
+            isDerived="false"
+            sourceEndRoleName="Entity"
+            targetEndRoleName="Checkpoint"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1b626b33-c499-42e8-8117-dfb778a6eb8a"
+              LastKnownName="Checkpoint"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c32a9390-6ad2-4c2a-b907-e3499aa5b10b"
+                  name="Entity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2350266-b89b-4037-a804-7dd785e5a6f4"
+                  name="Checkpoint"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7319a83f-4288-40cd-b022-34aa330602f7"
+            isDerived="false"
+            sourceEndRoleName="Entity"
+            targetEndRoleName="CollisionManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bd76cd4c-b4c3-45fb-b3fb-d8070ad67277"
+              LastKnownName="CollisionManager"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74c73ff4-03f4-4273-8207-993d20d13563"
+                  name="Entity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f104aa9f-091f-492a-b3ae-c4be5707ba8a"
+                  name="CollisionManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="dfad669c-382c-49cf-85c7-aec2a33410de"
+            name="string name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="00f2dfc7-8f38-46e5-bc7d-9ce53e46c0cf"
+            name="Vector2 accel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a65cfaea-d438-4ae2-9a06-2687748549b4"
+            name="double rot"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bbfc9945-d6dc-4ba4-a686-7eb4ea0524e7"
+            name="Vector2 hitbox"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="08c35f8d-f7db-41c7-a838-609fdd401f11"
+            name="bool isVisible"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="75f638ad-a52c-4ae2-bc45-42c424a78664"
+            name="bool isCollidable"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="436bc07b-135c-4971-bc91-6fa4becdfc71"
+            name="bool isActor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b702b791-ee59-4210-9390-532dde3a074f"
+            name="bool isAlive"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5568c5c9-f236-4b06-bdf9-1390a9573bc5"
+            name="RaceGame game"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="784c8b9f-d59b-4819-b30b-c50962d7530c"
+            name="Vector2 velocity"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8a90ae87-cf2e-4c4d-80ac-130fe608ca7f"
+            name="Vector2 coords"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6554c1a8-646a-4b64-955d-31c4e04b1e31"
+            name="Entity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84e2290b-a288-4cfe-8f26-4f2571d87a49"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83d3a0b1-91d3-469d-bec1-e47fd4647764"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9bbc38b-6f7f-4759-afda-c26a9bbcb85c"
+                  name="Vector2 coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0353858-a220-4f4a-aee4-89d46d3d7212"
+                  name="Vector2 hitbox"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73d2e52e-c5fa-4d6e-9125-1c00b5a64e92"
+                  name="double rot"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89202782-fa1a-46c0-a25a-c27bdb622adc"
+                  name="bool isVisible"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f55235e0-6669-43eb-91ac-aa3696e658fa"
+                  name="bool isCollidable"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c56b701-fe53-498c-90aa-fe72aabf354c"
+                  name="bool isActor"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bbea6f20-76e6-4af9-957d-0b7eae91de7a"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3a43c7e0-d9c8-45a6-b150-c5d8173209d7"
+                  name="float dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2dbad15-df60-4146-a406-3c78fea4c38f"
+                  name="InputManager inputManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e74c82cd-b7eb-43cd-9bf0-e08cd6f47d4c"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a30135d1-c090-4d7e-b9c0-570bc5bc8067"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5865be33-e4f2-41f4-9a9b-3af24b18d45b"
+            name="entityCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de8c38f5-3da1-4c31-8050-4a8f1f5422b3"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="159764e4-20bb-4a2c-82ae-d8ed31c36b14"
+            name="mapCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="55562671-7d66-4b1e-ac54-6acae68822c5"
+                  name="Vector2 vector"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="77142f1e-affa-4c07-a9d4-37a9c807678c"
+        name="GraphicsManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ec1e2280-3dad-4caf-aa2d-f261d9284c23"
+            name="string WINDOW_TITLE"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fdc9ef63-8b66-484f-8fee-763bf55f5fbb"
+            name="int SCREEN_WIDTH"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e7a5bbed-6b31-442a-bba8-68a038743d2f"
+            name="int SCREEN_HEIGHT"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a0b708dd-b4b3-4d0a-aec7-a2542bd4825e"
+            name="float SCALE"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a17ed133-fb08-44c7-a9a7-b4c5b64c55ed"
+            name="RaceGame game"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6faa1e9a-fb54-4b4e-b0ca-58b1694dcc40"
+            name="GraphicsDeviceManager graphicsDeviceManager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="35f6e304-b964-4c56-85f1-dc20f514e012"
+            name="SpriteBatch spriteBatch"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="972a3fec-a8de-47e1-97ac-b4065ed7ccbe"
+            name="Dictionary&lt;string, Texture2D&gt; sprites"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="55afbbf4-8cd2-499c-82a9-3b2691097a8f"
+            name="GraphicsManager"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1fffcc1d-741d-4637-9897-d6f039be0cfb"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="106e5eb7-c353-4d99-8ee2-0668cd93af01"
+            name="initialize"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2229c839-cd6b-45f2-9e08-4cf102da2a0d"
+            name="loadContent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6a055623-eca1-4df3-8384-be815e4db162"
+            name="drawSprite"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a28efd6-19e6-46a6-9c24-42331eab578d"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f5aecb1-5e5c-4958-a2b0-7ead6054d4de"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c71e1503-2edf-495e-9a30-64477a0ca0a1"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a6a674d-5e39-471e-8971-5fcf7a0b1b42"
+                  name="int width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06ee1936-26ca-4d3d-b376-e54b3ae9e773"
+                  name="int height"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="04e09023-7206-467e-9f9b-b8f92cae3f2d"
+            name="drawSprite"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4eed59d6-9a42-4b71-bb8f-ac9994f96414"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="394fac05-a1a8-4000-b1d5-d439de58c74a"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa8fe7a8-c2d4-45fd-bcd8-1dcb4d013e14"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dfd38301-6d82-4fe0-b834-f337e28be856"
+                  name="int width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8cccaad4-47f1-4b34-b4c6-074023eae28c"
+                  name="int height"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a0a91a5-39e1-461d-8f7c-a9a1e06877f3"
+                  name="float rotation"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5e8fca24-31b2-4fb3-9589-0826e2bc1b0e"
+            name="clearScreen"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4171bb09-1e76-41e6-8e9c-f5726ef1d480"
+                  name="Color color"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="db3853c2-306a-443f-bc0f-cc1caf5bbba4"
+        name="InputManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7fdd3f29-bff6-4df0-a734-410c945d97aa"
+            name="KeyboardState currentKeyState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="625f956d-b6ff-4438-adbc-17a17d4949f2"
+            name="InputManager"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="49c848e4-e836-4771-9b0d-477d56f1215e"
+            name="handleGameInput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10347e8f-957d-4b06-9b84-0a57783c44fb"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="be14959a-37ff-45b6-b93b-6822c0414b78"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9bb8c3f4-fd86-4aea-be24-7c1ca6cb38ba"
+        name="Map"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="16ba402c-c898-4c8c-b7c3-58ff55a14ba2"
+            isDerived="false"
+            sourceEndRoleName="Map"
+            targetEndRoleName="GraphicsManager"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77142f1e-affa-4c07-a9d4-37a9c807678c"
+              LastKnownName="GraphicsManager"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c279c308-790e-46b7-a132-214c7353c44e"
+                  name="Map"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d8a7668e-627f-40eb-bcac-2694d8ea7701"
+                  name="GraphicsManager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="74221c70-d0cf-4f88-94d7-081bc8c7ff1e"
+            name="Map"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0d42b8b1-c5d2-4d88-a132-999d5ba5be08"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db1391a8-7b60-499b-b300-0bc828a1ea0a"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c5f6b545-4e4d-4225-9de3-5013050a5004"
+        name="Powerup"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b810a811-8ec4-4a19-b289-5e862bbbde3a"
+            name="int width"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1cde0e28-4eda-4dd8-9dde-7daf9b7b1622"
+            name="int height"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4bf6ea18-5c00-4260-8955-8a57a5acd58c"
+            name="int TIMEOUT"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="17e18b01-33ce-4870-af87-bf9edfd2459a"
+            name="bool isActive"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="00cb1195-6b46-4aca-937c-d8a53c4ec6bf"
+            name="string type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6fd6ec75-589f-4c63-9f83-51fa4861191c"
+            name="int timer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7a019099-1df3-42db-a9d8-165bd243edf3"
+            name="bool isVisible"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="baf2045d-974c-4fc1-8dfc-0317d8664f2d"
+            name="Powerup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49b026cb-06a0-47fc-8a82-3f659e60cd6d"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a544ecf-fc58-4d03-9188-5c79c271ad60"
+                  name="string type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db3d4afe-34fe-4020-b37a-2cbbce977604"
+                  name="bool isActive"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="18f6a000-d2fe-436a-87d5-df8ddc776ead"
+                  name="bool isVisible"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f13566be-aae6-495c-9409-58865c8cd847"
+                  name="Vector2 coords)"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="111408d7-63ed-4b26-ac4c-fcdedf0158cf"
+                      LastKnownName="base(&quot;Powerup&quot;"
+                      LastKnownLocation="xnaracerUMLgroep12.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1e4f3fc4-6e00-420c-ab17-254599331239"
+                  name="game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3cdb58c9-cb68-4339-98c9-0a99ba8fdae7"
+                  name="coords"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9575328d-1c52-47c2-8d24-b57395866463"
+                  name="new Vector2(width"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37eeb0e4-f680-4b07-aa80-4e494e112c4a"
+                  name="height)"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="782e6be8-a1d6-4312-b39d-ce3121b8a734"
+                  name="0"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b305e47a-dabd-4292-a6f6-863a01b7556e"
+                  name="isVisible"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a167bc86-b200-4db9-b504-14929104513d"
+                  name="true"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1621a577-513c-4967-a33a-75ca713630ed"
+                  name="false"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9d714d07-874e-4e28-a948-9d302806002a"
+            name="resetCarDamage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a3bd539-0d09-44e1-ac1f-4c33922f8eac"
+                  name="Car car"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="334d7dca-f55d-4a23-b489-eacc131a5841"
+            name="resetCarPetrol"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53ac8803-62f4-48a9-9c1a-b018996cddea"
+                  name="Car car"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0f6e1fcf-4ce4-4afb-9cb8-fa59e101dc39"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2dab9ab5-d251-407b-bdc3-f6c597d5cfb3"
+                  name="float dt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a43eceb-d895-4770-9f94-1fd53a5534b5"
+                  name="InputManager inputManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="71a9711a-896c-4296-a00b-a962d90c4ece"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c6ee192-9e8a-4321-9c20-9ce641149007"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e7df3087-00ee-41e2-bd61-7fd7060cde03"
+            name="entityCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22dd07a9-c034-40e0-8232-8ed34cd93c4a"
+                  name="Entity entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="622cf46b-bd3a-43ed-8e43-c3c6eda26545"
+            name="mapCollision"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a451489a-8b12-4e5e-87c8-f187af9da79a"
+                  name="Vector2 vector"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5f2aab75-2cac-48d0-a6d2-4873c10d5483"
+        name="Program"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a45fd185-6ce1-4a61-895e-88c3c0853214"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="RaceGame"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="91a3ae0a-c9de-4494-b57c-040428a966ba"
+              LastKnownName="RaceGame"
+              LastKnownLocation="xnaracerUMLgroep12.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="adf037f0-2c62-4f34-a43c-97bf8087e75b"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10a15326-b509-4f89-ae54-0cf2bb79a5c3"
+                  name="RaceGame"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="85c2fcff-05bb-44cf-a03e-1beb14462734"
+            name="Main"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ec58c6e-341b-45ff-a470-3be924a26f35"
+                  name="string[] args"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1623dca2-9dc6-4f46-9747-c40871b061fd"
+        name="SoundManager"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d7616bf9-fb15-486b-a7ca-a0acaf488745"
+            name="RaceGame game"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="00c81916-5ede-4fb7-a4ac-6e08bce095d5"
+            name="Dictionaru&lt;string, SoundEffect&gt; sounds"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6a99dc57-57c2-4fe3-ae9e-15cb13481044"
+            name="Dictionary&lt;string, Song&gt; songs"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fe117e7d-3bed-401e-b765-28c8489ba1f5"
+            name="SoundManager"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b17e094c-280e-40bf-94f2-936565d9de04"
+                  name="RaceGame game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="852b3212-2092-4385-8cb0-12394b867c95"
+            name="loadContent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ed8dbb4a-954a-4d0f-82b3-bf9ee5dd1555"
+            name="loadSoundContent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b8dc9d2-9f43-4a78-b272-bc740b7f2f82"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="45d2945c-f671-4f8b-8b07-93dc02cb3ec4"
+            name="loadMusicContent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0e8e243-85ba-47d4-930d-126db29fa61d"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9dfe58b3-5b9e-4cb5-9d5a-d0a662b789e1"
+            name="playSound"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6256e685-01fd-4309-aa4c-c454c363ac1d"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="99a19f1b-ca2d-47ee-b760-5053ade71cc9"
+            name="playSong"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="03f61155-b13c-4665-bc87-c2aac847bc76"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e99afe49-16c1-415c-9c20-d3782b61ac62"
+        name="UI"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="15c4f3d5-188e-4ac6-8d90-f6abfb1a6f68"
+            name="RaceGame game"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3a7725bc-3612-44e1-89a5-be57f38ed04c"
+            name="render"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0eccee5e-0f87-464a-a88e-bfc9f0c6161a"
+                  name="GraphicsManager graphicsManager"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7199af0b-d3ad-4295-95a7-42185a5b8935"
+        name="base(&quot;car&quot;, game, coords, new Vector2(1337, 1337), rot," />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="69357019-b4b0-448f-96da-c5d72377cff8"
+        name="base(&quot;car&quot;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="84fc9233-5fe8-4d94-826b-47058b626cfa"
+        name="base(&quot;Checkpoint&quot;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="111408d7-63ed-4b26-ac4c-fcdedf0158cf"
+        name="base(&quot;Powerup&quot;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
