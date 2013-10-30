@@ -20,7 +20,7 @@ namespace XNARaceGame
 		#endregion
 
 		#region Constructor
-		public Car(RaceGame game, Vector2 coords, double rot) : base("Car", game, coords, new Vector2(1337, 1337), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
+		public Car(RaceGame game, Vector2 coords, double rot) : base("Car", game, coords, new Vector2(50, 50), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
 		{
 			damage = 0;
 			petrol = 100;
