@@ -69,7 +69,6 @@ namespace XNARaceGame {
             Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
             vp.X = (int)viewportCoords.X;
             vp.Y = (int)viewportCoords.Y;
-            vp.o
             vp.Width = SCREEN_WIDTH;
             vp.Height = SCREEN_HEIGHT;
             graphicsDeviceManager.GraphicsDevice.Viewport = vp;

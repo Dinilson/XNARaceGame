@@ -123,7 +123,8 @@ namespace XNARaceGame
 
 		#region Render
 		public override void render(GraphicsManager graphicsManager) {
-            graphicsManager.drawSprite(name, (int)coords.X, (int)coords.Y, 50, 50);
+            graphicsManager.setViewportCoords(coords);
+            graphicsManager.drawSprite(name, (int)coords.X, (int)coords.Y, 50, 50, (float)rot);
 		}
 		#endregion
 		
