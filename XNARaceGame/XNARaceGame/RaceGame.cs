@@ -59,6 +59,7 @@ namespace XNARaceGame
 
         protected override void Draw(GameTime gameTime)
         {
+            graphicsManager.updateViewportCoords();
             graphicsManager.clearScreen(Color.Black);
             graphicsManager.spriteBatch.Begin();
             map.render(graphicsManager);

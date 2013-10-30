@@ -75,5 +75,9 @@ namespace XNARaceGame {
             graphicsDeviceManager.GraphicsDevice.Viewport = vp;
             viewportCoords = nextViewportCoords;
         }
+
+        public void updateViewportCoords () {
+            viewportCoords = nextViewportCoords;
+        }
     }
 }
