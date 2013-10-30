@@ -22,7 +22,7 @@ namespace XNARaceGame
         
         public void render(GraphicsManager graphicsManager)
         {
-            graphicsManager.drawSprite("Map_001", 0, 0, 800, 600);
+            graphicsManager.drawSprite("Map_001", 0, 0, 1920, 1080);
         }
 
 	}

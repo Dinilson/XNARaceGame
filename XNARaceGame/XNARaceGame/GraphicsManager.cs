@@ -14,8 +14,8 @@ namespace XNARaceGame {
     public class GraphicsManager {
 
         private readonly static string WINDOW_TITLE = "appeltaart";
-        private readonly static int SCREEN_WIDTH = 800;
-        private readonly static int SCREEN_HEIGHT = 600;
+        private readonly static int SCREEN_WIDTH = 1280;
+        private readonly static int SCREEN_HEIGHT = 720;
         private readonly static float SCALE = 2.0f; // verander dit om de scherm grote te veranderen
 
         private RaceGame game;
