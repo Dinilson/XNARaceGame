@@ -85,6 +85,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="racetrackcoll.png">
+      <Name>racetrackcoll</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Compile Include="racetrackv2.png">
       <Name>racetrackv2</Name>
       <Importer>TextureImporter</Importer>
