@@ -22,7 +22,8 @@ namespace XNARaceGame {
         public GraphicsDeviceManager graphicsDeviceManager { get; set; }
         public SpriteBatch spriteBatch { get; set; }
         public Dictionary<string, Texture2D> sprites { get; set; }
-        public Vector2 viewportCoords { get; set; }
+        private Vector2 viewportCoords { get; set; }
+        public Vector2 nextViewportCoords { get; set; }
 
         public GraphicsManager(RaceGame game) {
             this.game = game;
@@ -48,11 +49,11 @@ namespace XNARaceGame {
         }
 
         public void drawSprite(string name, int x, int y, int width, int height) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE), (int)(y * SCALE), (int)(width * SCALE), (int)(height * SCALE)), Color.White);
+            drawSprite(name, x, y, width, height, 0f);
         }
 
         public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE), (int)(y * SCALE), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE - viewportCoords.X), (int)(y * SCALE - viewportCoords.Y), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
         }
 
         public void clearScreen(Color color) {
@@ -60,19 +61,19 @@ namespace XNARaceGame {
         }
 
         public void setViewportCoords (Vector2 coords) {
-            //if ((coords.X - (int)(SCREEN_WIDTH / 2)) > 0 && coords.X < SCREEN_WIDTH*SCALE && (coords.Y - (int)(SCREEN_HEIGHT / 2)) > 0 && coords.Y < SCREEN_HEIGHT*SCALE) {
-            //    viewportCoords = new Vector2(coords.X - (int)(SCREEN_WIDTH / 2), coords.Y - (int)(SCREEN_HEIGHT / 2));
-            //}
-            viewportCoords = coords;
+            if ((coords.X - (int)(SCREEN_WIDTH / 2)) > 0 && coords.X < SCREEN_WIDTH*SCALE && (coords.Y - (int)(SCREEN_HEIGHT / 2)) > 0 && coords.Y < SCREEN_HEIGHT*SCALE) {
+                nextViewportCoords = new Vector2(coords.X - (int)(SCREEN_WIDTH / 2), coords.Y - (int)(SCREEN_HEIGHT / 2));
+            }
         }
 
         public void updateViewport() {
             Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
-            vp.X = (int)viewportCoords.X;
-            vp.Y = (int)viewportCoords.Y;
+            vp.X = 0;
+            vp.Y = 0;
             vp.Width = SCREEN_WIDTH;
             vp.Height = SCREEN_HEIGHT;
             graphicsDeviceManager.GraphicsDevice.Viewport = vp;
+            viewportCoords = nextViewportCoords;
         }
     }
 }
