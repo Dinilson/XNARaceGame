@@ -52,11 +52,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="testau.png">
-      <Name>testau</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="testmap.png">
       <Name>testmap</Name>
       <Importer>TextureImporter</Importer>
@@ -92,6 +87,13 @@
     </Compile>
     <Compile Include="racetrackv2.png">
       <Name>racetrackv2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="testau.png">
+      <Name>testau</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
