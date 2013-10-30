@@ -44,21 +44,8 @@ namespace XNARaceGame {
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
         }
 
-        /*void graphics_PrepareDevice(object sender, PreparingDeviceSettingsEventArgs e) {
-            if (Environment.OSVersion.Platform != PlatformID.Win32NT) {
-                PresentationParameters presentParams = e.GraphicsDeviceInformation.PresentationParameters;
-
-                presentParams.RenderTargetUsage = RenderTargetUsage.PlatformContents;
-                if (graphicsDeviceManager.PreferredBackBufferHeight == 720) {
-                    presentParams.MultiSampleCount = 1;
-                } else {
-                    presentParams.MultiSampleCount = 1;
-                }
-            }
-        }*/
-
         public void drawSprite(string name, int x, int y, int width, int height) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x), (int)(y), (int)(width * SCALE), (int)(height * SCALE)), Color.White);
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE), (int)(y * SCALE), (int)(width * SCALE), (int)(height * SCALE)), Color.White);
         }
 
         public void clearScreen(Color color) {
