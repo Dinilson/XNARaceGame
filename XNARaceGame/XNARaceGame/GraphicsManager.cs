@@ -16,25 +16,20 @@ namespace XNARaceGame {
         private readonly static string WINDOW_TITLE = "appeltaart";
         private readonly static int SCREEN_WIDTH = 800;
         private readonly static int SCREEN_HEIGHT = 600;
-        private readonly static float SCALE = 1.0f; // verander dit om de scherm grote te veranderen
+        private readonly static float SCALE = 2.0f; // verander dit om de scherm grote te veranderen
 
         private RaceGame game;
         public GraphicsDeviceManager graphicsDeviceManager { get; set; }
         public SpriteBatch spriteBatch { get; set; }
         public Dictionary<string, Texture2D> sprites { get; set; }
+        public Vector2 viewportCoords { get; set; }
 
         public GraphicsManager(RaceGame game) {
             this.game = game;
+            viewportCoords = new Vector2(0, 0);
             graphicsDeviceManager = new GraphicsDeviceManager(game);
-            graphicsDeviceManager.PreferredBackBufferWidth = (int)(SCREEN_WIDTH*SCALE); // Schaalt screen width
-            graphicsDeviceManager.PreferredBackBufferHeight = (int)(SCREEN_HEIGHT*SCALE); // Schaalt screen height
-
-            Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
-            vp.X = vp.Y = 0;
-            vp.Width = graphicsDeviceManager.PreferredBackBufferWidth / 2;
-            vp.Height = graphicsDeviceManager.PreferredBackBufferHeight / 2;
-            graphicsDeviceManager.GraphicsDevice.Viewport = vp;
-
+            graphicsDeviceManager.PreferredBackBufferWidth = SCREEN_WIDTH; // Schaalt screen width
+            graphicsDeviceManager.PreferredBackBufferHeight = SCREEN_HEIGHT; // Schaalt screen height
             game.Window.Title = WINDOW_TITLE;
 
             sprites = new Dictionary<string, Texture2D>(); // 
@@ -42,6 +37,7 @@ namespace XNARaceGame {
 
         public void initialize() {
             spriteBatch = new SpriteBatch(graphicsDeviceManager.GraphicsDevice);
+            updateViewport();
         }
 
         public void loadContent() {
@@ -61,6 +57,19 @@ namespace XNARaceGame {
 
         public void clearScreen(Color color) {
             graphicsDeviceManager.GraphicsDevice.Clear(color);
+        }
+
+        public void setViewportCoords (Vector2 coords) {
+            viewportCoords = new Vector2(coords.X - (int)(SCREEN_WIDTH / 2), coords.Y - (int)(SCREEN_HEIGHT / 2));
+        }
+
+        public void updateViewport() {
+            Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
+            vp.X = (int)viewportCoords.X;
+            vp.Y = (int)viewportCoords.Y;
+            vp.Width = SCREEN_WIDTH;
+            vp.Height = SCREEN_HEIGHT;
+            graphicsDeviceManager.GraphicsDevice.Viewport = vp;
         }
     }
 }
