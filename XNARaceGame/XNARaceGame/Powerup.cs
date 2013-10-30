@@ -67,7 +67,7 @@ namespace XNARaceGame
         #region Render
         public override void render(GraphicsManager graphicsManager)
         {
-            graphicsManager.drawSprite(type + name, (int)coords.X, (int)coords.Y, width, height);
+            graphicsManager.drawSprite(type + name, (int)coords.X, (int)coords.Y, width, height, 0f);
         }
         #endregion
 
