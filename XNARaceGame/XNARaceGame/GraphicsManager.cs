@@ -61,10 +61,9 @@ namespace XNARaceGame {
         }
 
         public void setViewportCoords (Vector2 coords) {
-            int screenX = Math.Max(SCREEN_WIDTH / 2, Math.Min(1920 - (int)(SCREEN_WIDTH/2), (int)coords.X -SCREEN_WIDTH/2));
-            int screenY = Math.Max(SCREEN_HEIGHT / 2, Math.Min(1080 - (int)(SCREEN_HEIGHT/2) / 2, (int)coords.Y - SCREEN_HEIGHT / 2));
-            nextViewportCoords = Vector2.Subtract(coords * SCALE, new Vector2(screenX, screenY));
-            
+            //int screenX = Math.Max(SCREEN_WIDTH / 2, Math.Min(1920 - (int)(SCREEN_WIDTH/2), (int)coords.X -SCREEN_WIDTH/2));
+            //int screenY = Math.Max(SCREEN_HEIGHT / 2, Math.Min(1080 - (int)(SCREEN_HEIGHT/2) / 2, (int)coords.Y - SCREEN_HEIGHT / 2));
+            nextViewportCoords = Vector2.Subtract(coords * SCALE, new Vector2((coords.X * SCALE - SCREEN_WIDTH / 2) > 0 ? SCREEN_WIDTH / 2: 0, SCREEN_HEIGHT / 2));
         }
 
         public void updateViewport() {
