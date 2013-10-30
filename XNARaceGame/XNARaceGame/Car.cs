@@ -17,6 +17,8 @@ namespace XNARaceGame
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
+        private float accel2;
+        private float velocity2;
 		#endregion
 
 		#region Constructor
@@ -34,38 +36,73 @@ namespace XNARaceGame
         {
             double tau = (double)Math.PI * 2; // tau = 2 * pi
 
+
+
+            if (inputManager.currentKeyState.IsKeyDown(Keys.W))
+            {
+                if (accel2 < 100)
+                {
+                    accel2 += (800 * dt);
+                }
+                //accel = Vector2.Add(accel, new Vector2(400 * dt * (float)Math.Cos(rot), 400 * dt * (float)Math.Sin(rot)));
+                //accel = Vector2.Add(accel, Vector2.Normalize(accel) * 400 * dt);
+            }
+
+            if (inputManager.currentKeyState.IsKeyDown(Keys.S))
+            {
+                if (accel2 > 0)
+                {
+                    accel2 -= (1000 * dt);
+                }
+                if (accel2 <= 0)
+                {
+                    accel2 -= (300 * dt);
+                }
+            }
+
+            if (inputManager.currentKeyState.IsKeyDown(Keys.A))
+            {
+                rot -= 0.02;
+            }
+
+            if (inputManager.currentKeyState.IsKeyDown(Keys.D))
+            {
+                rot += 0.02;
+            }
+
+            if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
+            {
+                //accel = new Vector2(0, 0);
+            }
+
+
+
+            velocity2 = velocity2 + (accel2 * dt); // v = v + (a * dt). (a * dt = v)
+
             rot %= tau;
 
-            if (rot < 0) 
+            if (rot < 0)
             {
                 rot += tau;
             }
 
-            if (inputManager.currentKeyState.IsKeyDown(Keys.W))
-            {
-                if (accel.X == 0 && accel.Y == 0)
-                {
-                    accel = new Vector2((float)Math.Cos(rot), (float)Math.Sin(rot));
-                }
+            coords = Vector2.Add(coords, new Vector2(velocity2 * (float)Math.Cos(rot) * dt, velocity2 * (float)Math.Sin(rot) * dt));
 
-                else
-                {
-                    accel = Vector2.Add(accel, Vector2.Normalize(accel));
-                }
+            accel2 *= 0.9f;
+            if (velocity2 < 10.0f && accel2 == 0.0f)
+            {
+                velocity2 = 0.0f;
+            }
+            else
+            {
+                velocity2 *= 0.99f;
             }
 
-
-
-            if (inputManager.currentKeyState.IsKeyUp(Keys.W) && inputManager.currentKeyState.IsKeyUp(Keys.S))
-            {
-                accel = new Vector2(0, 0);
-            }
-
-            accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
+            /*accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
 
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
 
-            coords = Vector2.Add(Vector2.Multiply(velocity, dt), coords); // s = (v * dt) + s. (v * dt = s)
+            coords = Vector2.Add(Vector2.Multiply(velocity, dt), coords); // s = (v * dt) + s. (v * dt = s)*/
 			return isAlive;
 		}
 
