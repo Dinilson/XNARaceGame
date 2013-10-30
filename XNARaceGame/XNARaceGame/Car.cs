@@ -62,7 +62,7 @@ namespace XNARaceGame
             {
                 if (velocity != 0)
                 {
-                    rot -= 0.02;
+                    rot -= 0.01*velocity*dt;
                 }
             }
 
@@ -70,7 +70,7 @@ namespace XNARaceGame
             {
                 if (velocity != 0)
                 {
-                    rot += 0.02;
+                    rot += 0.01*velocity*dt;
                 }
             }
 
