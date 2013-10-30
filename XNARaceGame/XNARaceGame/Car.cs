@@ -34,8 +34,6 @@ namespace XNARaceGame
         {
             double tau = (double)Math.PI * 2; // tau = 2 * pi
 
-
-
             if (inputManager.currentKeyState.IsKeyDown(Keys.W))
             {
                 if (accel < 100)
@@ -45,7 +43,6 @@ namespace XNARaceGame
                 //accel = Vector2.Add(accel, new Vector2(400 * dt * (float)Math.Cos(rot), 400 * dt * (float)Math.Sin(rot)));
                 //accel = Vector2.Add(accel, Vector2.Normalize(accel) * 400 * dt);
             }
-
             if (inputManager.currentKeyState.IsKeyDown(Keys.S))
             {
                 if (accel > 0)
@@ -57,29 +54,23 @@ namespace XNARaceGame
                     accel -= (300 * dt);
                 }
             }
-
             if (inputManager.currentKeyState.IsKeyDown(Keys.A))
             {
                    rot -= 0.01*velocity*dt;
                 
             }
-
             if (inputManager.currentKeyState.IsKeyDown(Keys.D))
             {
                
                     rot += 0.01*velocity*dt;
                 
             }
-
             if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
             {
                 //accel = new Vector2(0, 0);
             }
 
-
-
             velocity = velocity + (accel * dt); // v = v + (a * dt). (a * dt = v)
-
             rot %= tau;
 
             if (rot < 0)
@@ -88,7 +79,6 @@ namespace XNARaceGame
             }
 
             coords = Vector2.Add(coords, new Vector2(velocity * (float)Math.Cos(rot) * dt, velocity * (float)Math.Sin(rot) * dt));
-
             accel *= 0.9f;
 
             if ((velocity < 5.0f && velocity >= 0.0f) && (accel < 0.0001f && accel > -0.0001f))

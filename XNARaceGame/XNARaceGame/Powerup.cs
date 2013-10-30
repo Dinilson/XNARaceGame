@@ -59,6 +59,7 @@ namespace XNARaceGame
             {
                 isVisible = true;
                 isActive = true;
+                timer = -1;
             }
 
             return isAlive;

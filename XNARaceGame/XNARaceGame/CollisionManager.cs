@@ -9,10 +9,9 @@ namespace XNARaceGame
         // controleert voor de map of entity aan het collide is met map
 		public static void CheckMapCollisions(Entity entity, Map map, double dt)
 		{
-
 		}
 
-		public static void CheckEntityCollisions(Entity entity, List<Entity> entities, double dt)
+		public static void CheckEntityCollisions(Entity entity, List<Entity> entities, float dt)
 		{
 			if (entity.isActor && entity.isCollidable)
 			{
