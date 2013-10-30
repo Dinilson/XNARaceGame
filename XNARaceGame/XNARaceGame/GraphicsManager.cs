@@ -62,7 +62,7 @@ namespace XNARaceGame {
 
         public void setViewportCoords (Vector2 coords) {
             //if() {
-                nextViewportCoords = Vector2.Add(coords * SCALE, new Vector2(SCREEN_WIDTH/2 , SCREEN_HEIGHT/2));
+                nextViewportCoords = Vector2.Subtract(coords * SCALE, new Vector2(SCREEN_WIDTH/2 , SCREEN_HEIGHT/2));
             //}
         }
 
