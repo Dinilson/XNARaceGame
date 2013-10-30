@@ -23,12 +23,11 @@ namespace XNARaceGame
         public bool isActive {get; set;} 
         public string type {get; set;} 
         public int timer {get; set;}
-        public bool isVisible { get; set; }
         #endregion
 
         #region Constructor
         //constructor
-        public Powerup(RaceGame game, string type, bool isActive, bool isVisible, Vector2 coords) : base("Powerup", game, coords, new Vector2(width, height), 0, isVisible, true, false)
+        public Powerup(RaceGame game, string type, bool isActive, Vector2 coords) : base("Powerup", game, coords, new Vector2(width, height), 0, true, true, false)
         {
             this.isActive = isActive;
             this.type = type;
