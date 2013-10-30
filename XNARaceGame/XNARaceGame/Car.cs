@@ -60,12 +60,18 @@ namespace XNARaceGame
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.A))
             {
-                rot -= 0.02;
+                if (velocity != 0)
+                {
+                    rot -= 0.02;
+                }
             }
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.D))
             {
-                rot += 0.02;
+                if (velocity != 0)
+                {
+                    rot += 0.02;
+                }
             }
 
             if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
@@ -87,15 +93,24 @@ namespace XNARaceGame
             coords = Vector2.Add(coords, new Vector2(velocity * (float)Math.Cos(rot) * dt, velocity * (float)Math.Sin(rot) * dt));
 
             accel *= 0.9f;
-            if (velocity < 10.0f && accel == 0.0f)
+
+            if ((velocity < 5.0f && velocity >= 0.0f) && (accel < 0.0001f && accel > -0.0001f))
             {
                 velocity = 0.0f;
+                accel = 0.0f;
+            }
+            else if ((velocity > -5.0f && velocity < 0.0f) && (accel < 0.0001f && accel > -0.0001f))
+            {
+                velocity = 0.0f;
+                accel = 0.0f;
             }
             else
             {
                 velocity *= 0.99f;
             }
-
+            Console.WriteLine("accel: " + accel);
+            Console.WriteLine("velocity: " + velocity);
+            Console.WriteLine("rot: " + rot);
             /*accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
 
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
