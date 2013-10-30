@@ -53,7 +53,7 @@ namespace XNARaceGame {
         }
 
         public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE - viewportCoords.X), (int)(y * SCALE - viewportCoords.Y), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE - viewportCoords.X), (int)(y * SCALE - viewportCoords.Y), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(width/2, height/2), SpriteEffects.None, 0f);
         }
 
         public void clearScreen(Color color) {
@@ -61,7 +61,9 @@ namespace XNARaceGame {
         }
 
         public void setViewportCoords (Vector2 coords) {
-            nextViewportCoords = Vector2.Add(coords * SCALE, new Vector2(SCREEN_WIDTH/2, SCREEN_HEIGHT/2));
+            //if() {
+                nextViewportCoords = Vector2.Add(coords * SCALE, new Vector2(SCREEN_WIDTH/2 , SCREEN_HEIGHT/2));
+            //}
         }
 
         public void updateViewport() {
