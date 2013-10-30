@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
+    // keybinding
 	public class InputManager
 	{
         public KeyboardState currentKeyState { get; set; }

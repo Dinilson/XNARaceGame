@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame {
+    // regelt alle grafische aspecten van de game
     public class GraphicsManager {
 
         private readonly static string WINDOW_TITLE = "appeltaart";

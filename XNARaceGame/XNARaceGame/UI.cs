@@ -2,6 +2,7 @@ using System;
 
 namespace XNARaceGame
 {
+    // tekent de userinterface
 	public class UI
 	{
         private RaceGame game;

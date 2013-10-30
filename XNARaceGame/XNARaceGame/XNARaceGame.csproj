@@ -120,7 +120,6 @@
     <Compile Include="Game1.cs" />
     <Compile Include="RaceGame.cs" />
     <Compile Include="SoundManager.cs" />
-    <Compile Include="Tile.cs" />
     <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
+    // verandert de staat van het object
 	class Powerup : Entity 
     {
 

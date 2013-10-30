@@ -5,6 +5,7 @@ namespace XNARaceGame
 {
 	class CollisionManager
 	{
+        // controleert voor de map of entity aan het collide is met map
 		public static void CheckMapCollisions(Entity entity, Map map, double dt)
 		{
 

@@ -13,6 +13,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace XNARaceGame
 {
+    //tekent de map
 	public class Map
 	{
          

@@ -10,7 +10,8 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
-{
+{   
+    // hoofdklasse voor bijna alle objecten in de game
 	public abstract class Entity
 	{
 		#region Entity variables

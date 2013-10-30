@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNARaceGame
 {
+    // hoofd gameklasse
 	public class RaceGame : Microsoft.Xna.Framework.Game
 	{
         public InputManager inputManager { get; set; }

@@ -38,7 +38,7 @@
   <Class Name="XNARaceGame.GraphicsManager" Collapsed="true">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAREAAABAAAAAAAAGAAQAgAAAAAAAIAAgAABCAAAA=</HashCode>
+      <HashCode>AAAAREAAABAAAADQAAGAAQAgAAAAAAAIAAgAABCAACA=</HashCode>
       <FileName>GraphicsManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,13 +82,6 @@
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAQAAAAAAAAAEAAMAAAIAAAKAAAAAAA=</HashCode>
       <FileName>SoundManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="XNARaceGame.Tile" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="XNARaceGame.UI" Collapsed="true">
