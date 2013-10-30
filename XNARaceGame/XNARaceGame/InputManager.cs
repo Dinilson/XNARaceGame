@@ -23,7 +23,7 @@ namespace XNARaceGame
        
         public void handleGameInput(RaceGame game) {
 
-            if (currentKeyState.IsKeyDown(Keys.W)) 
+            /*if (currentKeyState.IsKeyDown(Keys.W)) 
             {
                 game.graphicsManager.graphicsDeviceManager.GraphicsDevice.Clear(Color.Red);
             }
@@ -41,18 +41,22 @@ namespace XNARaceGame
             if (currentKeyState.IsKeyDown(Keys.D))
             {
                 // Right
-            }
+            }*/
 
             if (currentKeyState.IsKeyDown(Keys.P))
             {
                 game.paused = !game.paused;
-            }  
+            }
+
+            if (currentKeyState.IsKeyDown(Keys.Escape))
+            {
+                game.Exit();
+            }
         }
 
         public void update()
         {
             currentKeyState = Keyboard.GetState();
-
         }
 	}
 }

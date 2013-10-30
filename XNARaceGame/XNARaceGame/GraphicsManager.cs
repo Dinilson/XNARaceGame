@@ -26,11 +26,11 @@ namespace XNARaceGame {
         public GraphicsManager(RaceGame game) {
             this.game = game;
             graphicsDeviceManager = new GraphicsDeviceManager(game);
-            graphicsDeviceManager.PreferredBackBufferWidth = (int)(SCREEN_WIDTH*SCALE);
-            graphicsDeviceManager.PreferredBackBufferHeight = (int)(SCREEN_HEIGHT*SCALE);
+            graphicsDeviceManager.PreferredBackBufferWidth = (int)(SCREEN_WIDTH*SCALE); // Schaalt screen width
+            graphicsDeviceManager.PreferredBackBufferHeight = (int)(SCREEN_HEIGHT*SCALE); // Schaalt screen height
             game.Window.Title = WINDOW_TITLE;
 
-            sprites = new Dictionary<string, Texture2D>();
+            sprites = new Dictionary<string, Texture2D>(); // 
         }
 
         public void initialize() {
