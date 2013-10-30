@@ -17,8 +17,6 @@ namespace XNARaceGame
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
-        private float accel2;
-        private float velocity2;
 		#endregion
 
 		#region Constructor
@@ -40,9 +38,9 @@ namespace XNARaceGame
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.W))
             {
-                if (accel2 < 100)
+                if (accel < 100)
                 {
-                    accel2 += (800 * dt);
+                    accel += (800 * dt);
                 }
                 //accel = Vector2.Add(accel, new Vector2(400 * dt * (float)Math.Cos(rot), 400 * dt * (float)Math.Sin(rot)));
                 //accel = Vector2.Add(accel, Vector2.Normalize(accel) * 400 * dt);
@@ -50,13 +48,13 @@ namespace XNARaceGame
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.S))
             {
-                if (accel2 > 0)
+                if (accel > 0)
                 {
-                    accel2 -= (1000 * dt);
+                    accel -= (1000 * dt);
                 }
-                if (accel2 <= 0)
+                if (accel <= 0)
                 {
-                    accel2 -= (300 * dt);
+                    accel -= (300 * dt);
                 }
             }
 
@@ -77,7 +75,7 @@ namespace XNARaceGame
 
 
 
-            velocity2 = velocity2 + (accel2 * dt); // v = v + (a * dt). (a * dt = v)
+            velocity = velocity + (accel * dt); // v = v + (a * dt). (a * dt = v)
 
             rot %= tau;
 
@@ -86,16 +84,16 @@ namespace XNARaceGame
                 rot += tau;
             }
 
-            coords = Vector2.Add(coords, new Vector2(velocity2 * (float)Math.Cos(rot) * dt, velocity2 * (float)Math.Sin(rot) * dt));
+            coords = Vector2.Add(coords, new Vector2(velocity * (float)Math.Cos(rot) * dt, velocity * (float)Math.Sin(rot) * dt));
 
-            accel2 *= 0.9f;
-            if (velocity2 < 10.0f && accel2 == 0.0f)
+            accel *= 0.9f;
+            if (velocity < 10.0f && accel == 0.0f)
             {
-                velocity2 = 0.0f;
+                velocity = 0.0f;
             }
             else
             {
-                velocity2 *= 0.99f;
+                velocity *= 0.99f;
             }
 
             /*accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
