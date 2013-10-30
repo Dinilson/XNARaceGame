@@ -28,6 +28,13 @@ namespace XNARaceGame {
             graphicsDeviceManager = new GraphicsDeviceManager(game);
             graphicsDeviceManager.PreferredBackBufferWidth = (int)(SCREEN_WIDTH*SCALE); // Schaalt screen width
             graphicsDeviceManager.PreferredBackBufferHeight = (int)(SCREEN_HEIGHT*SCALE); // Schaalt screen height
+
+            Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
+            vp.X = vp.Y = 0;
+            vp.Width = graphicsDeviceManager.PreferredBackBufferWidth / 2;
+            vp.Height = graphicsDeviceManager.PreferredBackBufferHeight / 2;
+            graphicsDeviceManager.GraphicsDevice.Viewport = vp;
+
             game.Window.Title = WINDOW_TITLE;
 
             sprites = new Dictionary<string, Texture2D>(); // 
