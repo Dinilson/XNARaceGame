@@ -60,18 +60,15 @@ namespace XNARaceGame
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.A))
             {
-                if (velocity != 0)
-                {
-                    rot -= 0.01*velocity*dt;
-                }
+                   rot -= 0.01*velocity*dt;
+                
             }
 
             if (inputManager.currentKeyState.IsKeyDown(Keys.D))
             {
-                if (velocity != 0)
-                {
+               
                     rot += 0.01*velocity*dt;
-                }
+                
             }
 
             if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
