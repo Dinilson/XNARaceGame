@@ -11,8 +11,8 @@ namespace XNARaceGame
 		public static void CheckMapCollisions(Entity entity, Map map, double dt)
 		{
             if (entity.isActor && entity.isCollidable) {
-                Color[] colors = new Color[(int)(entity.hitbox.X * entity.hitbox.Y];
-                map.getCurrentMapTexture().GetData<Color>(colors);
+                Color[] colors = new Color[(int)(entity.hitbox.X * entity.hitbox.Y)];
+                map.getCurrentCollisionMap().GetData<Color>(colors);
                 for(int y = 0; y < entity.hitbox.Y; y++) {
                     for(int x = 0; x < entity.hitbox.X; x++) {
                         Color currentColor = colors[x+y];

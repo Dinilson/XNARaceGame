@@ -29,6 +29,10 @@ namespace XNARaceGame
             return game.graphicsManager.getSprite(currentMap);
         }
 
+        public Texture2D getCurrentCollisionMap() {
+            return game.graphicsManager.getSprite("Collision" + currentMap);
+        }
+
         public void render(GraphicsManager graphicsManager)
         {
             graphicsManager.drawSprite(currentMap, 0, 0, 1920, 1080);
