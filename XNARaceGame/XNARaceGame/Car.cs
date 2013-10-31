@@ -124,6 +124,7 @@ namespace XNARaceGame
 		#region MapCollision
 		public override void mapCollision(Vector2 vector)
 		{
+            coords = vector;
 		}
 		#endregion
 

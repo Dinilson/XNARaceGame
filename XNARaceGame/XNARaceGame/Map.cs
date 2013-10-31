@@ -16,14 +16,22 @@ namespace XNARaceGame
     //tekent de map
 	public class Map
 	{
-         
-		public Map()
+        private RaceGame game;
+        public string currentMap {get;set;}
+
+		public Map(RaceGame game, string currentMap)
 		{
+            this.game = game;
+            this.currentMap = currentMap;
         }
-        
+
+        public Texture2D getCurrentMapTexture() {
+            return game.graphicsManager.getSprite(currentMap);
+        }
+
         public void render(GraphicsManager graphicsManager)
         {
-            graphicsManager.drawSprite("Map_001", 0, 0, 1920, 1080);
+            graphicsManager.drawSprite(currentMap, 0, 0, 1920, 1080);
         }
 
 	}

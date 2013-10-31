@@ -31,7 +31,7 @@ namespace XNARaceGame
             graphicsManager = new GraphicsManager(this);
             soundManager = new SoundManager(this);
             ui = new UI(this);
-            map = new Map();
+            map = new Map(this, "Map_001");
 
             content = base.Content;
             content.RootDirectory = "Content";

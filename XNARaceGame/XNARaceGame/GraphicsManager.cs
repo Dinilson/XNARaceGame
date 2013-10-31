@@ -49,6 +49,10 @@ namespace XNARaceGame {
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
         }
 
+        public Texture2D getSprite(string name) {
+            return sprites[name];
+        }
+
         public void drawSprite(string name, int x, int y, int width, int height) {
             drawSprite(name, x, y, width, height, 0f);
         }
