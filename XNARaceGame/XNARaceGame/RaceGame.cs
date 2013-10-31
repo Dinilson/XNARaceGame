@@ -75,7 +75,7 @@ namespace XNARaceGame
         }
 
         protected override void BeginRun() {
-            soundManager.playSong();
+            soundManager.playSong("menumuz");
         }
 
 		protected override void Update(GameTime gameTime)

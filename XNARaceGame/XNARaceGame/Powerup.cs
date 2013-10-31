@@ -18,13 +18,11 @@ namespace XNARaceGame
         #region Attributes
         private readonly static int width = 20;
         private readonly static int height = 20;
-        private readonly static int TIMEOUT = 1000;
-
-
-        public bool isActive {get; set;} 
+        private readonly static int TIMEOUT = 10000;
+ 
         public string type {get; set;} 
         public int timer {get; set;}
-        public bool isVisible { get; set; }
+        public bool isActive { get; set; }
         #endregion
 
         #region Constructor
