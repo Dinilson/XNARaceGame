@@ -27,7 +27,9 @@ namespace XNARaceGame
 
 		public static bool EntitiesCollides(Entity collider, Entity colliding)
 		{
-            return new Rectangle((int)collider.coords.X, (int)collider.coords.Y, (int)collider.hitbox.X, (int)collider.hitbox.Y).Intersects(new Rectangle((int)colliding.coords.X, (int)colliding.coords.Y, (int)colliding.hitbox.X, (int)colliding.hitbox.Y)); // goedkope collision detection, niet prefereerbaar, maar wel werkbaar
+            Vector2 colliderHitbox = new Vector2(collider.hitbox.X * (collider.hitbox.X - (collider.hitbox.X - 1)), collider.hitbox.Y*(collider.hitbox.Y - (collider.hitbox.Y - 1)));
+            Vector2 collidingHitbox = new Vector2(colliding.hitbox.X * (colliding.hitbox.X - (colliding.hitbox.X - 1)), colliding.hitbox.Y * (colliding.hitbox.Y - (colliding.hitbox.Y - 1)));
+            return new Rectangle((int)collider.coords.X, (int)collider.coords.Y, (int)colliderHitbox.X, (int)colliderHitbox.Y).Intersects(new Rectangle((int)colliding.coords.X, (int)colliding.coords.Y, (int)collidingHitbox.X, (int)collidingHitbox.Y)); // goedkope collision detection, niet prefereerbaar, maar wel werkbaar
 		}
 	}
 }
