@@ -74,6 +74,10 @@ namespace XNARaceGame
             graphicsManager.spriteBatch.End();
         }
 
+        protected override void BeginRun() {
+            soundManager.playSong();
+        }
+
 		protected override void Update(GameTime gameTime)
 		{
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
