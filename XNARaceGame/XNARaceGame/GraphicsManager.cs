@@ -47,7 +47,7 @@ namespace XNARaceGame {
             sprites["RepairPowerup"] = game.content.Load<Texture2D>("healPowerup");
             sprites["Car"] = game.content.Load<Texture2D>("testau");
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
-            sprites["CollisionMap_001"] = game.content.Load<Texture2D>("collisionmap");
+            sprites["CollisionMap_001"] = game.content.Load<Texture2D>("racetrackcoll");
         }
 
         public Texture2D getSprite(string name) {
