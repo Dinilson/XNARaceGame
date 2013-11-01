@@ -23,6 +23,7 @@ namespace XNARaceGame {
         public GraphicsDeviceManager graphicsDeviceManager { get; set; }
         public SpriteBatch spriteBatch { get; set; }
         public Dictionary<string, Texture2D> sprites { get; set; }
+        public Dictionary<string, SpriteFont> fonts { get; set; }
         private Vector2 viewportCoords { get; set; }
         public Vector2 nextViewportCoords { get; set; }
 
@@ -35,6 +36,7 @@ namespace XNARaceGame {
             game.Window.Title = WINDOW_TITLE;
 
             sprites = new Dictionary<string, Texture2D>(); // 
+            fonts = new Dictionary<string, SpriteFont>();
         }
 
         public void initialize() {
@@ -48,6 +50,8 @@ namespace XNARaceGame {
             sprites["Car"] = game.content.Load<Texture2D>("testau");
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
             sprites["CollisionMap_001"] = game.content.Load<Texture2D>("racetrackcoll");
+            
+            fonts["font1"] = game.content.Load<SpriteFont>("SpriteFont");
         }
 
         public Texture2D getSprite(string name) {
@@ -60,6 +64,13 @@ namespace XNARaceGame {
 
         public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
             spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE - viewportCoords.X), (int)(y * SCALE - viewportCoords.Y), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(width/2, height/2), SpriteEffects.None, 0f);
+        }
+        
+        public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
+            if(relative) {
+                location = Vector2.Add(location, viewportCoords);
+            }
+            spriteBatch.DrawString(fonts[name], text, location, color);
         }
 
         public void clearScreen(Color color) {
