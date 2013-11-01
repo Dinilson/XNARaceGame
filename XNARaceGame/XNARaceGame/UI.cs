@@ -24,7 +24,7 @@ namespace XNARaceGame
 
         public void render(GraphicsManager graphicsManager) 
         {
-            graphicsManager.drawText("font1", "dit is een text", new Vector(10, 10), Color.white, true);
+            graphicsManager.drawText("font1", "dit is een text", new Vector2(10, 10), Color.White, true);
         }
 	}
 }
