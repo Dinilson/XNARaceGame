@@ -16,6 +16,7 @@ namespace XNARaceGame
 		#region Attributes
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
+        double TAU = (double)Math.PI * 2; // TAU = 2 * pi
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
 		#endregion
 
@@ -32,13 +33,14 @@ namespace XNARaceGame
 		#region Update
 		public override bool update(float dt, InputManager inputManager)
         {
-            double tau = (double)Math.PI * 2; // tau = 2 * pi
-
             if (inputManager.currentKeyState.IsKeyDown(Keys.W))
             {
-                if (accel < 100)
+                
+                accel += (100 * dt);
+
+                if (accel > 100)
                 {
-                    accel += (800 * dt);
+                    accel = 100.0f;
                 }
                 //accel = Vector2.Add(accel, new Vector2(400 * dt * (float)Math.Cos(rot), 400 * dt * (float)Math.Sin(rot)));
                 //accel = Vector2.Add(accel, Vector2.Normalize(accel) * 400 * dt);
@@ -47,11 +49,15 @@ namespace XNARaceGame
             {
                 if (accel > 0)
                 {
-                    accel -= (1000 * dt);
+                    accel -= (200 * dt);
                 }
                 if (accel <= 0)
                 {
-                    accel -= (300 * dt);
+                    accel -= (10 * dt);
+                }
+                if (accel < -75)
+                {
+                    accel = -75.0f;
                 }
             }
             if (inputManager.currentKeyState.IsKeyDown(Keys.A))
@@ -67,34 +73,28 @@ namespace XNARaceGame
             }
             if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
             {
-                //accel = new Vector2(0, 0);
+                accel = 0.0f;
             }
 
             velocity = velocity + (accel * dt); // v = v + (a * dt). (a * dt = v)
-            rot %= tau;
+            rot %= TAU;
 
             if (rot < 0)
             {
-                rot += tau;
+                rot += TAU;
             }
 
             coords = Vector2.Add(coords, new Vector2(velocity * (float)Math.Cos(rot) * dt, velocity * (float)Math.Sin(rot) * dt));
-            accel *= 0.9f;
 
-            if ((velocity < 5.0f && velocity >= 0.0f) && (accel < 0.0001f && accel > -0.0001f))
+            if ((velocity < 5.0f && velocity > -5.0f) && (accel == 0.0f))
             {
                 velocity = 0.0f;
-                accel = 0.0f;
-            }
-            else if ((velocity > -5.0f && velocity < 0.0f) && (accel < 0.0001f && accel > -0.0001f))
-            {
-                velocity = 0.0f;
-                accel = 0.0f;
             }
             else
             {
                 velocity *= 0.99f;
             }
+
             Console.WriteLine("accel: " + accel);
             Console.WriteLine("velocity: " + velocity);
             Console.WriteLine("rot: " + rot);

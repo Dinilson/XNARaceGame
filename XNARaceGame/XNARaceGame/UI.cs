@@ -31,10 +31,10 @@ namespace XNARaceGame
         {
             //lukas kijk hier ff na, ik weet niet wat ik verder moet.. of in moet laden
             fontPosition = new Vector2(0, 10);
-            text = new string("lol?");
-            color = new Color (Color.AntiqueWhite);
+            text = "lol?";
+            color = Color.AntiqueWhite;
             
-            graphicsManager.spriteBatch.DrawString(font1, text, fontPosition, color);
+            //graphicsManager.spriteBatch.DrawString(font1, text, fontPosition, color);
         }
 	}
 }
