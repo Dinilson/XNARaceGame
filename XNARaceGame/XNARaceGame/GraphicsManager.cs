@@ -66,10 +66,8 @@ namespace XNARaceGame {
         }
         
         public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
-            if (relative) {
-                location = Vector2.Subtract(location, viewportCoords) * SCALE;
-            } else {
-                location *= SCALE;
+            if (!relative) {
+                location = Vector2.Subtract(location * SCALE, viewportCoords);
             }
             spriteBatch.DrawString(fonts[name], text, location, color);
         }
