@@ -41,7 +41,7 @@ namespace XNARaceGame {
 
         public void initialize() {
             spriteBatch = new SpriteBatch(graphicsDeviceManager.GraphicsDevice);
-            updateViewport();
+            //updateViewport();
         }
 
         public void loadContent() {
@@ -51,7 +51,7 @@ namespace XNARaceGame {
             sprites["Map_001"] = game.content.Load<Texture2D>("racetrackv2");
             sprites["CollisionMap_001"] = game.content.Load<Texture2D>("racetrackcoll");
             
-            fonts["font1"] = game.content.Load<SpriteFont>("SpriteFont");
+            fonts["font1"] = game.content.Load<SpriteFont>("Spritefont uI");
         }
 
         public Texture2D getSprite(string name) {
@@ -67,8 +67,10 @@ namespace XNARaceGame {
         }
         
         public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
-            if(relative) {
+            if (relative) {
                 location = Vector2.Add(location, viewportCoords);
+            } else {
+                location *= SCALE;
             }
             spriteBatch.DrawString(fonts[name], text, location, color);
         }
@@ -82,7 +84,7 @@ namespace XNARaceGame {
             nextViewportCoords = Vector2.Clamp(nextViewportCoords, new Vector2(-1920/2-SCREEN_WIDTH/2, -1080/2-SCREEN_HEIGHT/2), new Vector2(SCREEN_WIDTH/2, SCREEN_HEIGHT/2));
         }
 
-        public void updateViewport() {
+        /*public void updateViewport() {
             Viewport vp = graphicsDeviceManager.GraphicsDevice.Viewport;
             vp.X = 0;
             vp.Y = 0;
@@ -90,7 +92,7 @@ namespace XNARaceGame {
             vp.Height = SCREEN_HEIGHT;
             graphicsDeviceManager.GraphicsDevice.Viewport = vp;
             viewportCoords = nextViewportCoords;
-        }
+        }*/
 
         public void updateViewportCoords () {
             viewportCoords = nextViewportCoords;
