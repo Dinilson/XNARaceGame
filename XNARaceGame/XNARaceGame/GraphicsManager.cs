@@ -17,7 +17,7 @@ namespace XNARaceGame {
         private readonly static string WINDOW_TITLE = "appeltaart";
         private readonly static int SCREEN_WIDTH = 1280;
         private readonly static int SCREEN_HEIGHT = 720;
-        private readonly static float SCALE = 2.0f; // verander dit om de scherm grote te veranderen
+        //private readonly static float SCALE = 2.0f; // verander dit om de scherm grote te veranderen
 
         private RaceGame game;
         public GraphicsDeviceManager graphicsDeviceManager { get; set; }
@@ -26,9 +26,11 @@ namespace XNARaceGame {
         public Dictionary<string, SpriteFont> fonts { get; set; }
         private Vector2 viewportCoords { get; set; }
         public Vector2 nextViewportCoords { get; set; }
+        public float scale { get; set; }
 
         public GraphicsManager(RaceGame game) {
             this.game = game;
+            scale = 2f;
             viewportCoords = new Vector2(0, 0);
             graphicsDeviceManager = new GraphicsDeviceManager(game);
             graphicsDeviceManager.PreferredBackBufferWidth = SCREEN_WIDTH; // Schaalt screen width
@@ -62,12 +64,12 @@ namespace XNARaceGame {
         }
 
         public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * SCALE - viewportCoords.X), (int)(y * SCALE - viewportCoords.Y), (int)(width * SCALE), (int)(height * SCALE)), null, Color.White, rotation, new Vector2(width/2, height/2), SpriteEffects.None, 0f);
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * scale - viewportCoords.X), (int)(y * scale - viewportCoords.Y), (int)(width * scale), (int)(height * scale)), null, Color.White, rotation, new Vector2(width/2, height/2), SpriteEffects.None, 0f);
         }
         
         public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
             if (!relative) {
-                location = Vector2.Subtract(location * SCALE, viewportCoords);
+                location = Vector2.Subtract(location * scale, viewportCoords);
             }
             spriteBatch.DrawString(fonts[name], text, location, color);
         }
@@ -77,7 +79,7 @@ namespace XNARaceGame {
         }
 
         public void setViewportCoords (Vector2 coords) {
-            nextViewportCoords = Vector2.Subtract(coords * SCALE, new Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
+            nextViewportCoords = Vector2.Subtract(coords * scale, new Vector2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
             nextViewportCoords = Vector2.Clamp(nextViewportCoords, new Vector2(-1920/2-SCREEN_WIDTH/2, -1080/2-SCREEN_HEIGHT/2), new Vector2(SCREEN_WIDTH/2, SCREEN_HEIGHT/2));
         }
 

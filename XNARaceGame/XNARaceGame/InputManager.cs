@@ -31,6 +31,12 @@ namespace XNARaceGame
             {
                 game.Exit();
             }
+            if(currentKeyState.IsKeyDown(Keys.O)) {
+                game.graphicsManager.scale += 0.1f;
+            }
+            if(currentKeyState.IsKeyDown(Keys.P)) {
+                game.graphicsManager.scale -= 0.1f;
+            }
         }
 
         public void update()
