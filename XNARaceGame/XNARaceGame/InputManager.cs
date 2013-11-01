@@ -22,7 +22,7 @@ namespace XNARaceGame
             currentKeyState = Keyboard.GetState(); 
 		}
        
-        public void handleGameInput(RaceGame game) {
+        public void handleGameInput(RaceGame game, float dt) {
             if (currentKeyState.IsKeyDown(Keys.P))
             {
                 game.paused = !game.paused;
@@ -32,10 +32,10 @@ namespace XNARaceGame
                 game.Exit();
             }
             if(currentKeyState.IsKeyDown(Keys.O)) {
-                game.graphicsManager.scale += 0.01f;
+                game.graphicsManager.scale += 0.1f * dt;
             }
             if(currentKeyState.IsKeyDown(Keys.I)) {
-                game.graphicsManager.scale -= 0.01f;
+                game.graphicsManager.scale -= 0.1f * dt;
             }
         }
 
