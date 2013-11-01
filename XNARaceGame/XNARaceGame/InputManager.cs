@@ -25,14 +25,17 @@ namespace XNARaceGame
 		}
 
         private bool isSingleKeyPress(Keys key) {
-            return currentKeyState.IsKeyDown(key) && !keyPressList.Contains(key);
+            bool keyPress = currentKeyState.IsKeyDown(key) && !keyPressList.Contains(key);
+            if (!keyPress) {
+                keyPressList.Add(key);
+            }
+            return keyPress;
         }
        
         public void handleGameInput(RaceGame game, float dt) {
             if (isSingleKeyPress(Keys.P))
             {
                 game.paused = !game.paused;
-                keyPressList.Add(Keys.P); // voeg toe aan single key press list
             }
             if (currentKeyState.IsKeyDown(Keys.Escape))
             {
