@@ -83,7 +83,7 @@ namespace XNARaceGame
 		{
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
             inputManager.update();
-            inputManager.handleGameInput(this);
+            inputManager.handleGameInput(this, dt);
             if (!paused) {
                 foreach (Entity entity in entities) {
                     //CollisionManager.CheckMapCollisions(entity, map, dt);
@@ -93,6 +93,7 @@ namespace XNARaceGame
                     }
                 }
             }
+            ui.update(this);
 		}
 
 		public void run()
