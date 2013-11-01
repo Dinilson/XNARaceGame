@@ -44,8 +44,8 @@ namespace XNARaceGame
             entities.Add(new Powerup(this, "Petrol", true, true, new Vector2(-500, -150)));
             entities.Add(new Powerup(this, "Petrol", true, false, new Vector2(500, -175)));
             entities.Add(new Powerup(this, "Repair", true, false, new Vector2(495, -180)));
-			entities.Add(new Car(this, cam[0],  new Vector2(10, 10), 0, new Keys[4] {Keys.W, Keys.S, Keys.A, Keys.D, Keys.I, Keys.O})); //als laatste tekenen
-            entities.Add(new Car(this, cam[1], new Vector2(50, 50), 0, new Keys[4] { Keys.Y, Keys.H, Keys.G, Keys.J , Keys.N, Keys.M}));
+			entities.Add(new Car(this, cam[0],  new Vector2(10, 10), 0, new Keys[6] {Keys.W, Keys.S, Keys.A, Keys.D, Keys.I, Keys.O})); //als laatste tekenen
+            entities.Add(new Car(this, cam[1], new Vector2(50, 50), 0, new Keys[6] { Keys.Y, Keys.H, Keys.G, Keys.J , Keys.N, Keys.M}));
             //entities.Add(new Car(this, new Vector2(10, 10), 0, new Keys[4] { Keys.I, Keys.K, Keys.J, Keys.L }));
         }
 

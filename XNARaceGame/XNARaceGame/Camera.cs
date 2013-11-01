@@ -45,6 +45,8 @@ namespace XNARaceGame {
         }
 
         public void setCoords(Vector2 coords) {
+            nextCoords = Vector2.Subtract(coords * scale, new Vector2(width / 2, height / 2));
+            nextCoords = Vector2.Clamp(nextCoords, new Vector2((-1920 / 2) * scale / 2 - width / 2, (-1080 / 2) * scale / 2 - height / 2), new Vector2(width / 2, height / 2));
             nextCoords = coords;
         }
     }
