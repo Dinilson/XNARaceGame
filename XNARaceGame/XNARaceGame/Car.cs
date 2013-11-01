@@ -17,15 +17,17 @@ namespace XNARaceGame
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
         double TAU = (double)Math.PI * 2; // TAU = 2 * pi
+		Keys[] keys;
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
 		#endregion
 
 		#region Constructor
-		public Car(RaceGame game, Vector2 coords, double rot) : base("Car", game, coords, new Vector2(50, 50), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
+		public Car(RaceGame game, Vector2 coords, double rot, Keys[] keys) : base("Car", game, coords, new Vector2(50, 50), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
 		{
 			damage = 0;
 			petrol = 100;
 			checkpoints = new bool[4] { false, false, false, false };
+			this.keys = keys;
             //accel = Vector2.Add(accel, new Vector2(0.1f, 0.1f));
 		}
 		#endregion
@@ -33,7 +35,7 @@ namespace XNARaceGame
 		#region Update
 		public override bool update(float dt, InputManager inputManager)
         {
-            if (inputManager.currentKeyState.IsKeyDown(Keys.W))
+            if (inputManager.currentKeyState.IsKeyDown(keys[0]))
             {
                 
                 accel += (100 * dt);
@@ -45,7 +47,7 @@ namespace XNARaceGame
                 //accel = Vector2.Add(accel, new Vector2(400 * dt * (float)Math.Cos(rot), 400 * dt * (float)Math.Sin(rot)));
                 //accel = Vector2.Add(accel, Vector2.Normalize(accel) * 400 * dt);
             }
-            if (inputManager.currentKeyState.IsKeyDown(Keys.S))
+            if (inputManager.currentKeyState.IsKeyDown(keys[1]))
             {
                 if (accel > 0)
                 {
@@ -60,18 +62,18 @@ namespace XNARaceGame
                     accel = -75.0f;
                 }
             }
-            if (inputManager.currentKeyState.IsKeyDown(Keys.A))
+            if (inputManager.currentKeyState.IsKeyDown(keys[2]))
             {
                    rot -= 0.01*velocity*dt;
                 
             }
-            if (inputManager.currentKeyState.IsKeyDown(Keys.D))
+            if (inputManager.currentKeyState.IsKeyDown(keys[3]))
             {
                
                     rot += 0.01*velocity*dt;
                 
             }
-            if (!inputManager.currentKeyState.IsKeyDown(Keys.W) && !inputManager.currentKeyState.IsKeyDown(Keys.S))
+            if (!inputManager.currentKeyState.IsKeyDown(keys[0]) && !inputManager.currentKeyState.IsKeyDown(keys[1]))
             {
                 accel = 0.0f;
             }
