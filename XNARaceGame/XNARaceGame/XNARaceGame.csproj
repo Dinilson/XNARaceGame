@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camera.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="Checkpoint.cs" />
     <Compile Include="CollisionManager.cs" />
