@@ -19,6 +19,7 @@ namespace XNARaceGame
         double TAU = (double)Math.PI * 2; // TAU = 2 * pi
 		Keys[] keys;
 		public bool[] checkpoints { get; set; } // Four checkpoins. Initialises as having reached none (all false).
+        private Vector2 coordsoffset;
 		#endregion
 
 		#region Constructor
@@ -85,8 +86,9 @@ namespace XNARaceGame
             {
                 rot += TAU;
             }
-
-            coords = Vector2.Add(coords, new Vector2(velocity * (float)Math.Cos(rot) * dt, velocity * (float)Math.Sin(rot) * dt));
+            coordsoffset.X = velocity * (float)Math.Cos(rot) * dt;
+            coordsoffset.Y = velocity * (float)Math.Sin(rot) * dt;
+            coords = Vector2.Add(coords, coordsoffset);
 
             if ((velocity < 5.0f && velocity > -5.0f) && (accel == 0.0f))
             {
@@ -97,9 +99,9 @@ namespace XNARaceGame
                 velocity *= 0.99f;
             }
 
-            Console.WriteLine("accel: " + accel);
+            /*Console.WriteLine("accel: " + accel);
             Console.WriteLine("velocity: " + velocity);
-            Console.WriteLine("rot: " + rot);
+            Console.WriteLine("rot: " + rot);*/
             /*accel = Vector2.Add(accel, new Vector2(-velocity.X * 0.25f, -velocity.Y * 0.25f));
 
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
