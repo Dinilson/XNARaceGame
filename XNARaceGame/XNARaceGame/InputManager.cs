@@ -26,7 +26,7 @@ namespace XNARaceGame
 
         private bool isSingleKeyPress(Keys key) {
             bool keyPress = currentKeyState.IsKeyDown(key) && !keyPressList.Contains(key);
-            if (!keyPress) {
+            if (keyPress) {
                 keyPressList.Add(key);
             }
             return keyPress;
