@@ -124,7 +124,7 @@ namespace XNARaceGame
 		#region MapCollision
 		public override void mapCollision(Vector2 vector)
 		{
-            velocity = -accel - 1;
+            velocity -= accel - 1;
 		}
 		#endregion
 
