@@ -24,12 +24,6 @@ namespace XNARaceGame
 
         public void render(GraphicsManager graphicsManager) 
         {
-
-            //lukas kijk hier ff na, ik weet niet wat ik verder moet.. of in moet laden
-            /*fontPosition = new Vector2(0, 10);
-            text = "lol?";
-            color = Color.AntiqueWhite;*/
-
             graphicsManager.drawText("font1", "dit is een text", new Vector2(10, 10), Color.White, true);
         }
 	}
