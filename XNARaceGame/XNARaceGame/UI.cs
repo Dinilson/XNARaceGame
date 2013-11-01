@@ -23,7 +23,7 @@ namespace XNARaceGame
 		}
 
         public void update(RaceGame game) {
-            text = "Staat de game op pauze? " + (game.paused? "Ja.": "Nee");
+            text = "Staat de game op pauze? " + (game.paused? "Ja.": "Nee.");
         }
 
         public void render(GraphicsManager graphicsManager)

@@ -14,6 +14,7 @@ namespace XNARaceGame
 	class Car : Entity
 	{
 		#region Attributes
+        private Camera camera;
         private double damage; // Percentage. Preferably up to 100.
         private double petrol; // Percentage. Starts with full petrol.
         double TAU = (double)Math.PI * 2; // TAU = 2 * pi
@@ -23,8 +24,9 @@ namespace XNARaceGame
 		#endregion
 
 		#region Constructor
-		public Car(RaceGame game, Vector2 coords, double rot, Keys[] keys) : base("Car", game, coords, new Vector2(50, 50), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
+		public Car(RaceGame game, Camera camera, Vector2 coords, double rot, Keys[] keys) : base("Car", game, coords, new Vector2(50, 50), rot, true, true, true) // Yet to define hitbox. Dummy values 1337.
 		{
+            this.camera = camera;
 			damage = 0;
 			petrol = 100;
 			checkpoints = new bool[4] { false, false, false, false };
@@ -107,7 +109,7 @@ namespace XNARaceGame
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
 
             coords = Vector2.Add(Vector2.Multiply(velocity, dt), coords); // s = (v * dt) + s. (v * dt = s)*/
-            game.graphicsManager.setViewportCoords(coords);
+            camera.setCoords(coords);
 			return isAlive;
 		}
 

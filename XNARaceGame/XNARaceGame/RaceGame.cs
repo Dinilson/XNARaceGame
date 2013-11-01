@@ -38,12 +38,14 @@ namespace XNARaceGame
 		}
 
         private void entitiesInit() {
+            List<Camera> cam = graphicsManager.addCameras(2);
             entities = new List<Entity>();
             entities.Add(new Powerup(this, "Repair", true, true, new Vector2(200, 200)));
             entities.Add(new Powerup(this, "Petrol", true, true, new Vector2(-500, -150)));
             entities.Add(new Powerup(this, "Petrol", true, false, new Vector2(500, -175)));
             entities.Add(new Powerup(this, "Repair", true, false, new Vector2(495, -180)));
-			entities.Add(new Car(this, new Vector2(10, 10), 0, new Keys[4] {Keys.W, Keys.S, Keys.A, Keys.D})); //als laatste tekenen
+			entities.Add(new Car(this, cam[0],  new Vector2(10, 10), 0, new Keys[4] {Keys.W, Keys.S, Keys.A, Keys.D})); //als laatste tekenen
+            entities.Add(new Car(this, cam[1], new Vector2(50, 50), 0, new Keys[4] { Keys.Y, Keys.H, Keys.G, Keys.J }));
             //entities.Add(new Car(this, new Vector2(10, 10), 0, new Keys[4] { Keys.I, Keys.K, Keys.J, Keys.L }));
         }
 
@@ -60,19 +62,21 @@ namespace XNARaceGame
 
         protected override void Draw(GameTime gameTime)
         {
-            graphicsManager.updateViewportCoords();
-            graphicsManager.clearScreen(Color.Black);
-            graphicsManager.spriteBatch.Begin();
-            map.render(graphicsManager);
-            foreach (Entity entity in entities)
-            {
-                if (entity.isVisible)
-                {
-                    entity.render(graphicsManager);  
+            foreach (Camera camera in graphicsManager.cameras) {
+                camera.postUpdate();
+                graphicsManager.currentCamera = camera;
+                graphicsManager.clearScreen(Color.Black);
+                graphicsManager.spriteBatch.Begin();
+                map.render(graphicsManager);
+                foreach (Entity entity in entities) {
+                    if (entity.isVisible) {
+                        entity.render(graphicsManager);
+                    }
                 }
+                ui.render(graphicsManager);
+                graphicsManager.spriteBatch.End();
+                camera.postUpdate();
             }
-            ui.render(graphicsManager);
-            graphicsManager.spriteBatch.End();
         }
 
         protected override void BeginRun() {
