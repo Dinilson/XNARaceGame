@@ -85,7 +85,7 @@ namespace XNARaceGame
             inputManager.handleGameInput(this);
             if (!paused) {
                 foreach (Entity entity in entities) {
-                    CollisionManager.CheckMapCollisions(entity, map, dt);
+                    //CollisionManager.CheckMapCollisions(entity, map, dt);
                     CollisionManager.CheckEntityCollisions(entity, entities, dt);
                     if (!entity.update(dt, inputManager)) {
                         entities.Remove(entity);
