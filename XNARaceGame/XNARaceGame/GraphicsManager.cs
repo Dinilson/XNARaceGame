@@ -41,7 +41,6 @@ namespace XNARaceGame {
 
         public void initialize() {
             spriteBatch = new SpriteBatch(graphicsDeviceManager.GraphicsDevice);
-            //updateViewport();
         }
 
         public void loadContent() {
@@ -68,7 +67,7 @@ namespace XNARaceGame {
         
         public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
             if (relative) {
-                location = Vector2.Add(location, viewportCoords);
+                location = Vector2.Subtract(location, viewportCoords);
             } else {
                 location *= SCALE;
             }
