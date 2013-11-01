@@ -16,23 +16,23 @@ namespace XNARaceGame
 	public class InputManager
 	{
         public KeyboardState currentKeyState { get; set; }
-        private List<Keys> keyPresslist { get; set; }
+        private List<Keys> keyPressList { get; set; }
 
 		public InputManager()
 		{
             currentKeyState = Keyboard.GetState();
-            keyPresslist = new List<Keys>();
+            keyPressList = new List<Keys>();
 		}
 
         private bool isSingleKeyPress(Keys key) {
-            return currentKeyState.IsKeyDown(key) && !keyPresslist.Contains(key);
+            return currentKeyState.IsKeyDown(key) && !keyPressList.Contains(key);
         }
        
         public void handleGameInput(RaceGame game, float dt) {
             if (isSingleKeyPress(Keys.P))
             {
                 game.paused = !game.paused;
-                keyPresslist.Add(Keys.P); // voeg toe aan single key press list
+                keyPressList.Add(Keys.P); // voeg toe aan single key press list
             }
             if (currentKeyState.IsKeyDown(Keys.Escape))
             {
@@ -45,9 +45,10 @@ namespace XNARaceGame
                 game.graphicsManager.scale -= 0.5f * dt;
             }
 
-            foreach (Keys key in keyPresslist) {
+            Keys[] keyPressListCopy = keyPressList.ToArray<Keys>();
+            foreach (Keys key in keyPressListCopy) {
                 if(currentKeyState.IsKeyUp(key)) {
-                    keyPresslist.Remove(key);
+                    keyPressList.Remove(key);
                 }
             }
         }
