@@ -103,6 +103,7 @@ namespace XNARaceGame
             velocity = Vector2.Add(velocity, Vector2.Multiply(accel, dt)); // v = v + (a * dt). (a * dt = v)
 
             coords = Vector2.Add(Vector2.Multiply(velocity, dt), coords); // s = (v * dt) + s. (v * dt = s)*/
+            game.graphicsManager.setViewportCoords(coords);
 			return isAlive;
 		}
 
@@ -110,7 +111,6 @@ namespace XNARaceGame
 
 		#region Render
 		public override void render(GraphicsManager graphicsManager) {
-            graphicsManager.setViewportCoords(coords);
             graphicsManager.drawSprite(name, (int)coords.X, (int)coords.Y, 50, 50, (float)rot);
 		}
 		#endregion
