@@ -27,11 +27,8 @@ namespace XNARaceGame {
         public List<Camera> cameras { get; set; }
         public Camera currentCamera { get; set; }
 
-        public float scale { get; set; }
-
         public GraphicsManager(RaceGame game) {
             this.game = game;
-            scale = SCALE;
             currentCamera.coords = new Vector2(0, 0);
             graphicsDeviceManager = new GraphicsDeviceManager(game);
             graphicsDeviceManager.PreferredBackBufferWidth = SCREEN_WIDTH; // Schaalt screen width
@@ -66,12 +63,12 @@ namespace XNARaceGame {
         }
 
         public void drawSprite(string name, int x, int y, int width,  int height, float rotation) {
-            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * scale - currentCamera.coords.X), (int)(y * scale - currentCamera.coords.Y), (int)(width * scale), (int)(height * scale)), null, Color.White, rotation, new Vector2(width/2, height/2), SpriteEffects.None, 0f);
+            spriteBatch.Draw(sprites[name], new Rectangle((int)(x * currentCamera.scale - currentCamera.coords.X), (int)(y * currentCamera.scale - currentCamera.coords.Y), (int)(width * currentCamera.scale), (int)(height * currentCamera.scale)), null, Color.White, rotation, new Vector2(width / 2, height / 2), SpriteEffects.None, 0f);
         }
         
         public void drawText(string name, string text, Vector2 location, Color color, bool relative) {
             if (!relative) {
-                location = Vector2.Subtract(location * scale, currentCamera.coords);
+                location = Vector2.Subtract(location * currentCamera.scale, currentCamera.coords);
             }
             spriteBatch.DrawString(fonts[name], text, location, color);
         }
@@ -82,8 +79,8 @@ namespace XNARaceGame {
 
         public List<Camera> addCameras(int n) {
             if(n == 2) {
-                cameras.Add(new Camera(graphicsDeviceManager.GraphicsDevice.Viewport, 0, 0, SCREEN_WIDTH/2, SCREEN_HEIGHT));
-                cameras.Add(new Camera(graphicsDeviceManager.GraphicsDevice.Viewport, SCREEN_WIDTH/2, 0, SCREEN_WIDTH/2, SCREEN_HEIGHT));
+                cameras.Add(new Camera(graphicsDeviceManager.GraphicsDevice.Viewport, 0, 0, SCREEN_WIDTH/2, SCREEN_HEIGHT, SCALE));
+                cameras.Add(new Camera(graphicsDeviceManager.GraphicsDevice.Viewport, SCREEN_WIDTH/2, 0, SCREEN_WIDTH/2, SCREEN_HEIGHT, SCALE));
             }
             return cameras;
         }

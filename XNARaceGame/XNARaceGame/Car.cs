@@ -80,6 +80,11 @@ namespace XNARaceGame
             {
                 accel = 0.0f;
             }
+            if (!inputManager.currentKeyState.IsKeyDown(keys[4])) {
+                camera.scale += 0.5f * dt;
+            } else if (!inputManager.currentKeyState.IsKeyDown(keys[5])) {
+                camera.scale -= 0.5f * dt;
+            }
 
             velocity = velocity + (accel * dt); // v = v + (a * dt). (a * dt = v)
             rot %= TAU;

@@ -13,10 +13,11 @@ namespace XNARaceGame {
         private int y;
         private int width;
         private int height;
+        public float scale { get; set; }
         public Vector2 coords { get; set; }
         private Vector2 nextCoords;
 
-        public Camera(Viewport viewport, int x, int y, int width, int height) {
+        public Camera(Viewport viewport, int x, int y, int width, int height, float scale) {
             coords = new Vector2(0, 0);
             this.viewport = viewport;
             viewportCopy = viewport;
@@ -24,6 +25,7 @@ namespace XNARaceGame {
             this.y = y;
             this.width = width;
             this.height = height;
+            this.scale = scale;
         }
 
         public void preUpdate() {
