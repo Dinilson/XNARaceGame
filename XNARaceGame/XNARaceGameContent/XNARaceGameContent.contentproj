@@ -94,6 +94,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Spritefont uI.spritefont">
+      <Name>Spritefont uI</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <SubType>Designer</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="racetrackv2.png">
       <Name>racetrackv2</Name>
       <Importer>TextureImporter</Importer>
@@ -101,12 +109,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spritefonts\Spritefont uI.spritefont">
-      <Name>Spritefont uI</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <SubType>Designer</SubType>
-    </Compile>
+    <Folder Include="spritefonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

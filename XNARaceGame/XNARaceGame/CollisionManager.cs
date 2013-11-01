@@ -10,7 +10,7 @@ namespace XNARaceGame
         // controleert voor de map of entity aan het collide is met map
 		public static void CheckMapCollisions(Entity entity, Map map, double dt)
 		{
-            if (entity.isActor && entity.isCollidable) {
+            if (entity.isActor && entity.isCollidable && false) {
                 Color[] colors = new Color[(int)(entity.hitbox.X * entity.hitbox.Y)];
                 map.getCurrentCollisionMap().GetData<Color>(colors);
                 for(int y = 0; y < entity.hitbox.Y; y++) {
