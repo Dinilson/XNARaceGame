@@ -15,8 +15,12 @@ namespace XNARaceGame
     // tekent de userinterface
 	public class UI
 	{
-        SpriteFont Font1;
-        Vector2 FontPos;
+        SpriteFont font1;
+        Vector2 fontPosition;
+        string text;
+        Color color;
+        
+        
 
         private RaceGame game;
 
@@ -27,8 +31,14 @@ namespace XNARaceGame
 
         public void render(GraphicsManager graphicsManager) 
         {
-            //graphicsManager.spriteBatch.DrawString(Font1,"........................
+            
+            fontPosition = new Vector2(0, 10);
+            
+            graphicsManager.spriteBatch.DrawString(font1, text, fontPosition, color);
 
+            
+            
+            
             
 
         }
