@@ -15,16 +15,20 @@ namespace XNARaceGame
     // tekent de userinterface
 	public class UI
 	{
-        private RaceGame game;
+        private string text;
 
 		public UI(RaceGame game)
 		{
-            this.game = game;
+            update(game);
 		}
+
+        public void update(RaceGame game) {
+            text = "Staat de game op pauze? " + (game.running? "Ja.": "Nee");
+        }
 
         public void render(GraphicsManager graphicsManager)
         {
-            graphicsManager.drawText("font1", "Staat de game op pauze? " + (game.running? "Ja.": "Nee"), new Vector2(10, 10), Color.White, true);
+            graphicsManager.drawText("font1", text, new Vector2(10, 10), Color.White, true);
         }
 	}
 }

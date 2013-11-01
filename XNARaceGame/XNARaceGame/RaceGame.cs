@@ -93,6 +93,7 @@ namespace XNARaceGame
                     }
                 }
             }
+            ui.update(this);
 		}
 
 		public void run()
