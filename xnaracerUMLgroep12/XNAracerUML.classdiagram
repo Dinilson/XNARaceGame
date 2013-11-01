@@ -4,12 +4,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="6cfac549-658e-4514-9e68-d46299a1b96b" name="Car" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="bef770e5-f6fc-4994-b915-ffca6a74f0d1" />
-        <generalsInternal>
-          <generalization Id="2d1d8871-0358-4738-8de6-f9931dc7e471" isSubstitutable="false">
+        <targetEnds>
+          <association Id="133834ac-dd05-4dbd-a37d-a54c1113e7b3" isDerived="false" sourceEndRoleName="Car" targetEndRoleName="InputManager" isLeaf="false" isAbstract="false">
             <classMoniker Id="d0c95e18-7206-401f-841a-e20bab951fb0" LastKnownName="InputManager" />
-            <elementDefinition Id="ba1fa0ba-9dfa-4720-85c5-9cbe9aee13c0" />
-          </generalization>
-        </generalsInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02942909-d1f7-4a40-9c4c-c473e19163c5" name="Car" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="95679488-69c6-4181-a08f-a2d775162a57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="115d964e-1745-4719-843a-54dfbdd40031" name="InputManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d89e0039-e3a9-4889-b6b6-f7baa4edb1f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="41968b41-6a57-4c1c-996f-6e8469a32719" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="862a5e5b-5def-4f40-b7d3-ab9e73db4953" name="double damage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="de1fc00b-93fa-4dc7-819d-6d88665f51f2" />
@@ -485,24 +497,12 @@
             <classMoniker Id="8cb8ec7c-b769-438b-a628-faaaed83ea86" LastKnownName="Powerup" />
             <elementDefinition Id="9a69342d-541f-408b-b7c5-42d8a2b53054" />
           </generalization>
+          <generalization Id="e8d62e04-62af-47d9-83d2-5f4b7e49bb08" isSubstitutable="false">
+            <classMoniker Id="adecbd39-13e9-4641-a81d-1cb9f28be6a6" LastKnownName="Checkpoint" />
+            <elementDefinition Id="2bbe47a3-47f1-43cb-aed7-87ffd4c3964a" />
+          </generalization>
         </generalsInternal>
         <targetEnds>
-          <association Id="57238ced-dbd7-40bc-b9c0-9fb0a4ca2d35" isDerived="false" sourceEndRoleName="Entity" targetEndRoleName="Checkpoint" isLeaf="false" isAbstract="false">
-            <classMoniker Id="adecbd39-13e9-4641-a81d-1cb9f28be6a6" LastKnownName="Checkpoint" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="ea9ff4ad-4382-449c-9390-f9e8ddd06be7" name="Entity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="c32a9390-6ad2-4c2a-b907-e3499aa5b10b" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="8c385047-3b61-42cd-8521-a34e1c35c7c1" name="Checkpoint" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="f2350266-b89b-4037-a804-7dd785e5a6f4" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="a69c3e7a-0981-48c9-9eb5-f69c3dcf6abc" />
-          </association>
           <association Id="8a5e35bf-bd2c-4c2e-b74e-2334dfdcb022" isDerived="false" sourceEndRoleName="Entity" targetEndRoleName="CollisionManager" isLeaf="false" isAbstract="false">
             <classMoniker Id="87c41e34-c8f6-40ab-ad56-547abc50fea5" LastKnownName="CollisionManager" />
             <relationshipOwnedElementsInternal>
@@ -652,6 +652,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="a672946e-1bf8-442a-ad5e-836ad7f9311a" name="GraphicsManager" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="77142f1e-affa-4c07-a9d4-37a9c807678c" />
+        <targetEnds>
+          <association Id="ec4037b3-8421-4ba4-abb7-949757b5b1dc" isDerived="false" sourceEndRoleName="GraphicsManager" targetEndRoleName="Map" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5c839139-e12a-4365-a4a2-38bb982672fa" LastKnownName="Map" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c413108-38e7-4b29-86a9-d09ebfd7bc88" name="GraphicsManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="62440e30-eb04-454a-aede-4b94f51a379c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd536224-cbef-43c1-a02e-4eae1ec4db28" name="Map" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="55014f24-98b7-4e13-8281-2f26092dc1e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="92768b11-a3e6-4d9a-9956-00c299b1fbf4" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="0581b54e-1380-47ed-811e-43840a56a410" name="string WINDOW_TITLE" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ec1e2280-3dad-4caf-aa2d-f261d9284c23" />
@@ -804,24 +822,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="5c839139-e12a-4365-a4a2-38bb982672fa" name="Map" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="9bb8c3f4-fd86-4aea-be24-7c1ca6cb38ba" />
-        <targetEnds>
-          <association Id="caeafe01-f819-4abf-abe4-1b34f970c983" isDerived="false" sourceEndRoleName="Map" targetEndRoleName="GraphicsManager" isLeaf="false" isAbstract="false">
-            <classMoniker Id="a672946e-1bf8-442a-ad5e-836ad7f9311a" LastKnownName="GraphicsManager" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="03840334-de38-41ef-9161-2b1398d51e16" name="Map" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="c279c308-790e-46b7-a132-214c7353c44e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="493b007e-1da8-439d-bc78-5fe571b44597" name="GraphicsManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="d8a7668e-627f-40eb-bcac-2694d8ea7701" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="16ba402c-c898-4c8c-b7c3-58ff55a14ba2" />
-          </association>
-        </targetEnds>
         <ownedOperationsInternal>
           <operation Id="47a09e34-2302-40ae-b1f9-6a7df010274a" name="Map" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="74221c70-d0cf-4f88-94d7-081bc8c7ff1e" />
@@ -842,6 +842,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="8cb8ec7c-b769-438b-a628-faaaed83ea86" name="Powerup" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c5f6b545-4e4d-4225-9de3-5013050a5004" />
+        <targetEnds>
+          <association Id="4647cf74-639a-42f1-9da6-817484f34889" isDerived="false" sourceEndRoleName="Powerup" targetEndRoleName="Car" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6cfac549-658e-4514-9e68-d46299a1b96b" LastKnownName="Car" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2bc4d37-38cf-4e62-aefd-edfd1895960a" name="Powerup" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3729963c-f96b-4ffd-b47e-e7ca620b201e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ab9fa37-1a84-4b82-9e96-0d581d123dec" name="Car" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="435b7bec-4548-4d04-b7b8-284b123c5617" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e906e867-f7a4-4e67-adb4-c500796a50db" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="ba8e0296-a02c-4c91-b17d-cd06bef0072f" name="int width" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b810a811-8ec4-4a19-b289-5e862bbbde3a" />
