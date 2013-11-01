@@ -43,7 +43,7 @@ namespace XNARaceGame
             entities.Add(new Powerup(this, "Petrol", true, true, new Vector2(-500, -150)));
             entities.Add(new Powerup(this, "Petrol", true, false, new Vector2(500, -175)));
             entities.Add(new Powerup(this, "Repair", true, false, new Vector2(495, -180)));
-            entities.Add(new Car(this, new Vector2(10, 10), 0)); //als laatste tekenen
+			entities.Add(new Car(this, new Vector2(10, 10), 0, new Keys[4] {Keys.W, Keys.S, Keys.A, Keys.D})); //als laatste tekenen
         }
 
         protected override void Initialize() {
